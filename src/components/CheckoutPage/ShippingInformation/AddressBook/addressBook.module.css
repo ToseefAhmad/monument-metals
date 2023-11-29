@@ -1,0 +1,18 @@
+.content {
+    composes: grid from global;
+    composes: auto-rows-fr from global;
+    composes: gap-1.3 from global;
+
+    composes: lg_grid-cols-2 from global;
+    composes: lg_gap-2.5 from global;
+}
+
+.buttonContainer {
+    composes: pt-1.3 from global;
+
+    composes: lg_pt-2.5 from global;
+}
+
+.buttonContainer button {
+    @apply w-full;
+}

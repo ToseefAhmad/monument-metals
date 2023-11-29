@@ -1,0 +1,16 @@
+.sectionRoot {
+    /* Empty to reset default styles */
+}
+
+.sectionContentsContainer {
+    /* Empty to reset default styles */
+}
+
+.sectionTitleWrapper {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: py-2.5 from global;
+
+    composes: lg_py-3.75 from global;
+}

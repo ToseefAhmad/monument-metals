@@ -1,0 +1,63 @@
+.arrowButtonWrapper {
+    composes: absolute from global;
+    composes: bottom-px from global;
+    composes: w-2/4 from global;
+
+    composes: lg_bottom-full from global;
+    composes: lg_w-max from global;
+    composes: lg_mb-12.5 from global;
+    composes: translate-y-[2%] from global;
+}
+
+.arrowButtonNextWrapper {
+    composes: arrowButtonWrapper;
+
+    composes: right-0 from global;
+    composes: pl-[2.5px] from global;
+}
+
+.arrowButtonPrevWrapper {
+    composes: arrowButtonWrapper;
+
+    composes: left-0 from global;
+    composes: pr-[2.5px] from global;
+
+    composes: lg_left-auto from global;
+    composes: lg_right-[85px] from global;
+}
+
+.arrowButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: h-11.5 from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: outline-none from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: lg_w-20 from global;
+    composes: lg_text-base from global;
+
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: text-red-light from global;
+    composes: border-gray-light from global;
+    composes: bg-white from global;
+
+    composes: hover-hover_hover_text-white from global;
+    composes: hover-hover_hover_bg-red from global;
+    composes: hover-hover_hover_border-red from global;
+
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-red-dark from global;
+    composes: active_focus_border-red-dark from global;
+}

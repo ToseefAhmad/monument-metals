@@ -1,0 +1,46 @@
+.notificationContainer {
+    composes: h-10 from global;
+    composes: m-0 from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: sticky from global;
+    composes: top-0 from global;
+    composes: z-50 from global;
+    composes: bg-white from global;
+    composes: items-center from global;
+
+    /* Large screen styles */
+    composes: lg_h-12.5 from global;
+}
+
+.message {
+    composes: flex from global;
+    composes: items-end from global;
+    composes: justify-center from global;
+}
+
+.text {
+    composes: text-white from global;
+    composes: text-xs from global;
+    composes: cursor-pointer from global;
+    composes: text-center from global;
+
+    /* Large screen styles */
+    composes: lg_text-base from global;
+}
+
+.textMobile {
+    composes: leading-4 from global;
+}
+
+.warning {
+    composes: bg-gold from global;
+}
+
+.sale {
+    composes: bg-green from global;
+}
+
+.major {
+    composes: bg-red-light from global;
+}

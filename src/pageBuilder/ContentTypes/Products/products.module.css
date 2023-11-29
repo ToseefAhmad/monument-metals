@@ -1,0 +1,82 @@
+.root a {
+    @apply no-underline;
+}
+
+.error {
+    composes: text-center from global;
+    composes: p-8 from global;
+}
+
+.centerMode :global(.slick-slide) {
+    @apply opacity-50 duration-300;
+
+    /* Hover state */
+    @apply hover_opacity-100;
+}
+
+.centerMode :global(.slick-slide.slick-current) {
+    @apply opacity-100;
+}
+
+.galleryItems {
+    composes: items from '~@magento/venia-ui/lib/components/Gallery/gallery.module.css';
+
+    composes: grid-cols-4 from global;
+}
+
+.carousel {
+    composes: root;
+
+    composes: root from '~@app/pageBuilder/ContentTypes/Slider/slider.module.css';
+
+    composes: pointer-events-none from global;
+}
+
+.carousel:hover {
+    @apply z-20;
+}
+
+.carousel :global(.slick-slider) {
+    @apply pb-12.5;
+
+    /* Large screen styles */
+    @apply lg_pb-0;
+}
+
+.carousel :hover :global(.slick-list) {
+    /* all of this with !important because of duplicate css styles
+    slick-slider hack for vertical overflowing
+    hover, so this doesn't affect content below */
+    @apply lg_pb-[300px] !important;
+    @apply lg_mb-[-300px] !important;
+}
+
+.carousel :global(.slick-track) {
+    @apply lg_flex !important;
+    @apply pointer-events-auto;
+}
+
+.carousel :global(.slick-slide) {
+    @apply lg_h-auto !important;
+}
+
+.carousel :global(.slick-track .slick-slide > div) {
+    grid-template-columns: 50% 50%;
+
+    @apply
+        grid
+        lg_h-full
+        lg_p-[5px];
+
+    /* Large screen styles */
+    @apply lg_block;
+}
+
+.carousel :global(.slick-track .slick-slide > div > .galleryItem) {
+    @apply lg_m-0;
+}
+
+.carousel :global(.slick-initialized .slick-slide:not(.slick-active)) {
+    @apply relative
+        left-[-999%];
+}

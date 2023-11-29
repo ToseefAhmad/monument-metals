@@ -1,0 +1,3 @@
+.root {
+    composes: border-0 from global;
+}

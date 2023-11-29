@@ -1,0 +1,8 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: h-15 from global;
+    composes: w-15 from global;
+    composes: lg_hidden from global;
+}

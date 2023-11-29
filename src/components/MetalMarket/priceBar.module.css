@@ -1,0 +1,138 @@
+.priceContainer {
+    composes: h-10 from global;
+    composes: lg_h-12.5 from global;
+    composes: m-0 from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: sticky from global;
+    composes: top-0 from global;
+    composes: z-50 from global;
+    composes: bg-white from global;
+
+    /* Large screen styles */
+    composes: lg_items-center from global;
+}
+
+.notification {
+    composes: top-12.5 from global;
+}
+
+.priceEntry {
+    composes: flex from global;
+    composes: items-end from global;
+
+    /* Large screen styles */
+    composes: lg_justify-center from global;
+    composes: lg_px-0 from global;
+    composes: lg_w-[292px] from global;
+    composes: lg_my-3.75 from global;
+    composes: lg_relative from global;
+}
+
+/* Seperator */
+div.priceEntry:not(:last-child) {
+    @apply lg_after_content-['']
+        lg_after_w-2.5
+        lg_after_h-5
+        lg_after_border-r-1
+        lg_after_border-gray-light
+        lg_after_absolute
+        lg_after_right-0
+        lg_after_bottom-1.5;
+}
+
+.priceEntryItems {
+    composes: ml-2 from global;
+    composes: font-semibold from global;
+}
+
+.label {
+    composes: capitalize from global;
+    composes: text-xs from global;
+
+    /* Large screen styles */
+    composes: lg_text-base from global;
+}
+
+.askPrice {
+    composes: priceEntryItems;
+    composes: text-black-lightest from global;
+    composes: text-xs from global;
+    composes: whitespace-nowrap from global;
+
+    /* Large screen styles */
+    composes: lg_text-base from global;
+}
+
+.change {
+    composes: priceEntryItems;
+    composes: font-bold from global;
+    composes: text-xss from global;
+    composes: whitespace-nowrap from global;
+
+    /* Large screen styles */
+    composes: lg_text-sm from global;
+}
+
+.green {
+    composes: text-green from global;
+}
+
+.red {
+    composes: text-red-light from global;
+}
+
+.icon {
+    composes: inline-block from global;
+    composes: align-middle from global;
+    composes: mr-2 from global;
+}
+
+.mobileRoot {
+    composes: h-10 from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: sticky from global;
+    composes: top-0 from global;
+    composes: z-50 from global;
+    composes: bg-white from global;
+}
+
+.mobileNotification {
+    composes: top-10 from global;
+}
+
+.mobileRoot svg {
+    @apply opacity-50
+        h-1.5;
+}
+
+.visibleEntry {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: w-1/2 from global;
+    composes: my-2.5 from global;
+}
+
+.hiddenEntry {
+    composes: hidden from global;
+}
+
+.arrowButton {
+    composes: w-[3rem] from global;
+    composes: outline-none from global;
+}
+
+.singleShimmer {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+}
+
+.shimmer {
+    composes: h-10 from global;
+
+    /* Large screen styles */
+    composes: lg_h-12.5 from global;
+}

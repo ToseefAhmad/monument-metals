@@ -1,0 +1,63 @@
+.root {
+    composes: border-t border-solid border-gray-light from global;
+}
+
+.contents_container {
+    composes: lg_px-7.5 from global;
+    composes: px-5 from global;
+    composes: lg_pt-5 from global;
+    composes: pt-3.75 from global;
+    composes: lg_pb-7.5 from global;
+    composes: lg_pb-5 from global;
+    composes: pb-3.75 from global;
+    composes: border-b border-solid border-gray-light from global;
+}
+
+.contents_container label {
+    @apply lg_pb-1.25 lg_text-sm text-xs;
+}
+
+.contents_container:empty {
+    @apply hidden;
+}
+
+.contents_container_closed {
+    composes: contents_container;
+    composes: hidden from global;
+}
+
+.title {
+    composes: headingMobile5 from '../../StyleGuide/typographySection.module.css';
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: lg_text-base from global;
+    composes: lg_leading-8 from global;
+    composes: pb-0 from global;
+}
+
+.title_container {
+    composes: cursor-pointer from global;
+    composes: block from global;
+    composes: w-full from global;
+    composes: m-0 from global;
+}
+
+.title_wrapper {
+    grid-template-columns: 1fr;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-6 from global;
+    composes: items-center from global;
+    composes: justify-items-start from global;
+    composes: lg_h-15.5 from global;
+    composes: h-12.5 from global;
+    composes: lg_px-7.5 from global;
+    composes: lg_py-0 from global;
+    composes: py-0 from global;
+    composes: px-5 from global;
+    composes: border-b border-solid border-gray-light from global;
+}
+
+.title_wrapper span:last-of-type {
+    @apply h-4.25 w-4.25;
+}

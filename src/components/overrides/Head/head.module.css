@@ -1,0 +1,6 @@
+.heading {
+    composes: absolute from global;
+    composes: opacity-0 from global;
+    composes: invisible from global;
+    composes: -translate-x-288 from global;
+}

@@ -1,0 +1,50 @@
+.container {
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.table {
+    composes: w-full from global;
+    composes: text-sm from global;
+}
+
+.thead {
+    composes: bg-blue from global;
+    composes: text-white from global;
+}
+
+.headText {
+    composes: font-semibold from global;
+}
+
+.tbody {
+    composes: text-center from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.row {
+    composes: border-gray-light from global;
+    composes: border-1 from global;
+    composes: h-11 from global;
+}
+
+.price > span:first-of-type {
+    @apply pr-1;
+}
+
+.description {
+    composes: bg-white-dark from global;
+    composes: text-gray-dark from global;
+}
+
+.description b,
+.description strong {
+    @apply text-black-lightest
+        font-bold;
+}
+
+.description p {
+    @apply m-0
+        p-0;
+}

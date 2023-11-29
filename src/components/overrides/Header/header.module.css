@@ -1,0 +1,247 @@
+.root {
+    composes: sticky from global;
+    composes: top-0 from global;
+    composes: bg-white from global;
+    composes: z-50 from global;
+    composes: top-10 from global;
+
+    /* Large screen styles */
+    composes: lg_top-12.5 from global;
+}
+
+.root_scrolled {
+    composes: root;
+
+    composes: shadow-header from global;
+}
+
+.notification {
+    composes: top-20 from global;
+    composes: lg_top-25 from global;
+}
+
+.menuWrapper {
+    composes: relative from global;
+    composes: z-20 from global;
+    composes: px-5 from global;
+    composes: hidden from global;
+    composes: bg-white from global;
+    composes: shadow-header from global;
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+
+    /* Large screen styles */
+    composes: lg_block from global;
+
+    /* Transition */
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.menuWrapper_hidden {
+    composes: hidden from global;
+    composes: invisible from global;
+    composes: opacity-0 from global;
+
+    /* Large screen styles */
+    composes: lg_block from global;
+
+    /* Transition */
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.menuContainer {
+    composes: container from global;
+}
+
+.switchers {
+    composes: auto-cols-max from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-end from global;
+    composes: max-w-desktop from global;
+    composes: mx-auto from global;
+    composes: relative from global;
+    composes: w-full from global;
+    composes: z-11 from global;
+}
+
+.switchersContainer {
+    composes: bg-gray-100 from global;
+    composes: hidden from global;
+    composes: px-8 from global;
+    composes: w-full from global;
+}
+
+/* Large screen styles */
+.switchersContainer {
+    composes: sm_block from global;
+}
+
+.mainWrapper {
+    composes: h-auto from global;
+    composes: w-full from global;
+}
+
+.mainContainer {
+    composes: relative from global;
+    composes: border-0 from global;
+    composes: content-center from global;
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: h-15 from global;
+    composes: items-center from global;
+    composes: justify-self-center from global;
+    composes: min-height-header from global;
+    composes: w-full from global;
+    composes: z-3 from global;
+}
+
+/* Large screen styles */
+.mainContainer {
+    composes: lg_container from global;
+    composes: lg_h-23 from global;
+    composes: lg_min-height-header from global;
+}
+
+.primaryActions {
+    composes: col-start-1 from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-self-start from global;
+    composes: row-start-1 from global;
+    composes: self-center from global;
+    composes: pl-0 from global;
+
+    composes: lg_hidden from global;
+}
+
+.navTrigger {
+    composes: pl-5 from global;
+}
+
+.cartTrigger {
+    composes: pr-2.5 from global;
+}
+
+.logoContainer {
+    composes: block from global;
+    composes: justify-self-center from global;
+    composes: absolute from global;
+    composes: left-2/4 from global;
+    composes: -translate-x-2/4 from global;
+}
+
+/* Large screen styles */
+.logoContainer {
+    composes: lg_relative from global;
+    composes: lg_left-0 from global;
+    composes: lg_translate-x-0 from global;
+    composes: lg_justify-self-start from global;
+}
+
+.secondaryActions {
+    composes: flex from global;
+}
+
+.searchFallback {
+    composes: hidden from global;
+    composes: justify-center from global;
+    composes: mb-2 from global;
+    composes: px-4 from global;
+
+    composes: lg_flex from global;
+    composes: lg_w-80 from global;
+    composes: xl_w-100 from global;
+}
+
+.input {
+    composes: input from '../TextInput/textInput.module.css';
+    composes: max-w-sm from global;
+}
+
+.loader,
+.loader::before,
+.loader::after {
+    --dot-size: 2em;
+    --dot-font-size: 6px;
+    --dot-shadow-offset: calc(-1 * var(--dot-size) + var(--dot-font-size));
+    border-radius: 50%;
+    width: var(--dot-size);
+    height: var(--dot-size);
+    animation: pulse 1.8s infinite ease-in-out;
+    animation-fill-mode: both;
+}
+
+.loader {
+    composes: relative from global;
+    color: rgb(var(--venia-global-color-gray-dark));
+    font-size: var(--dot-font-size);
+    margin: var(--dot-shadow-offset) auto 0;
+    transform: translateZ(0);
+    animation-delay: -0.16s;
+}
+
+.loader::before,
+.loader::after {
+    content: '';
+    position: absolute;
+    top: 0;
+}
+
+.loader::before {
+    color: rgb(var(--venia-global-color-gray));
+    left: -3.5em;
+    animation-delay: -0.32s;
+}
+
+.loader::after {
+    color: rgb(var(--venia-global-color-gray-darker));
+    left: 3.5em;
+}
+
+@keyframes pulse {
+    0%,
+    80%,
+    100% {
+        box-shadow: 0 var(--dot-size) 0 -1.3em;
+    }
+    40% {
+        box-shadow: 0 var(--dot-size) 0 0;
+    }
+}
+
+.searchOpen {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: absolute from global;
+    composes: w-full from global;
+    composes: z-3 from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: h-screen from global;
+
+    composes: lg_relative from global;
+    composes: lg_w-80 from global;
+    composes: lg_h-auto from global;
+
+    composes: xl_w-94 from global;
+}
+
+.topBarWrapper {
+    composes: min-h-10 from global;
+    composes: lg_min-h-[49px] from global;
+}
+
+.topBarWrapper_shimmer {
+    composes: topBarWrapper;
+    composes: flex from global;
+}
+
+.topHeaderContacts {
+    composes: m-0 from global;
+}

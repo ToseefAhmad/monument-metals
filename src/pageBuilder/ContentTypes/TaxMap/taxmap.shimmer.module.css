@@ -1,0 +1,7 @@
+.root {
+    composes: root_rectangle from '~@magento/venia-ui/lib/components/Shimmer/shimmer.module.css';
+
+    composes: block from global;
+    composes: full-bleed from global;
+    composes: h-150 from global;
+}

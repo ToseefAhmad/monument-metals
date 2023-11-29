@@ -1,0 +1,109 @@
+.root {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: block from global;
+    composes: pointer-events-none from global;
+    composes: select-none from global;
+}
+
+.groupRoot {
+    composes: absolute from global;
+    composes: z-1 from global;
+    composes: flex from global;
+    font-size: 1em;
+}
+
+.vertical {
+    composes: flex-col from global;
+}
+
+.horizontal {
+    composes: flex-row from global;
+}
+
+.topLeft {
+    composes: top-0 from global;
+    composes: left-0 from global;
+}
+
+.topCenter {
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+}
+
+.topRight {
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: text-right from global;
+}
+
+.middleLeft {
+    composes: top-0 from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: mt-auto from global;
+    composes: mb-auto from global;
+}
+
+.middleCenter {
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: m-auto from global;
+}
+
+.middleRight {
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: mt-auto from global;
+    composes: mb-auto from global;
+    composes: text-right from global;
+}
+
+.bottomLeft {
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+}
+
+.bottomCenter {
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+}
+
+.bottomRight {
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: text-right from global;
+}
+
+.vertical.bottomRight,
+.vertical.topRight,
+.vertical.middleRight,
+.horizontal.bottomRight,
+.horizontal.bottomCenter,
+.horizontal.bottomLeft {
+    align-items: flex-end;
+}
+
+.vertical.bottomLeft,
+.vertical.topLeft,
+.vertical.middleLeft {
+    align-items: flex-start;
+}

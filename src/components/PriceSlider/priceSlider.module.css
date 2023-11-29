@@ -1,0 +1,51 @@
+.root {
+    composes: py-[0.5rem] from global;
+
+    composes: lg_pb-6 from global;
+    composes: lg_pt-0 from global;
+}
+
+.sliderWrapper {
+    composes: mx-[3rem] from global;
+    composes: lg_mx-6 from global;
+}
+
+.priceSectionWrapper {
+    composes: ml-[1.5rem] from global;
+    composes: lg_ml-[1.15rem] from global;
+    composes: flex from global;
+    composes: justify-between from global;
+}
+
+.priceInput {
+    composes: input from '~@magento/venia-ui/lib/components/TextInput/textInput.module.css';
+}
+
+.priceInput::-webkit-inner-spin-button,
+.priceInput::-webkit-outer-spin-button {
+    appearance: none;
+    margin: 0;
+}
+
+.priceField {
+    composes: root from '~@magento/venia-ui/lib/components/Field/field.module.css';
+    composes: pt-[1.15rem] from global;
+    composes: pr-[1.5rem] from global;
+
+    composes: lg_pr-[1.15rem] from global;
+}
+
+.slider :global(.rc-slider-rail) {
+    @apply bg-white-dark;
+}
+
+.slider :global(.rc-slider-track) {
+    @apply bg-blue;
+}
+
+.slider :global(.rc-slider-handle) {
+    @apply
+        bg-blue
+        border-0
+        opacity-100;
+}

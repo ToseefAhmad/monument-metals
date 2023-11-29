@@ -1,0 +1,18 @@
+.main {
+    composes: container from global;
+}
+
+/**
+ * Min-height for Checkout Page where
+ * mobile: header = 60px and footer = 164px, in total = 224px
+ * desktop: header and footer 100px each, in total = 200px
+ */
+.main {
+    min-height: calc(100vh - 224px);
+}
+
+@media (min-width: 1024px) {
+    .main {
+        min-height: calc(100vh - 200px);
+    }
+}

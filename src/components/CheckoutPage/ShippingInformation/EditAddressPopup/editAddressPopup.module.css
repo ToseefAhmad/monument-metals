@@ -1,0 +1,100 @@
+.editButton {
+    composes: absolute from global;
+    composes: top-[10px] from global;
+    composes: right-[50px] from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: items-center from global;
+    composes: gap-1 from global;
+    composes: text-blue-dark from global;
+    composes: cursor-pointer from global;
+    composes: outline-none from global;
+}
+
+.editButton svg {
+    @apply w-3 h-3;
+}
+
+.modal {
+    composes: bg-white from global;
+    composes: w-screen from global;
+    composes: max-h-screen from global;
+    composes: overflow-y-scroll from global;
+    composes: px-5 from global;
+    composes: pb-24 from global;
+
+    composes: md_w-[730px] from global;
+    composes: md_px-12.5 from global;
+    composes: md_pb-12.5 from global;
+}
+
+.header {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: pt-6.25 from global;
+    composes: pb-5 from global;
+}
+
+.closeIcon {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-end from global;
+    composes: relative from global;
+}
+
+.closeButton {
+    composes: flex from global;
+    composes: outline-none from global;
+}
+
+.title {
+    composes: text-xl from global;
+}
+
+.fields {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: w-full from global;
+}
+
+@media (min-width: 768px) {
+    .fields {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.checkboxWrapper {
+    composes: inline-flex from global;
+    composes: pt-2.5 from global;
+}
+
+.actions {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: pt-2.5 from global;
+}
+
+.closeButtonWrapper {
+    composes: w-2/4 from global;
+    composes: pr-2.5 from global;
+
+    composes: md_w-auto from global;
+}
+
+.closeButtonWrapper button {
+    @apply w-full md_w-auto;
+}
+
+.updateButtonWrapper {
+    composes: w-2/4 from global;
+
+    composes: md_w-auto from global;
+}
+
+.updateButtonWrapper button {
+    @apply w-full md_w-auto;
+}

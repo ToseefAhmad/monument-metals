@@ -1,0 +1,22 @@
+.radioRoot {
+    composes: root from '@app/components/overrides/RadioGroup/radioGroup.module.css';
+
+    /* Override default grid template columns to 2 items per row */
+    @apply grid-cols-1
+        gap-1.3
+        lg_grid-cols-2
+        lg_gap-2;
+}
+
+.radioLabel {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: auto-cols-max from global;
+    composes: gap-1 from global;
+}
+
+.error {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: text-red-light from global;
+}

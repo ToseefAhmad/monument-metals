@@ -1,0 +1,77 @@
+.root {
+    composes: block from global;
+    composes: md_grid from global;
+    composes: py-5 from global;
+    composes: md_py-3.75 from global;
+    composes: px-[25px] from global;
+    composes: md_px-7.5 from global;
+    composes: border from global;
+    composes: first_border-t from global;
+    composes: md_first_border-t-0 from global;
+    composes: border-t-0 from global;
+    composes: border-gray-light from global;
+    composes: items-center from global;
+    grid-template-columns: 50% repeat(3, 1fr);
+}
+
+.itemsContainer {
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-3.75 from global;
+    composes: mb-2.5 from global;
+    composes: lg_mb-0 from global;
+    grid-template-columns: auto 1fr;
+}
+
+.thumbnail img {
+    @apply last_p-2.5
+        last_border
+        border-gray-light
+        last_mb-1.5
+        lg_last_mb-0;
+}
+
+.placeHolderImage {
+    @apply bg-green;
+}
+
+.totalPrice {
+    composes: text-green from global;
+    composes: font-semibold from global;
+}
+
+.itemPriceLabel,
+.itemQtyLabel,
+.itemTotalLabel {
+    composes: inline-block from global;
+    composes: md_hidden from global;
+    composes: text-gray-dark from global;
+    composes: font-normal from global;
+    composes: pr-1 from global;
+}
+
+.price {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.quantity {
+    composes: text-black-lightest from global;
+    composes: lg_text-gray-dark from global;
+}
+
+.priceCurrency {
+    composes: pr-1 from global;
+}
+
+.image {
+    composes: border border-solid border-gray-light from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+}
+
+.preorderLabel {
+    composes: flex from global;
+    grid-area: 2 / 2 / 3 / 3;
+}

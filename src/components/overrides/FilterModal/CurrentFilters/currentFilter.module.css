@@ -1,0 +1,26 @@
+.root {
+    composes: pr-5 from global;
+    composes: items-center from global;
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: h-min-10 from global;
+    composes: whitespace-nowrap from global;
+}
+
+.root svg {
+    /* tailwind dont wanna generate class */
+    stroke: rgb(178 34 52);
+    stroke-width: 3px;
+}
+
+.categoryTitle {
+    composes: capitalize from global;
+}
+
+.categoryValue {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: pr-2 from global;
+    composes: pl-1 from global;
+}

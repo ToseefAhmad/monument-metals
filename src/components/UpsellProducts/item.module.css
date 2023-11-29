@@ -1,0 +1,96 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-between from global;
+    composes: px-5 from global;
+    composes: py-3.75 from global;
+
+    composes: lg_flex-row from global;
+    composes: lg_items-center from global;
+}
+
+.link {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: pb-2.5 from global;
+
+    composes: lg_justify-between from global;
+    composes: lg_pb-0 from global;
+}
+
+.imageWrapper {
+    composes: pr-2.5 from global;
+
+    composes: lg_pr-5 from global;
+}
+
+.imageRoot {
+    composes: flex from global;
+    composes: h-15 from global;
+    composes: w-15 from global;
+
+    composes: lg_h-20 from global;
+    composes: lg_w-20 from global;
+}
+
+.image {
+    composes: object-contain from global;
+    composes: h-15 from global;
+    composes: w-15 from global;
+
+    composes: lg_h-20 from global;
+    composes: lg_w-20 from global;
+}
+
+.content {
+    composes: font-normal from global;
+    composes: text-sm from global;
+
+    composes: lg_pr-5 from global;
+}
+
+.name {
+    composes: text-gray-dark from global;
+    composes: transition-primary from global;
+}
+
+.link:hover .name {
+    @apply text-blue;
+}
+
+.price {
+    composes: font-semibold from global;
+}
+
+.actions {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: flex-shrink-0 from global;
+    composes: w-full from global;
+
+    composes: lg_w-auto from global;
+}
+
+.quantity {
+    composes: pr-1.25 from global;
+}
+
+.quantity input {
+    @apply h-11.5 w-11.5;
+}
+
+.quantity button {
+    @apply w-6 h-[23px];
+}
+
+.button {
+    composes: text-white from global;
+    composes: flex-grow-[1] from global;
+
+    composes: lg_flex-grow-0 from global;
+}
+
+.button button {
+    @apply min-h-0 min-w-0 h-11.5 w-full lg_w-11.5;
+}

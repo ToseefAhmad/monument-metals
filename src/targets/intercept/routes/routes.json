@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Style Guide",
+        "pattern": "/style-guide",
+        "exact": true,
+        "path": "@app/components/StyleGuide",
+        "layout": "empty"
+    },
+    {
+        "name": "Contact Us",
+        "pattern": "/contact-us",
+        "exact": true,
+        "path": "@app/components/ContactUs"
+    },
+    {
+        "name": "Order",
+        "pattern": "/order/:orderId",
+        "exact": true,
+        "path": "@app/components/overrides/OrderHistoryPage/OrderDetails",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "Alerts",
+        "pattern": "/alerts",
+        "exact": true,
+        "path": "@app/components/ProductAlerts/Account",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "CheckoutPage",
+        "pattern": "/checkout",
+        "exact": true,
+        "path": "@app/components/CheckoutPage",
+        "layout": "checkout",
+        "authed": true,
+        "redirectTo": "/cart"
+    },
+    {
+        "name": "Cart Login",
+        "pattern": "/cart-login",
+        "exact": true,
+        "path": "@app/components/CartLoginPage",
+        "layout": "checkout"
+    },
+    {
+        "name": "AccountInformationPage",
+        "pattern": "/account-information",
+        "exact": true,
+        "path": "@app/components/overrides/AccountInformationPage",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "OrderHistory",
+        "pattern": "/order-history",
+        "exact": true,
+        "path": "@app/components/overrides/OrderHistoryPage",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "AddressBook",
+        "pattern": "/address-book",
+        "exact": true,
+        "path": "@app/components/overrides/AddressBookPage",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "Newsletter",
+        "pattern": "/communications",
+        "exact": true,
+        "path": "@app/components/overrides/CommunicationsPage/communicationsPage",
+        "authed": true,
+        "redirectTo": "/"
+    },
+    {
+        "name": "SavedPayments",
+        "pattern": "/saved-payments",
+        "exact": true,
+        "path": "@app/components/overrides/SavedPaymentsPage",
+        "authed": true,
+        "redirectTo": "/"
+    }
+]

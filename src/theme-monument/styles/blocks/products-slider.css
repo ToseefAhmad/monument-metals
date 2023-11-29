@@ -1,0 +1,26 @@
+.products-slider-wrapper {
+    @apply overflow-hidden;
+}
+
+.products-slider-inner {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.products-slider h2 {
+    @apply font-semibold
+        text-center
+        mt-0
+        mb-5;
+
+    /* Large screen styles */
+    @apply lg_text-left
+        lg_mb-12.5
+        lg_w-[calc(100%-200px)];
+}
+
+.cms-page.cms-home .products-slider {
+    @apply pb-7.5;
+
+    /* Large screen styles */
+    @apply lg_pb-12.5;
+}

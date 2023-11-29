@@ -1,0 +1,7 @@
+.shimmer {
+    composes: grid from global;
+    composes: items-center from global;
+    composes: h-[310px] from global;
+    composes: xs_h-[410px] from global;
+    composes: w-[1170px] from global;
+}

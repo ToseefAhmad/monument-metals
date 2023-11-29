@@ -1,0 +1,9 @@
+.shimmer {
+    composes: w-full from global;
+    composes: h-[inherit] from global;
+    composes: pt-2.5 from global;
+}
+
+.trustpilot-widget iframe {
+    @apply h-5 !important;
+}

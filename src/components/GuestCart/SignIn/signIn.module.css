@@ -1,0 +1,82 @@
+.root {
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+
+    composes: lg_grid-flow-col from global;
+    composes: lg_grid-cols-2 from global;
+}
+
+.formContainer {
+    composes: last_border-gray-light from global;
+    composes: last_border-t from global;
+    composes: py-5 from global;
+    composes: mx-5 from global;
+
+    composes: lg_last_border-t-0 from global;
+    composes: lg_last_border-l from global;
+    composes: lg_py-0 from global;
+    composes: lg_px-7.5 from global;
+    composes: lg_mx-0 from global;
+    composes: lg_my-7.5 from global;
+}
+
+.forgotPasswordAndRememberMeContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+}
+
+.buttonContainer {
+    composes: pt-2.5 from global;
+
+    composes: lg_pt-5 from global;
+}
+
+.buttonContainer button {
+    @apply w-full;
+}
+
+.emailAndPasswordFields {
+    composes: pt-2.5 from global;
+
+    composes: lg_pt-5 from global;
+    composes: lg_pb-2.5 from global;
+}
+
+.field {
+    composes: pb-2.5 from global;
+}
+
+.emailRoot,
+.passwordRoot {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: pb-1.75 from global;
+
+    composes: lg_pb-1.75 from global;
+}
+
+.forgotPasswordContainer {
+    composes: flex from global;
+    composes: justify-end from global;
+}
+
+.forgotPasswordButton {
+    composes: root from '@magento/venia-ui/lib/components/LinkButton/linkButton.module.css';
+
+    composes: p-0 from global;
+    composes: block from global;
+    composes: no-underline from global;
+}
+
+.forgotPasswordButton {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: text-sm from global;
+
+    composes: lg_text-base from global;
+}

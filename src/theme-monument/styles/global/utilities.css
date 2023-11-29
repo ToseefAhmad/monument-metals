@@ -1,0 +1,40 @@
+/* Utilities styles */
+@layer utilities {
+    /* Main container styles */
+    .container {
+        @apply px-mobile lg_max-w-desktop;
+    }
+
+    /* Utility class for full bleed container */
+    .full-bleed {
+        @apply w-[calc(100vw-var(--scrollBarWidth))]
+            ml-[50%]
+            -translate-x-2/4;
+    }
+
+    /* Primary transition styles */
+    .transition-primary {
+        @apply transition
+            duration-200
+            ease-in-out;
+    }
+
+    /* Fix for useScrollLock */
+    html[data-scroll-lock='true'] {
+        @apply overflow-hidden;
+    }
+
+    html[data-scroll-lock='true'] > body {
+        /* Fix for useScrollLock for touch devices */
+        touch-action: none;
+
+        /* Fix page shift when scroll bar is hidden */
+        @apply w-[calc(100vw-var(--scrollBarWidth))];
+    }
+
+    /* Take default scroll bar width variable or set 0px instead */
+    body {
+        /* stylelint-disable-next-line length-zero-no-unit, custom-property-pattern */
+        --scrollBarWidth: var(--global-scrollbar-width, 0px);
+    }
+}

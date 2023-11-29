@@ -1,0 +1,135 @@
+.selectCategoryRoot h1,
+.selectCategoryRoot h2,
+.selectCategoryRoot h3,
+.selectCategoryRoot h4,
+.selectCategoryRoot h5,
+.selectCategoryRoot h6,
+.selectCategoryRoot p {
+    @apply my-0;
+}
+
+.selectCategoryRoot {
+    @apply bg-white-dark
+        py-7.5
+        mb-7.5
+        lg_max-h-[422px]
+        lg_h-[422px]
+        lg_mb-12.5
+        relative;
+}
+
+.selectCategoryRoot > div {
+    @apply relative;
+}
+
+.selectCategoryRoot > div::before {
+    content: '.';
+
+    @apply bg-white-dark
+        absolute
+        w-screen
+        h-[calc(100%+60px)]
+        -left-5
+        -top-7.5
+        lg_h-[422px]
+        desktop_left-[calc(((1170px-100vw-var(--scrollBarWidth))/2))];
+}
+
+.selectCategoryRoot .headerText {
+    @apply text-center
+        font-semibold
+        text-black-lightest
+        text-2.5xl
+        z-1
+        mb-6
+        lg_text-4.5xl
+        lg_text-left
+        lg_mt-5
+        lg_mb-12.5;
+}
+
+.selectCategoryRoot > div > div:nth-child(2) {
+    /* Override inline styles */
+    @apply grid !important;
+    @apply grid-flow-row
+        grid-cols-3
+        gap-1.25
+        lg_gap-3.75;
+}
+
+.categoryItem {
+    /* Override inline styles */
+    @apply w-full
+        flex
+        flex-col
+        items-start
+        justify-between !important;
+    @apply bg-white
+        rounded-sm
+        relative
+        h-[120px]
+        2sm_h-[220px];
+}
+
+.categoryItem .categoryTitle p {
+    @apply mt-5
+        mb-5
+        pl-4.25
+        border-l-2
+        border-solid
+        border-blue
+        flex
+        flex-row
+        justify-start
+        items-center
+        lg_pl-7
+        lg_mt-8.75
+        lg_mb-0
+        lg_h-9.5;
+}
+
+.categoryItem .categoryTitle p a {
+    @apply font-semibold
+        text-base
+        text-black-lightest
+        flex
+        flex-row
+        justify-start
+        items-center
+        no-underline
+        w-full
+        lg_text-2xl;
+}
+
+.categoryItem .categoryTitle p a img {
+    @apply hidden
+        lg_flex
+        lg_my-0
+        lg_ml-2.5
+        lg_w-4
+        lg_h-2.5;
+}
+
+.categoryImage {
+    @apply w-full;
+}
+
+.categoryImage a {
+    @apply absolute
+        bottom-0
+        w-full
+        h-full
+        flex
+        items-end
+        justify-center;
+}
+
+.categoryImage img {
+    @apply m-auto
+        2sm_w-[190px]
+        lg_w-[240px];
+}
+
+.categoryImage a img {
+    @apply lg_w-[240px];
+}

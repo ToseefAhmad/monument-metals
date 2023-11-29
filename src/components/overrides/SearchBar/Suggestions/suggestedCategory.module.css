@@ -1,0 +1,5 @@
+.label {
+    composes: text-gray-dark from global;
+    composes: font-normal from global;
+    composes: mb-1.25 from global;
+}

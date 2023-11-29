@@ -1,0 +1,71 @@
+.root {
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: items-center from global;
+
+    composes: lg_items-center from global;
+    composes: lg_gap-5 from global;
+    composes: lg_px-5 from global;
+    composes: lg_border-l from global;
+    composes: lg_border-gray-light from global;
+    composes: lg_py-1.25 from global;
+    composes: transition from global;
+    composes: relative from global;
+}
+
+.root::before {
+    @apply content-['']
+        bg-blue
+        block
+        h-[1px]
+        bottom-[1px]
+        absolute
+        left-0
+        w-0
+        transition-all
+        ease-in-out;
+}
+
+.root:hover::before {
+    @apply w-full;
+}
+
+.root > span svg {
+    @apply mr-4
+        mt-0
+        lg_mr-0;
+}
+
+.wrapper {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-start from global;
+}
+
+.textSmall {
+    composes: font-normal from global;
+    composes: text-base from global;
+
+    composes: lg_font-bold from global;
+    composes: lg_uppercase from global;
+    composes: lg_text-xss from global;
+}
+
+.textWrapper {
+    composes: hidden from global;
+
+    composes: lg_flex from global;
+    composes: lg_items-center from global;
+    composes: lg_gap-4 from global;
+}
+
+.text {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: leading-8 from global;
+    composes: capitalize from global;
+}
+
+.loader {
+    composes: indicator from '@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+}

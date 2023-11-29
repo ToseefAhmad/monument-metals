@@ -1,0 +1,32 @@
+.mask_default {
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: block from global;
+    composes: h-full from global;
+    composes: w-full from global;
+    composes: bg-black-lightest from global;
+    composes: appearance-none from global;
+    composes: cursor-default from global;
+    composes: z-10 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+/* state: inactive */
+.mask {
+    composes: mask_default;
+
+    composes: invisible from global;
+    composes: opacity-0 from global;
+}
+
+/* state: active */
+.mask_active {
+    composes: mask_default;
+
+    composes: visible from global;
+    composes: opacity-40 from global;
+}

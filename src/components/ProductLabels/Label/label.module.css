@@ -1,0 +1,41 @@
+.root {
+    composes: relative from global;
+    composes: z-1 from global;
+    composes: flex from global;
+    font-size: 1em;
+}
+
+.image {
+    composes: static from global;
+    composes: w-full from global;
+    composes: max-h-full from global;
+    composes: h-auto from global;
+}
+
+.image:first-of-type {
+    display: none;
+}
+
+.imageContainer {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: opacity-100 from global;
+    composes: max-h-full from global;
+    composes: items-center from global;
+}
+
+.text {
+    composes: w-full from global;
+    font-size: 100%;
+    line-height: 1;
+    text-align: inherit;
+}
+
+.imageContainer + .text {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    overflow: hidden;
+    text-align: inherit;
+    transform: translateY(-50%);
+}

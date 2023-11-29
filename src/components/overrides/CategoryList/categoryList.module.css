@@ -1,0 +1,27 @@
+.root {
+    composes: pb-7.5 from global;
+}
+
+.header {
+    composes: text-center from global;
+    composes: mb-8 from global;
+}
+
+.title {
+    composes: uppercase from global;
+}
+
+.content {
+    composes: gap-1.25 from global;
+    composes: justify-center from global;
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: md_gap-2.5 from global;
+    composes: md_grid-cols-3 from global;
+    composes: md_w-full from global;
+
+    /** lg styles */
+    composes: lg_grid from global;
+    composes: lg_gap-2.5 from global;
+    composes: desktop_grid-cols-4 from global;
+}

@@ -1,0 +1,27 @@
+.entryForm {
+    composes: pb-2.5 from global;
+
+    composes: lg_pb-3.75 from global;
+}
+
+.buttonContainer {
+    composes: mt-1.25 from global;
+}
+
+.buttonContainer button {
+    @apply w-full;
+}
+
+.removeForm {
+    composes: flex from global;
+    composes: pb-2.5 from global;
+
+    composes: lg_pb-3.75 from global;
+}
+
+.removeButton {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-red-light from global;
+    composes: ml-1 from global;
+}

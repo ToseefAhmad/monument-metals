@@ -1,0 +1,152 @@
+.root {
+    composes: block from global;
+
+    composes: lg_px-6 from global;
+    composes: lg_pb-6 from global;
+    composes: lg_flex from global;
+    composes: lg_flex-col from global;
+    composes: lg_relative from global;
+    composes: lg_w-full from global;
+    composes: lg_overflow-scroll from global;
+    margin-bottom: calc(env(safe-area-inset-bottom) + 40%);
+
+    /* Used apply because composes doesnt work  */
+    @apply lg_mb-0;
+}
+
+div.root {
+    @apply lg_pb-6;
+}
+
+.root::-webkit-scrollbar {
+    @apply hidden;
+}
+
+.products {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: gap-1.25 from global;
+
+    composes: lg_flex from global;
+    composes: lg_flex-col from global;
+    composes: lg_flex-1 from global;
+    composes: lg_gap-0 from global;
+}
+
+.header {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: mt-5 from global;
+    composes: mb-2.5 from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+
+    composes: lg_py-6 from global;
+    composes: lg_mt-0 from global;
+    composes: lg_mb-0 from global;
+    composes: lg_h-19 from global;
+    composes: lg_border-solid from global;
+    composes: lg_border-b-1 from global;
+    composes: lg_border-gray-light from global;
+}
+
+.headingMobile {
+    composes: lg_hidden from global;
+}
+
+.headingDesktop {
+    composes: hidden from global;
+    composes: lg_block from global;
+}
+
+.productsEmpty {
+    composes: hidden from global;
+}
+
+.searchButton {
+    composes: w-full from global;
+    composes: relative from global;
+    composes: block from global;
+    composes: border-solid from global;
+    composes: border-1 from global;
+    composes: border-gray-light from global;
+    composes: mt-5 from global;
+    composes: mb-7.5 from global;
+    composes: lg_mb-0 from global;
+    composes: min-h-14 from global;
+    composes: text-blue from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: break-words from global;
+    composes: max-w-full from global;
+}
+
+/* Product Card styles */
+
+.productCardRoot {
+    composes: root from '../../ProductCard/productCard.module.css';
+
+    composes: lg_flex-row from global;
+    composes: lg_items-center from global;
+    composes: lg_justify-start from global;
+    composes: lg_h-auto from global;
+    composes: lg_border-l-0 from global;
+    composes: lg_border-r-0 from global;
+    composes: lg_border-t-0 from global;
+    composes: lg_pl-0 from global;
+    composes: lg_py-5 from global;
+}
+
+.imageWrapper {
+    composes: imageWrapper from '../../ProductCard/productCard.module.css';
+
+    composes: lg_w-15 from global;
+    composes: lg_h-15 from global;
+    composes: lg_p-2.5 from global;
+    composes: lg_block from global;
+    composes: lg_mx-0 from global;
+    composes: lg_border-solid from global;
+    composes: lg_border-1 from global;
+    composes: lg_border-gray-light from global;
+    composes: lg_mr-5 from global;
+}
+
+.image {
+    composes: image from '../../ProductCard/productCard.module.css';
+    composes: relative from global;
+}
+
+.image > img {
+    @apply block h-full object-contain;
+}
+
+.nameAndPrice {
+    composes: nameAndPrice from '../../ProductCard/productCard.module.css';
+
+    composes: lg_w-auto from global;
+    composes: lg_text-left from global;
+}
+
+.name {
+    composes: name from '../../ProductCard/productCard.module.css';
+
+    composes: lg_text-left from global;
+    composes: lg_font-normal from global;
+    composes: lg_text-gray-dark from global;
+}
+
+.thumbnail {
+    composes: thumbnail from '../../ProductCard/productCard.module.css';
+}
+
+.textBeforePrice {
+    composes: textBeforePrice from '../../ProductCard/productCard.module.css';
+
+    composes: lg_hidden from global;
+}
+
+.price {
+    composes: lg_text-red-light from global;
+}

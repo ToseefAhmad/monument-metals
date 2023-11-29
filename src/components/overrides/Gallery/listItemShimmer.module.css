@@ -1,0 +1,78 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-3 from global;
+    composes: p-12.5 from global;
+    composes: pb-10.5 from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: mt-2.5 from global;
+    grid-template-columns: 250px 1fr 1fr;
+
+    composes: first_mt-0 from global;
+}
+
+.imageColumn {
+    composes: grid from global;
+    composes: relative from global;
+}
+
+.images {
+    composes: ml-[25px] from global;
+    composes: w-[200px] from global;
+    composes: h-[200px] from global;
+}
+
+.descriptionColumn {
+    composes: px-5 from global;
+}
+
+.name {
+    composes: h-5 from global;
+    composes: mb-3 from global;
+}
+
+.price {
+    composes: h-[37px] from global;
+    composes: mb-5 from global;
+}
+
+.addToCart {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-x-2 from global;
+    composes: h-[64px] from global;
+    composes: mb-3 from global;
+
+    grid-template-columns: 64px 1fr;
+}
+
+.shipping {
+    composes: h-5 from global;
+}
+
+.tableColumn {
+    composes: max-h-[200px] from global;
+}
+
+.imageContainer {
+    grid-area: main;
+}
+
+.imageContainer img {
+    @apply my-0
+        mx-auto;
+}
+
+.label {
+    composes: h-[22px] from global;
+    composes: w-[65px] from global;
+    composes: mb-2 from global;
+}
+
+.image {
+    transition: opacity 512ms ease-out;
+    composes: block from global;
+    composes: h-50 from global;
+    composes: w-50 from global;
+    composes: object-contain from global;
+}

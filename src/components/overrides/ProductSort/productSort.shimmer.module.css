@@ -1,0 +1,15 @@
+.root {
+    composes: root from './productSort.module.css';
+
+    composes: flex from global;
+}
+
+.sortButtonShimmer {
+    composes: flex from global;
+    composes: w-full from global;
+}
+
+.sortButtonShimmer > div {
+    @apply min-h-10 min-w-full;
+    @apply lg_min-h-11.5 lg_w-[194px];
+}

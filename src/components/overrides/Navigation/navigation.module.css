@@ -1,0 +1,89 @@
+.visible {
+    composes: opacity-100 from global;
+    composes: visible from global;
+}
+
+.root {
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: grid from global;
+    composes: grid-rows-mobileNavigation from global;
+    composes: left-0 from global;
+    composes: overflow-hidden from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: w-full from global;
+    composes: z-50 from global;
+    composes: transition-primary from global;
+
+    transform: translate3d(-100%, 0, 0);
+}
+
+.root_open {
+    composes: root visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.header {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: relative from global;
+    composes: z-1 from global;
+    composes: border-b-1 from global;
+    composes: border-gray-light from global;
+    composes: h-16 from global;
+    composes: pl-5 from global;
+}
+
+.body {
+    composes: visible;
+    composes: min-h-0 from global;
+    composes: overflow-auto from global;
+    composes: h-[80%] from global;
+    composes: overflow-scroll from global;
+    composes: transition-primary from global;
+}
+
+.modal {
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: overflow-auto from global;
+    composes: absolute from global;
+    composes: right-0 from global;
+    composes: top-16 from global;
+    composes: transition-primary from global;
+
+    transform: translate3d(-100%, 0, 0);
+}
+
+.modal_open {
+    composes: modal visible;
+    transform: translate3d(0, 0, 0);
+}
+
+.footer {
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: border-t-1 from global;
+    composes: border-gray-light from global;
+    composes: bg-white from global;
+
+    composes: w-screen from global;
+    padding: 10px 5% calc(env(safe-area-inset-bottom) + 10px);
+}
+
+.footer > div {
+    @apply shadow-none;
+}
+
+.footer svg {
+    @apply mt-2.5;
+}
+
+.footer svg line,
+polyline {
+    /* tw throws error with stroke property */
+    stroke: #111927;
+}

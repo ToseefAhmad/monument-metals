@@ -1,0 +1,80 @@
+.root {
+    composes: grid from global;
+    composes: bg-white from global;
+    composes: mb-3 from global;
+    composes: h-fit from global;
+    composes: rounded from global;
+}
+
+.header {
+    composes: container from global;
+    composes: lg_py-3.5 from global;
+    composes: lg_pl-6.25 from global;
+    composes: border-t from global;
+    composes: border-gray-light from global;
+    composes: items-center from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: min-h-12.5 from global;
+    composes: grid-cols-auto1fr from global;
+    grid-template-columns: 1fr auto;
+}
+
+.category {
+    composes: text-left from global;
+}
+
+.name {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: whitespace-nowrap from global;
+    composes: text-base from global;
+    composes: h-6 from global;
+    composes: text-left from global;
+}
+
+.list {
+    composes: pt-5 from global;
+    composes: pl-6 from global;
+    composes: pr-2 from global;
+    composes: md_max-h-87.5 from global;
+    composes: overflow-auto	 from global;
+}
+
+/* Custom scrollbar */
+
+.list::-webkit-scrollbar {
+    width: 10px;
+    height: 30px;
+}
+
+.list::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgb(0 0 0 / 30%);
+}
+
+.list::-webkit-scrollbar-thumb {
+    box-shadow: inset 0 0 6px gray;
+}
+
+.filterCount {
+    composes: text-red-light from global;
+    composes: font-semibold from global;
+    composes: pl-1 from global;
+    composes: hidden from global;
+    composes: lg_inline-block from global;
+}
+
+.list:empty {
+    @apply hidden;
+}
+
+.icon {
+    composes: text-black-lightest from global;
+    composes: opacity-40 from global;
+}
+
+.icon svg {
+    @apply h-3.5
+        w-3.5;
+    stroke-width: 3px;
+}

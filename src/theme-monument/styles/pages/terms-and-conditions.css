@@ -1,0 +1,83 @@
+.terms-and-conditions h1,
+.terms-and-conditions h2,
+.terms-and-conditions h3,
+.terms-and-conditions h4,
+.terms-and-conditions h5,
+.terms-and-conditions h6,
+.terms-and-conditions p {
+    @apply my-0;
+}
+
+.terms-and-conditions > div > :not(.full-width) {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.terms-and-conditions .full-width > * {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.terms-and-conditions .full-width {
+    @apply bg-white-dark;
+}
+
+.terms-and-conditions p {
+    @apply text-gray-dark text-sm lg_text-base mb-0;
+}
+
+.terms-and-conditions .intro {
+    @apply pt-3.75 lg_pt-5 !important;
+}
+
+.terms-and-conditions hr {
+    /* !important to override inline styles */
+    @apply border-black-lightest
+        border-opacity-10
+        my-3.75
+        lg_my-7.5
+        block
+        !important;
+}
+
+.terms-and-conditions h3 {
+    @apply text-2.3xl
+        lg_text-4xl
+        font-semibold
+        text-black-lightest
+        mt-7.5
+        lg_mt-0
+        mb-5
+        lg_mb-12.5;
+}
+
+.terms-and-conditions h3.secondary {
+    @apply lg_mb-5;
+}
+
+.terms-and-conditions h4 {
+    @apply text-xl
+        lg_text-2xl
+        lg_leading-9.5
+        font-semibold
+        text-black-lightest
+        mb-3.75 mt-0;
+}
+
+.terms-and-conditions .pagebuilder-column {
+    @apply pb-7.5
+        lg_pb-12.5
+        lg_pt-12.5;
+}
+
+.terms-and-conditions .secondary-intro {
+    @apply pb-5
+        lg_pb-12.5;
+}
+.terms-and-conditions .trustbox-container {
+    @apply hidden
+        lg_block
+        lg_mb-12.5;
+}
+
+.terms-and-conditions .trustbox-container .title {
+    @apply lg_pt-12.5;
+}

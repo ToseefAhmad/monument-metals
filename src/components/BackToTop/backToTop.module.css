@@ -1,0 +1,31 @@
+.topButton {
+    composes: rounded from global;
+    composes: bg-blue from global;
+    composes: border-blue from global;
+    composes: outline-none from global;
+
+    composes: hover_bg-blue-lighter from global;
+    composes: hover_border-blue-lighter from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+
+    composes: fixed from global;
+    composes: bottom-[80px] from global;
+    composes: z-[999] from global;
+    composes: right-[30px] from global;
+    composes: w-10 from global;
+    composes: h-10 from global;
+
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.arrowIcon path {
+    fill: white;
+}

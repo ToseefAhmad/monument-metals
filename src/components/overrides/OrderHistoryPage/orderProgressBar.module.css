@@ -1,0 +1,116 @@
+.root {
+    composes: relative from global;
+    composes: flex from global;
+    composes: lg_mx-7.5 from global;
+    composes: lg_mb-[100px] from global;
+    composes: flex-col from global;
+    composes: pl-[5px] from global;
+    composes: gap-5 from global;
+    composes: mb-5 from global;
+
+    composes: lg_mb-0 from global;
+    composes: lg_gap-0 from global;
+    composes: lg_pl-[5px] from global;
+    composes: lg_flex-row from global;
+    composes: lg_items-center from global;
+    composes: lg_justify-between from global;
+    composes: place-items-start from global;
+    composes: lg_place-items-center from global;
+}
+
+.root::before {
+    @apply
+        absolute
+        border-solid
+        border-white-dark
+        left-[24px]
+        h-full
+        border-l-2
+
+        lg_left-0
+        lg_border-l-0
+        lg_border-t-2
+        lg_h-auto
+        lg_w-full;
+
+    content: '';
+}
+
+.checkMarkIcon {
+    composes: text-white from global;
+}
+
+.step {
+    composes: relative from global;
+    composes: bg-white-dark from global;
+    composes: rounded-full from global;
+    composes: text-white from global;
+    composes: border-[5px] from global;
+    composes: border-solid from global;
+    composes: border-gray from global;
+    composes: w-10 from global;
+    composes: lg_w-[50px] from global;
+    composes: h-10 from global;
+    composes: lg_h-[50px] from global;
+    composes: lg_bg-blue from global;
+}
+.checkMarkIcon {
+    composes: absolute from global;
+    composes: left-1/2 from global;
+    composes: top-1/2 from global;
+    transform: translate(-50%, -50%);
+}
+
+.step_completed {
+    composes: bg-blue from global;
+    composes: relative from global;
+    composes: rounded-full from global;
+    composes: text-white from global;
+    composes: border-[5px] from global;
+    composes: border-solid from global;
+    composes: border-gray from global;
+    composes: w-10 from global;
+    composes: lg_w-[50px] from global;
+    composes: h-10 from global;
+    composes: lg_h-[50px] from global;
+}
+
+.step .checkMarkIcon {
+    @apply hidden;
+}
+
+/* tailwind doesnt support fill and component not working corectly */
+.checkMarkIcon path {
+    fill: white;
+}
+
+.statusItem {
+    composes: justify-center from global;
+    composes: text-center from global;
+    composes: relative from global;
+    composes: flex from global;
+}
+
+.textWrapper {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: pl-[15px] from global;
+    composes: text-left from global;
+    composes: self-center from global;
+    composes: lg_text-center from global;
+    composes: lg_pl-0 from global;
+    composes: lg_absolute from global;
+    composes: lg_top-[100%] from global;
+    composes: lg_w-[160px] from global;
+}
+
+.textWrapper span {
+    @apply text-xs leading-5 lg_leading-[1.875rem] lg_text-sm;
+}
+
+.statusLabel {
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: lg_pt-2 from global;
+}

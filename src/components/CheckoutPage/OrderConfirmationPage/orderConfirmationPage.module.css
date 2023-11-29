@@ -1,0 +1,149 @@
+.root {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: gap-7.5 from global;
+    composes: pt-7.5 from global;
+
+    /* Desktop styles */
+    composes: lg_pb-12.5 from global;
+}
+
+.headingOrderConfirm,
+.headingOrderConfirmDescription,
+.orderDetailsWrapper,
+.orderSummaryWrapper {
+    grid-column: 1 / span 1;
+}
+
+.description {
+    composes: max-w-[480px] from global;
+    composes: leading-5 from global;
+    composes: pb-2.5 from global;
+
+    /* Desktop styles */
+    composes: lg_max-w-[485px] from global;
+}
+
+.orderNumberText {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.orderNumber {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: text-lg from global;
+
+    composes: lg_text-xl from global;
+}
+
+.returnButton button {
+    @apply min-w-full whitespace-nowrap mb-2 sm_mb-0;
+
+    /* Tablet and desktop styles */
+    @apply md_min-w-40;
+}
+
+.orderDetails {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: pl-5 from global;
+    composes: pb-5 from global;
+
+    composes: lg_pb-7 from global;
+}
+
+.orderDetails::before {
+    content: '';
+
+    @apply absolute
+        left-0
+        w-0.5
+        h-6
+        bg-red-light;
+}
+
+.orderDetailsBlock {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+
+    /* Tablet and desktop styles */
+    composes: md_gap-5 from global;
+
+    @apply md_grid-cols-2;
+    @apply lg_grid-cols-[271px,1fr];
+}
+
+.orderDetailsColumn {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+}
+
+.orderDetailsItem {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.orderDetailsItemValue {
+    composes: leading-4 from global;
+}
+
+.orderSummaryTitle {
+    composes: pb-3.75 from global;
+
+    /* Desktop styles */
+    composes: lg_pb-5 from global;
+}
+
+.orderSummary {
+    composes: bg-white-dark from global;
+    composes: pt-3.75 from global;
+    composes: -mx-5 from global;
+
+    composes: md_mx-0 from global;
+
+    /* Desktop styles */
+    composes: lg_pt-7.5 from global;
+}
+
+.orderSummaryContainer {
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: px-5 from global;
+
+    composes: first_border-none from global;
+
+    /* Desktop styles */
+    composes: lg_px-7.5 from global;
+}
+
+.finishOrderActions {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: flex-wrap from global;
+    composes: md_flex-nowrap from global;
+    composes: justify-center from global;
+    composes: sm_justify-start from global;
+}
+
+/* Tablet styles */
+@media (min-width: 768px) {
+    .root {
+        grid-template-columns: 60% minmax(min-content, 40%);
+    }
+
+    .orderSummaryWrapper {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 4;
+    }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+    .root {
+        grid-template-columns: minmax(min-content, 770px) 370px;
+    }
+}

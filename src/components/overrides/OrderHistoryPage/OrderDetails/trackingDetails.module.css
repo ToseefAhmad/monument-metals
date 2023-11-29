@@ -1,0 +1,4 @@
+.root {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}

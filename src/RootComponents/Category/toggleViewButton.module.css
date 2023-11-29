@@ -1,0 +1,46 @@
+.viewButton {
+    line-height: 0;
+    composes: p-3.75 from global;
+    composes: border from global;
+    composes: rounded from global;
+    composes: max-h-11.5 from global;
+    composes: lg_hover_shadow-tileShadowDarker from global;
+    composes: lg_disabled_shadow-none from global;
+    composes: transition-primary from global;
+}
+
+.listButton {
+    composes: viewButton;
+    composes: bg-blue from global;
+}
+
+.gridButton {
+    composes: viewButton;
+    composes: bg-white from global;
+    composes: text-red from global;
+}
+
+.darkerIcon {
+    composes: opacity-50 from global;
+    fill: #111927;
+}
+
+.lightIcon {
+    fill: white;
+}
+
+.shimmerRoot {
+    composes: hidden from global;
+    composes: grid-flow-col from global;
+    composes: gap-1.5 from global;
+
+    composes: lg_grid from global;
+}
+
+.shimmerButton {
+    composes: flex from global;
+}
+
+.shimmerButton > div {
+    @apply min-h-11.5 min-w-11.5;
+}

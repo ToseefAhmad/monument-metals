@@ -1,0 +1,348 @@
+.wrapper {
+    composes: lg_border from global;
+    composes: border-white-dark from global;
+    composes: rounded-sm from global;
+    composes: lg_p-[30px] from global;
+}
+
+.options {
+    composes: gap-1.25 from global;
+    composes: justify-center from global;
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+    composes: lg_gap-2.5 from global;
+    composes: lg_grid-cols-2 from global;
+    composes: lg_w-full from global;
+}
+
+.optionParent_root {
+    composes: border border-solid rounded-sm from global;
+    composes: w-full from global;
+    composes: h-[76px] from global;
+    composes: lg_h-[56px] from global;
+    composes: flex items-center from global;
+    composes: justify-between from global;
+    composes: pr-3 from global;
+
+    composes: lg_mb-1 from global;
+    composes: cursor-pointer from global;
+    composes: transition-primary from global;
+
+    composes: hover_border-blue from global;
+
+    composes: lg_mb-2.5 from global;
+}
+
+.optionParent {
+    composes: optionParent_root;
+
+    composes: border-gray-light from global;
+}
+
+.optionParentDisabled {
+    composes: optionParent_root;
+
+    @apply border-gray-light hover_border-gray-light bg-white-dark;
+}
+
+.optionParent_active {
+    composes: optionParent_root;
+
+    composes: border-blue from global;
+}
+
+.option {
+    composes: flex items-center from global;
+    composes: pl-6 from global;
+    line-height: 16px;
+}
+
+.paymentOptionIcon {
+    composes: w-[35px] from global;
+    composes: h-[24px] from global;
+    composes: border from global;
+    composes: border-white-dark from global;
+}
+
+.inputLabel {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: bg-[inherit] from global;
+    composes: cursor-pointer from global;
+}
+
+.input {
+    grid-area: input;
+
+    composes: opacity-0 from global;
+    composes: h-4 from global;
+    composes: w-4 from global;
+    composes: checked_bg-blue from global;
+    composes: appearance-none from global;
+    composes: cursor-pointer from global;
+    composes: z-10 from global;
+
+    composes: disabled_cursor-default from global;
+}
+
+.icon {
+    grid-area: input;
+
+    composes: h-4 from global;
+    composes: w-4 from global;
+}
+
+.icon {
+    composes: block from global;
+    composes: relative from global;
+    composes: text-gray-light from global;
+}
+
+.icon::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+
+    @apply block
+        absolute
+        bg-white
+        top-2/4
+        left-2/4
+        rounded-full;
+}
+
+.iconRoot {
+    composes: block from global;
+}
+
+.iconRootCheck polyline {
+    @apply text-green stroke-current;
+}
+
+.iconRootCheckDisabled polyline {
+    @apply text-gray stroke-current;
+}
+
+.iconRootChevrons polyline {
+    @apply text-red-light stroke-current;
+}
+
+.discount {
+    composes: text-black from global;
+    composes: font-semibold from global;
+    composes: capitalize from global;
+}
+
+.discountDisabled {
+    composes: discount;
+
+    @apply text-gray;
+}
+
+.iconSvgCheck {
+    @apply text-green stroke-current;
+}
+
+.iconSvg {
+    composes: stroke-current from global;
+}
+
+.input:checked + .icon svg {
+    @apply text-blue fill-current;
+}
+
+.input:disabled + .icon svg {
+    @apply text-white fill-current;
+}
+
+.input:disabled:checked + .icon::before {
+    @apply bg-black-lightest
+        opacity-40;
+}
+
+.title {
+    grid-area: label;
+    composes: text-sm from global;
+    composes: lg_text-base from global;
+    composes: font-semibold from global;
+}
+
+.titleDisabled {
+    composes: title;
+
+    @apply text-gray;
+}
+
+.globalContent {
+    composes: bg-white from global;
+    composes: border-r from global;
+    composes: border-l from global;
+    composes: border-b from global;
+    composes: rounded-sm from global;
+    composes: lg_mt-1 from global;
+    composes: px-7 from global;
+    composes: py-4 from global;
+    composes: text-sm from global;
+}
+
+.content {
+    composes: globalContent;
+    composes: flex-column from global;
+    composes: text-xs from global;
+    composes: lg_text-base from global;
+}
+
+.desktopContent {
+    composes: globalContent;
+    composes: col-start-1 from global;
+    composes: col-end-4 from global;
+}
+
+.labelMobile {
+    composes: text-base from global;
+    composes: lg_text-base from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: mb-7.5 from global;
+}
+
+.labelMobileSmall {
+    composes: labelMobile;
+
+    @apply text-sm;
+}
+
+.labelMobileLarge {
+    composes: labelMobile;
+
+    @apply text-lg;
+}
+
+.labelMobileLarge {
+    composes: labelMobile from global;
+
+    @apply text-xl lg_text-2xl;
+}
+
+.descriptionTitleContainer {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-2 from global;
+    composes: justify-start from global;
+    composes: items-center from global;
+}
+
+.lowestPrice {
+    composes: grid from global;
+    composes: max-w-min from global;
+    composes: whitespace-nowrap from global;
+    composes: grid-flow-col from global;
+    composes: gap-2 from global;
+    composes: mx-3 from global;
+    composes: items-center from global;
+}
+
+.descriptionContainer {
+    composes: h-[min-content] from global;
+    composes: lg_h-[175px] from global;
+    composes: lg_overflow-y-auto from global;
+    composes: pb-5 from global;
+
+    composes: lg_pb-0 from global;
+}
+
+.descriptionContainer::-webkit-scrollbar {
+    @apply w-[3px];
+}
+
+.descriptionContainer::-webkit-scrollbar-track {
+    @apply bg-gray-light;
+}
+
+.descriptionContainer::-webkit-scrollbar-thumb {
+    @apply bg-gray-dark;
+}
+
+.paymentHeaderTab {
+    composes: min-h-[56px] from global;
+    composes: max-w-full from global;
+    composes: bg-white-dark from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-[10px] from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: mt-3 from global;
+    composes: mb-5 from global;
+}
+
+.paymentHeader {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.activeDescription {
+    composes: mb-3 from global;
+}
+
+.listItemWrapper {
+    composes: relative from global;
+    composes: pl-6 from global;
+}
+
+.listItem::before {
+    content: '';
+
+    @apply absolute top-[10px] lg_top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.contentHidden {
+    composes: hidden from global;
+}
+
+.mobileContent {
+    composes: mb-2 from global;
+}
+
+.paymentHeaderTabShimmer {
+    composes: paymentHeaderTab;
+
+    @apply hidden lg_flex;
+}
+
+.titleShimmer {
+    composes: w-full from global;
+
+    composes: lg_w-1/8 from global;
+}
+
+.descriptionShimmer {
+    composes: w-full from global;
+
+    composes: lg_w-2/4 from global;
+}
+
+.descriptionMobileShimmer {
+    composes: w-full from global;
+
+    composes: lg_w-2/4 from global;
+
+    composes: lg_hidden from global;
+}
+
+.optionShimmer {
+    composes: w-full from global;
+    composes: h-[76px] from global;
+    composes: lg_h-[56px] from global;
+    composes: flex items-center from global;
+    composes: justify-between from global;
+
+    composes: lg_mb-2.5 from global;
+}

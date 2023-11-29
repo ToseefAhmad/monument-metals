@@ -1,0 +1,188 @@
+.root {
+    composes: fixed from global;
+    composes: right-0 from global;
+    composes: invisible from global;
+    composes: opacity-0 from global;
+    composes: translate-x-[1000px] from global;
+}
+
+.root_open {
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: right-0 from global;
+    composes: bottom-0 from global;
+    composes: w-full from global;
+    composes: bg-white from global;
+    composes: visible from global;
+    composes: opacity-100 from global;
+    composes: z-20 from global;
+
+    composes: lg_w-117.5 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.contents {
+    grid-template-rows: auto 1fr auto;
+
+    composes: grid from global;
+    composes: auto-rows-auto from global;
+    composes: h-full from global;
+}
+
+.contents_open {
+    composes: contents;
+}
+
+.header {
+    composes: py-4 from global;
+
+    composes: lg_pt-12.5 from global;
+    composes: lg_pb-5 from global;
+    composes: lg_px-12.5 from global;
+}
+
+.headingWrapper {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: border-b from global;
+    composes: border-gray-light from global;
+    composes: px-5 from global;
+    composes: pb-4 from global;
+
+    composes: lg_border-none from global;
+    composes: lg_px-0 from global;
+    composes: lg_pb-0 from global;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: text-xl from global;
+    composes: text-black-lightest from global;
+}
+
+.closeButton {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-black-lightest from global;
+    composes: text-opacity-40 from global;
+    composes: outline-none from global;
+
+    composes: hover_text-opacity-100 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.quantity {
+    composes: opacity-100 from global;
+    composes: px-5 from global;
+    composes: pt-5 from global;
+
+    composes: lg_px-0 from global;
+    composes: lg_pt-2.5 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.quantity_loading {
+    composes: quantity;
+
+    composes: opacity-50 from global;
+}
+
+.quantityItems {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.stockStatusMessageContainer {
+    composes: px-5 from global;
+
+    composes: lg_px-0 from global;
+}
+
+.body {
+    composes: overflow-y-auto from global;
+    composes: pl-5 from global;
+
+    composes: lg_pl-12.5 from global;
+
+    @apply pr-[calc(1.25rem-var(--scrollBarWidth))];
+    @apply lg_pr-[calc(3.125rem-var(--scrollBarWidth))];
+}
+
+.price {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: items-center from global;
+    composes: opacity-100 from global;
+    composes: py-4 from global;
+
+    composes: lg_py-5 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.price_loading {
+    composes: price;
+
+    composes: opacity-50 from global;
+}
+
+.priceTotal {
+    composes: font-semibold from global;
+    composes: text-green from global;
+}
+
+.footer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: px-5 from global;
+    composes: pb-5 from global;
+
+    composes: lg_px-12.5 from global;
+    composes: lg_pb-12.5 from global;
+}
+
+/* Styles for empty cart */
+.headerEmpty {
+    composes: pt-4 from global;
+
+    composes: lg_pt-12.5 from global;
+    composes: lg_px-12.5 from global;
+}
+
+.bodyEmpty {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: px-5 from global;
+
+    composes: lg_px-12.5 from global;
+}
+
+.emptyCart {
+    composes: grid from global;
+    composes: gap-1.5 from global;
+    composes: text-center from global;
+
+    composes: lg_gap-4 from global;
+}
+
+.shoppingButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+
+    composes: hover_text-white from global;
+    composes: focus_text-white from global;
+
+    margin-bottom: env(safe-area-inset-bottom, 0);
+}

@@ -1,0 +1,28 @@
+.hero-banner {
+    @apply lg_w-full
+        lg_max-w-desktop
+        lg_mx-auto
+        lg_transform-none;
+}
+
+.hero-banner > div,
+.hero-banner__secondary {
+    @apply gap-2.5;
+}
+
+/* Override inline CMS block styles */
+.hero-banner img {
+    @apply max-h-[410px];
+    @apply w-full
+        m-0 !important;
+}
+
+.hero-banner__main {
+    @apply w-full
+        lg_w-[67.522%] !important;
+}
+
+.hero-banner__secondary {
+    @apply hidden
+        lg_flex !important;
+}

@@ -1,0 +1,153 @@
+.root {
+    composes: w-full from global;
+}
+
+.table {
+    composes: w-full from global;
+    composes: text-left from global;
+    composes: mt-5 from global;
+}
+
+.tableAction {
+    composes: text-right from global;
+    composes: mt-3 from global;
+    composes: lg_mt-0 from global;
+}
+
+.table tr {
+    @apply p-[25px]
+        lg_p-0;
+}
+
+.tableHeader {
+    composes: rounded-t from global;
+    composes: bg-black-lightest from global;
+    composes: hidden from global;
+    composes: lg_table-row from global;
+}
+
+.tableHeader > th {
+    @apply font-semibold
+        bg-black-lightest
+        text-white
+        text-sm
+        py-2
+        first_pl-7.5
+        first_rounded-tl
+        last_rounded-tr
+        last_pr-7.5;
+}
+
+.tableContents > td {
+    @apply font-normal
+        p-0
+        text-gray-dark
+        text-sm
+        lg_py-3.25
+        lg_first_pl-7.5
+        lg_last_pr-7.5
+        lg_last_py-2;
+}
+
+.tableContents {
+    composes: border from global;
+    composes: lg_border-t-0 from global;
+    composes: border-gray-light from global;
+    composes: grid from global;
+    composes: lg_table-row from global;
+    composes: mb-1.25 from global;
+    composes: lg_mb-0 from global;
+}
+
+.nameColumn a {
+    @apply font-normal
+        text-gray-dark;
+}
+
+.stockNameColumn,
+.nameColumn {
+    composes: lg_w-3/5 from global;
+}
+
+.stockNameAnchor {
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+}
+
+.qtyColumn {
+    composes: lg_w-[8%] from global;
+}
+
+.stockStatusLabel {
+    composes: pl-1 from global;
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.tableAction button {
+    @apply border
+        border-solid
+        border-gray-light
+        rounded
+        p-2.5
+        py-2.25
+        lg_mr-1.25
+        w-full
+        lg_w-auto;
+}
+
+.tableAction button svg {
+    @apply m-auto;
+}
+
+.deleteIcon {
+    composes: text-blue from global;
+}
+
+.mobileNameLabel {
+    composes: lg_hidden from global;
+    composes: pr-1 from global;
+}
+
+.date {
+    composes: font-semibold from global;
+    composes: lg_font-normal from global;
+    composes: text-blue from global;
+    composes: lg_text-gray-dark from global;
+}
+
+.emptyMarketAlerts {
+    composes: flex from global;
+    composes: bg-white-dark from global;
+    composes: border-2 from global;
+    composes: border-gold from global;
+    composes: py-3.25 from global;
+    composes: px-4.5 from global;
+    composes: lg_px-5.5 from global;
+    composes: mt-5 from global;
+    composes: items-center from global;
+}
+
+.informationIcon {
+    composes: text-gold from global;
+    composes: mr-2.5 from global;
+    composes: lg_mr-3.75 from global;
+}
+
+.priceInformationIcon {
+    composes: informationIcon;
+    composes: mb-auto from global;
+    composes: lg_mb-0 from global;
+    composes: pt-1.25 from global;
+    composes: lg_pt-0 from global;
+    composes: lg_pb-7.5 from global;
+}
+.emptyAlertDescription {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: pr-1 from global;
+}
+
+.dateColumn {
+    composes: min-w-[144px] from global;
+}

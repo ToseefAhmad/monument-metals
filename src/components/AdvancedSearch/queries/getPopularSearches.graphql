@@ -1,0 +1,11 @@
+query getPopularSearches($inputText: String) {
+    xsearchPopularSearches(search: $inputText) {
+        items {
+            name
+            url
+            num_results
+        }
+        total_count
+        code
+    }
+}

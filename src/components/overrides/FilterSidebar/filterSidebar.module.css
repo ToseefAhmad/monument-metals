@@ -1,0 +1,58 @@
+.root {
+    composes: lg_grid from global;
+    composes: hidden from global;
+    composes: z-10 from global;
+}
+
+.body {
+    composes: overflow-auto from global;
+}
+
+.removeAllFiltersWrapper {
+    composes: ml-auto from global;
+    composes: text-black-lightest from global;
+    composes: flex from global;
+    composes: whitespace-nowrap from global;
+}
+
+.removeAllFiltersButton {
+    composes: font-semibold from global;
+    composes: relative from global;
+}
+
+.blocks {
+    composes: mb-7.5 from global;
+    composes: grid from global;
+    grid-template-columns: 1.5fr repeat(4, minmax(0, 1fr));
+    composes: gap-2.5 from global;
+}
+
+.currentFilters {
+    composes: flex from global;
+    composes: pb-6 from global;
+}
+
+.removeIcon {
+    composes: text-red-light from global;
+    composes: stroke-red-light from global;
+    composes: mr-1.5 from global;
+}
+
+/* tw throws error with stroke property  when i use hex */
+.removeIcon polyline {
+    stroke: rgb(178 34 52);
+}
+.verticalLine {
+    composes: w-px from global;
+    composes: opacity-20 from global;
+    composes: bg-black-lightest from global;
+    composes: h-4.5 from global;
+    composes: float-left from global;
+}
+.leftLine {
+    composes: mr-2 from global;
+}
+
+.rightLine {
+    composes: ml-3 from global;
+}

@@ -1,0 +1,54 @@
+:root {
+    --amxsearch-color-highlight: #3ac39c;
+    --amxsearch-color-hover: #f4f5fa;
+    --amxsearch-color-border: rgb(var(--venia-global-color-border));
+    --amxsearch-color-background: #fff;
+    --amxsearch-grey: #adadad;
+    --amxsearch-color-text: rgb(var(--venia-global-color-text));
+    --amxsearch-color-text-hover: rgb(var(--venia-global-color-text));
+
+    --amscroll-width: 0.2rem;
+    --amscroll-color: var(--amxsearch-grey);
+}
+
+.am-scrollbar {
+    overflow: hidden;
+}
+
+.am-scrollbar::-webkit-scrollbar {
+    background: #f0f0f0;
+}
+
+.am-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: var(--amscroll-width);
+    background: var(--amscroll-color);
+    cursor: pointer;
+}
+
+.am-scrollbar::-webkit-scrollbar {
+    width: var(--amscroll-width);
+}
+
+.am-scrollbar::-webkit-scrollbar-thumb {
+    width: var(--amscroll-width);
+}
+
+.am-scrollbar::-webkit-scrollbar-track {
+    width: var(--amscroll-width);
+}
+
+.counter {
+    display: inline-flex;
+    align-items: center;
+    color: var(--amxsearch-grey);
+    font-size: 0.7rem;
+    margin: 0 0 0 0.1rem;
+}
+
+.counter::before {
+    content: '(';
+}
+
+.counter::after {
+    content: ')';
+}

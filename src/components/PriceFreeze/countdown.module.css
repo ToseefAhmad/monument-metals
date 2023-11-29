@@ -1,0 +1,39 @@
+@import '../ProductAlerts/sharedModal.css';
+
+.root {
+    composes: py-2.5 from global;
+
+    composes: lg_py-3.75 from global;
+}
+
+.text {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.time {
+    composes: font-bold from global;
+    composes: text-red-light from global;
+    composes: text-lg from global;
+
+    composes: lg_text-xl from global;
+}
+
+.freeze {
+    composes: pt-12 from global;
+    composes: pb-6 from global;
+    composes: text-center from global;
+}
+
+.shimmer {
+    composes: root;
+
+    composes: flex from global;
+}
+
+.shimmerContent {
+    composes: h-[33px] from global;
+    composes: w-full from global;
+
+    composes: lg_h-[35px] from global;
+}

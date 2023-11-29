@@ -1,0 +1,75 @@
+query getSearch($inputText: String) {
+    xsearchPopularSearches(search: $inputText) {
+        items {
+            name
+            url
+            num_results
+        }
+        total_count
+        code
+    }
+    xsearchRecentSearches {
+        items {
+            name
+            url
+            num_results
+        }
+        total_count
+        code
+    }
+    xsearchBlogs(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+    xsearchBrands(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchCategories(search: $inputText) {
+        items {
+            name
+            url
+        }
+        total_count
+        code
+    }
+    xsearchFaqs(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchLandings(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchPages(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+}

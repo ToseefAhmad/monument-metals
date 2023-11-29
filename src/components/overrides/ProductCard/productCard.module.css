@@ -1,0 +1,51 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: max-w-full from global;
+    composes: p-3.75 from global;
+    composes: border-1 from global;
+    composes: rounded-sm from global;
+    composes: border-gray-light from global;
+}
+
+.nameAndPrice {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: justify-between from global;
+    composes: w-full from global;
+    composes: h-full from global;
+    composes: text-center from global;
+}
+
+.imageWrapper {
+    composes: w-[83%] from global;
+}
+
+.image {
+    composes: w-full from global;
+    composes: mx-auto from global;
+}
+
+.name {
+    composes: break-words from global;
+    composes: text-center from global;
+}
+
+.thumbnail {
+    composes: w-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+}
+
+.textBeforePrice {
+    composes: text-xss from global;
+    composes: text-gray-dark from global;
+}
+
+.price {
+    composes: text-center from global;
+}

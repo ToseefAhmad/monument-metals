@@ -1,0 +1,15 @@
+.logo {
+    composes: h-7.5 from global;
+    composes: w-28 from global;
+
+    composes: lg_h-16 from global;
+    composes: lg_w-60 from global;
+}
+
+.logoLight {
+    composes: h-7.5 from global;
+    composes: w-28.5 from global;
+
+    composes: lg_h-11.5 from global;
+    composes: lg_w-[173px] from global;
+}

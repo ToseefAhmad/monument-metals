@@ -1,0 +1,95 @@
+.root {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-5 from global;
+    composes: border-t from global;
+    composes: last_border-b from global;
+    composes: border-gray-light from global;
+    composes: opacity-100 from global;
+    composes: py-4 from global;
+
+    composes: lg_py-5 from global;
+}
+
+.root_disabled {
+    composes: root;
+    composes: opacity-50 from global;
+}
+
+.thumbnail {
+    border: solid 1px rgb(var(--venia-global-color-border));
+}
+
+.image {
+    composes: object-center from global;
+    composes: object-contain from global;
+}
+
+.name {
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+}
+
+.stockStatus {
+    composes: font-semibold from global;
+    composes: text-red-light from global;
+}
+
+.content {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-1.5 from global;
+    composes: w-full from global;
+
+    composes: lg_gap-2.5 from global;
+}
+
+.contentItems {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-4 from global;
+
+    composes: lg_gap-5 from global;
+}
+
+.price {
+    composes: font-semibold from global;
+    composes: text-green from global;
+}
+
+.deleteButton {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-9 from global;
+    composes: w-9 from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+    composes: text-black-lightest from global;
+    composes: text-opacity-40 from global;
+    composes: ml-auto from global;
+
+    composes: hover_bg-gray-light from global;
+    composes: hover_text-opacity-100 from global;
+
+    composes: disabled_bg-white from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.thumbnail {
+    composes: w-15 from global;
+    composes: h-15 from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+}
+
+.thumbnail img {
+    @apply h-full;
+}

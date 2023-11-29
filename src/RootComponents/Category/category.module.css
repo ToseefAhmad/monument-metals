@@ -1,0 +1,118 @@
+.root {
+    composes: pb-7.5 from global;
+}
+
+.rootNoProducts {
+    composes: pb-0 from global;
+}
+
+.title {
+    composes: pt-7.5 from global;
+    composes: pb-2.5 from global;
+    composes: lg_pb-7.5 from global;
+}
+
+.trustPilot {
+    composes: m-0 from global;
+}
+
+.pagination {
+    composes: relative from global;
+    composes: bottom-0 from global;
+}
+
+.placeholder {
+    composes: h-screen from global;
+}
+
+.heading {
+    composes: lg_py-7.5 from global;
+    composes: lg_pb-7 from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-center from global;
+    composes: lg_justify-end from global;
+    composes: lg_flex-nowrap from global;
+    composes: lg_items-center from global;
+}
+
+.headerButtons {
+    composes: lg_pb-0 from global;
+    composes: min-h-[62px] from global;
+    composes: lg_min-h-0 from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: lg_justify-end from global;
+    composes: w-full from global;
+}
+
+.contentWrapper {
+    composes: w-full from global;
+    composes: lg_flex from global;
+}
+
+.categoryHeader {
+    composes: lg_w-full from global;
+}
+
+.categoryInfo {
+    composes: lg_m-0 from global;
+    composes: lg_text-left from global;
+}
+
+.categoryContent {
+    composes: lg_grow from global;
+    composes: w-full from global;
+}
+
+.categoryDescription {
+    composes: p-7 from global;
+    composes: bg-white-dark from global;
+    composes: left-1/2 from global;
+    composes: lg_w-full from global;
+    composes: full-bleed from global;
+
+    composes: lg_p-12.5 from global;
+    composes: lg_ml-0 from global;
+    composes: lg_translate-x-0 from global;
+}
+
+.toolbarSectionWrapper {
+    composes: relative from global;
+    composes: lg_bg-white-dark from global;
+    composes: lg_full-bleed from global;
+    composes: mb-7.5 from global;
+    composes: z-10 from global;
+}
+
+.toolbarSection {
+    composes: lg_container from global;
+}
+
+.headerButtons > * {
+    @apply w-1/2
+        lg_w-auto;
+}
+
+.headerButtons > * button {
+    @apply w-full;
+}
+
+.headerButtons button {
+    @apply min-h-10
+        capitalize
+        lg_uppercase;
+}
+
+.viewSwitcher {
+    composes: hidden from global;
+    composes: grid-flow-col from global;
+    composes: gap-1.5 from global;
+
+    composes: lg_grid from global;
+}
+
+.viewSwitcher button:enabled {
+    @apply hover_opacity-80
+        focus-visible_border-opacity-0;
+}

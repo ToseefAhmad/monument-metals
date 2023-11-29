@@ -1,0 +1,9 @@
+.shimmer {
+    composes: radioRoot from './shippingRadios.module.css';
+}
+
+.shimmerContainer {
+    composes: h-12.5 from global;
+
+    composes: lg_h-14 from global;
+}

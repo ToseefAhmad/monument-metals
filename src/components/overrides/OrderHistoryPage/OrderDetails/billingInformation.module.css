@@ -1,0 +1,12 @@
+.root {
+    composes: pb-3.75 from global;
+    composes: lg_pb-0 from global;
+}
+
+.heading {
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: pb-1.5 from global;
+    composes: lg_pb-2.5 from global;
+}

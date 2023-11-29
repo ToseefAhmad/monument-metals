@@ -1,0 +1,32 @@
+.root {
+    composes: py-3.75 from global;
+
+    composes: lg_py-5 from global;
+}
+
+.lineItems {
+    grid-template-columns: 1fr auto;
+    composes: grid gap-1.25 lg_gap-3 from global;
+    composes: leading-6 from global;
+    composes: items-center from global;
+    composes: justify-items-end from global;
+}
+
+.lineItemLabel {
+    composes: justify-self-start from global;
+}
+
+.price {
+    composes: justify-self-end font-semibold text-black-lightest from global;
+}
+
+.totalLabel {
+    composes: lineItemLabel;
+    composes: font-normal from global;
+}
+
+.totalPrice {
+    composes: price;
+    composes: font-semibold from global;
+    composes: text-green-dark from global;
+}

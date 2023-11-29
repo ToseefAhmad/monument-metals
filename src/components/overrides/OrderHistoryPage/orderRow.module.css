@@ -1,0 +1,140 @@
+.root {
+    composes: border from global;
+    composes: lg_border-b-0 from global;
+    composes: last_border-b from global;
+    composes: border-gray-light from global;
+    composes: grid from global;
+    composes: mb-1.25 from global;
+
+    /* composes: grid-cols-5 from global; */
+    composes: p-6.25 from global;
+    composes: lg_px-7.5 from global;
+    composes: lg_py-[9px] from global;
+    composes: items-center from global;
+}
+
+/* tailwind doesnt support custom temple columns */
+@media (min-width: 1024px) {
+    .root {
+        grid-template-columns: repeat(4, 1fr) 193px;
+    }
+}
+
+.cell {
+    overflow: hidden;
+}
+
+.stackedCell {
+    composes: text-sm from global;
+    composes: font-normal from global;
+    composes: gap-1 from global;
+    composes: flex from global;
+    composes: cell;
+}
+
+.orderTotal {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.orderTotal > span:first-child {
+    @apply pr-1;
+}
+
+.actionContainer {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: justify-self-center from global;
+    composes: gap-1.25 from global;
+    composes: w-full from global;
+    composes: pt-3.75 from global;
+    composes: lg_pt-0 from global;
+}
+.orderNumber {
+    composes: hover_text-blue-dark from global;
+    composes: focus_text-blue-dark from global;
+}
+
+.orderNumber,
+.orderDate,
+.orderStatusBadge,
+.orderTotal {
+    composes: font-semibold from global;
+    composes: lg_font-normal from global;
+    composes: text-black-lightest from global;
+    composes: lg_text-gray-dark from global;
+    composes: text-sm from global;
+}
+
+.actionButton {
+    composes: font-bold from global;
+    composes: lg_px-5 from global;
+    composes: min-w-[91px] from global;
+    composes: text-sm from global;
+    composes: py-[2px] from global;
+    composes: rounded from global;
+}
+
+.reorderButton {
+    composes: actionButton;
+    composes: bg-blue from global;
+    composes: text-white from global;
+}
+
+.printButton {
+    composes: root_lowPriority from '@app/components/overrides/Button/button.module.css';
+
+    @apply min-w-0 min-h-0 capitalize;
+}
+
+.printButton:hover svg * {
+    stroke: white;
+}
+
+.orderNumberContainer,
+.orderDateContainer,
+.orderTotalContainer {
+    composes: stackedCell;
+}
+
+.orderNumberLabel,
+.orderDateLabel,
+.orderStatusLabel,
+.orderTotalLabel {
+    composes: block from global;
+    composes: lg_hidden from global;
+}
+
+.orderStatusContainer {
+    composes: stackedCell;
+    row-gap: 0.75rem;
+}
+
+.orderItemsContainer {
+    composes: cell;
+    padding: 0;
+}
+
+.contentToggleContainer {
+    composes: cell;
+    padding: 0;
+}
+
+.content {
+    border-top: 2px solid rgb(var(--venia-global-color-gray));
+    grid-column: 1 / -1;
+    padding: 1.5rem;
+}
+
+.content_collapsed {
+    display: none;
+}
+
+.viewOrderButton {
+    composes: block from global;
+    composes: lg_hidden from global;
+    composes: hover_opacity-80 from global;
+    composes: clicked_opacity-80 from global;
+    composes: cursor-pointer from global;
+    composes: pl-4 from global;
+}

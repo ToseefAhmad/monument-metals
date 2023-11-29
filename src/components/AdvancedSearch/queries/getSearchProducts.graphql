@@ -1,0 +1,109 @@
+query getSearchProducts($inputText: String) {
+    xsearchProducts(search: $inputText) {
+        total_count
+        items {
+            __typename
+            id
+            type_id
+            name
+            sku
+            rating_summary
+            reviews_count
+            price {
+                minimalPrice {
+                    amount {
+                        value
+                    }
+                }
+                maximalPrice {
+                    amount {
+                        value
+                    }
+                }
+                regularPrice {
+                    amount {
+                        value
+                    }
+                }
+            }
+            price_range {
+                minimum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        percent_off
+                        amount_off
+                    }
+                }
+                maximum_price {
+                    regular_price {
+                        currency
+                        value
+                    }
+                    final_price {
+                        currency
+                        value
+                    }
+                    discount {
+                        percent_off
+                        amount_off
+                    }
+                }
+            }
+            price_tiers {
+                final_price {
+                    currency
+                    value
+                }
+                fee_price {
+                    currency
+                    value
+                }
+                quantity
+            }
+            special_price
+            special_from_date
+            special_to_date
+            attribute_set_id
+            is_salable
+            image {
+                url
+            }
+            url_key
+            url_suffix
+            url_path
+            options_container
+            tier_price
+            manufacturer
+            url_rewrites {
+                url
+            }
+            media_gallery_entries {
+                # id is deprecated and unused in our code, but lint rules require we
+                # request it if available
+                id
+                uid
+                label
+                position
+                disabled
+                file
+            }
+            categories {
+                id
+                uid
+                name
+                breadcrumbs {
+                    category_id
+                    category_name
+                }
+            }
+        }
+        code
+    }
+}

@@ -1,0 +1,35 @@
+/** The "thumbnail" is a round pil button below the product image in mobile or
+ * as a thumbnail to the left of the product image in desktop.
+ */
+.root {
+    composes: outline-none from global;
+
+    /* Large screen styles */
+    composes: lg_h-23.75 from global;
+    composes: lg_w-23.75 from global;
+    composes: lg_p-2.5 from global;
+}
+
+.rootSelected {
+    composes: root;
+
+    composes: block from global;
+
+    composes: border-2 from global;
+    composes: border-red-light from global;
+    composes: rounded-sm from global;
+    composes: lg_p-2 from global;
+}
+
+.image {
+    composes: block from global;
+
+    composes: object-contain from global;
+    composes: object-center from global;
+
+    /* Large screen styles */
+    composes: lg_h-18.75 from global;
+    composes: lg_w-18.75 from global;
+    composes: lg_m-auto from global;
+    composes: lg_bg-opacity-0 from global;
+}

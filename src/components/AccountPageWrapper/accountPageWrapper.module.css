@@ -1,0 +1,162 @@
+.root {
+    composes: mb-7.5 from global;
+    composes: lg_mb-12.5 from global;
+}
+
+.title {
+    composes: pb-3.75 from global;
+    composes: pt-7.5 from global;
+    composes: lg_py-7.5 from global;
+    composes: text-2.5xl from global;
+    composes: lg_text-4.5xl from global;
+}
+
+.menuClosed {
+    composes: border-default from global;
+}
+
+.menuTitleWrapper {
+    composes: flex from global;
+    composes: bg-white-dark from global;
+    composes: justify-center from global;
+    composes: w-full from global;
+    composes: items-center from global;
+    composes: h-10 from global;
+    composes: lg_mb-2 from global;
+}
+
+.menuTitle {
+    composes: capitalize from global;
+    composes: text-sm from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.AccountMenu {
+    composes: mt-0 from global;
+}
+
+.AccountMenu ul li {
+    @apply bg-white-dark;
+}
+
+.AccountMenu ul li .menuItemActive {
+    @apply lg_bg-white-dark
+        text-black-lightest
+        border-l-red-light
+        border-opacity-100;
+}
+
+.AccountMenu li:not(:last-child) {
+    @apply mb-1.25;
+}
+
+.menuItem {
+    composes: inline-block from global;
+    composes: font-semibold from global;
+    composes: py-[13px] from global;
+    composes: pl-6.5 from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: hover_text-black-lightest from global;
+    composes: border-l-3 from global;
+    composes: border-blue from global;
+    composes: border-opacity-20 from global;
+    composes: lg_text-gray-dark from global;
+}
+
+.menuItemActive {
+    composes: inline-block from global;
+    composes: py-[13px] from global;
+    composes: pl-6.5 from global;
+    composes: w-full from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: tracking-normal from global;
+    composes: border-l-3 from global;
+    composes: border-red-light from global;
+}
+
+.signOut {
+    composes: menuItem;
+    composes: text-left from global;
+    composes: border-l-3 from global;
+    composes: border-red-light from global;
+}
+
+.content {
+    composes: mt-7.5 from global;
+    composes: lg_mt-0 from global;
+    composes: lg_ml-7.5 from global;
+}
+
+.contentWrapper {
+    composes: lg_grid from global;
+    grid-template-columns: 270px 1fr;
+}
+
+/* Modal menu */
+
+.menuModal {
+    composes: bg-white from global;
+    composes: bottom-0 from global;
+    composes: h-full from global;
+    composes: left-0 from global;
+    composes: overflow-hidden from global;
+    composes: fixed from global;
+    composes: top-0 from global;
+    composes: z-[51] from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.menuModal ul li {
+    @apply bg-white
+        border-b
+        border-gray-light
+        mb-0
+        first_border-t;
+}
+
+.menuModal ul li:not(:last-child) {
+    @apply mb-0;
+}
+
+.menuModal ul li a {
+    @apply border-0
+        py-2.5
+        flex
+        px-5;
+}
+
+.menuModalClosed {
+    composes: hidden from global;
+}
+
+.modalMenuTitleWrapper {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: px-5 from global;
+    composes: py-3.75 from global;
+    composes: items-center from global;
+}
+
+.modalMenuTitle {
+    composes: font-semibold from global;
+    composes: text-xl from global;
+    composes: text-black-lightest from global;
+}
+
+.closeButton {
+    composes: ml-auto from global;
+}
+
+.iconRight {
+    composes: fill-black-lightest from global;
+    composes: opacity-40 from global;
+}
+
+.iconRightRoot {
+    composes: ml-auto from global;
+    composes: self-center from global;
+}

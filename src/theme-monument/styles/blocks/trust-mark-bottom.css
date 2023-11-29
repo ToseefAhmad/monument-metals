@@ -1,0 +1,56 @@
+.trust-mark-bottom-container {
+    @apply mb-3.5;
+
+    /* Large screen styles */
+    @apply lg_mb-[35px];
+}
+
+.trust-mark-bottom-container div {
+    /* !important to override inline styles */
+    @apply flex-row
+        justify-center
+        items-center
+        !important;
+
+    /* Large screen styles */
+    @apply lg_justify-between
+        !important;
+}
+
+.trust-mark-bottom-container div {
+    @apply flex
+        flex-row
+        mt-5
+        flex-wrap
+        justify-center
+        w-[321px]
+        gap-y-1
+        mx-auto;
+
+    /* Mobile to desktop image size switch breakpoint */
+    @apply 2sm_w-160;
+
+    /* Large screen styles */
+    @apply lg_max-w-full
+    /* Specific width for 1024px tablet */
+        lg_w-[96vw]
+        lg_mt-7.5;
+}
+
+.trust-mark-bottom-container figure {
+    @apply mr-5;
+}
+.trust-mark-bottom-container figure:last-child {
+    @apply mr-[1px];
+}
+
+figure.trust-mark-bottom-item-4 {
+    @apply mr-0;
+
+    /* Large screen styles */
+    @apply lg_mr-5;
+}
+
+.trust-mark-bottom-container img {
+    @apply mt-0 lg_min-h-10;
+}

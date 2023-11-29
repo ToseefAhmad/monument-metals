@@ -1,0 +1,45 @@
+.root {
+    composes: hidden from global;
+    composes: full-bleed from global;
+    composes: bg-white-dark from global;
+    composes: h-breadcrumbs from global;
+
+    composes: lg_block from global;
+}
+
+:global(.cms-page) .root {
+    @apply mb-7.5;
+}
+
+.container {
+    composes: container from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-x-2.5 from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: h-full from global;
+
+    /* Show ellipses when overflowing. */
+    composes: overflow-hidden from global;
+    composes: overflow-ellipsis from global;
+    composes: whitespace-nowrap from global;
+}
+
+.divider {
+    composes: leading-0 from global;
+}
+
+.text {
+    composes: text-black-lightest from global;
+}
+
+.link {
+    composes: text-sm from global;
+    composes: text-gray-dark from global;
+    composes: hover_text-black-lightest from global;
+}
+
+.currentCategory {
+    composes: text;
+}

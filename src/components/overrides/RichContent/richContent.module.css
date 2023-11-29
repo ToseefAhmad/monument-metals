@@ -1,0 +1,81 @@
+.root h2,
+.root h3,
+.root h4,
+.root h5,
+.root h6 {
+    @apply mt-4;
+}
+
+.root h1 {
+    @apply mt-[34.2px] mb-[19px];
+}
+.root h2 {
+    @apply mb-[18px];
+}
+
+.root h3 {
+    @apply mb-[12px];
+}
+.root h4 {
+    @apply mb-[10px];
+}
+
+.root h5 {
+    @apply mb-[7px];
+}
+
+.root h6 {
+    @apply mb-[4px];
+}
+
+.root p {
+    @apply mb-4;
+}
+
+.root ol {
+    counter-reset: list-number;
+}
+
+.root ol li {
+    @apply relative lg_pl-6 lg_text-base text-sm pl-5;
+}
+
+.root ol li::before {
+    counter-increment: list-number;
+    content: counters(list-number, '.') '. ';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block text-red-light font-bold;
+}
+
+.root ul li {
+    @apply relative lg_pl-6 lg_text-base text-sm pl-5;
+}
+
+.root ul li::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.root a {
+    @apply p-0;
+}
+.root blockquote {
+    @apply text-lg my-4 mx-0 font-light italic;
+}
+.root table {
+    @apply w-full my-4 mx-0 border-l border-t border-solid border-gray-light;
+}
+.root table td,
+.root table th {
+    @apply text-left p-4 text-sm border-r border-b border-solid border-gray-light;
+}
+.root table th {
+    @apply bg-gray;
+}
+.root :global .cms-content-important {
+    @apply bg-gray py-5 px-4 text-base border border-solid border-gray-light;
+}
+.root pre {
+    @apply bg-gray-light p-4 border border-solid border-gray-light;
+}

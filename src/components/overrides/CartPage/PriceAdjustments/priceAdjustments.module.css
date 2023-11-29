@@ -1,0 +1,47 @@
+.root select {
+    @apply bg-white mb-2.5 lg_h-14 h-12.5;
+}
+
+.tax_container {
+    composes: flex from global;
+    composes: justify-between from global;
+    composes: -mt-[2px] from global;
+
+    composes: lg_mt-2.5 from global;
+}
+
+.tax_price {
+    composes: bodyMobileText from '../../../StyleGuide/typographySection.module.css';
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: pb-0 from global;
+    composes: lg_text-base from global;
+}
+
+.tax_label {
+    composes: bodyMobileText from '../../../StyleGuide/typographySection.module.css';
+    composes: pb-0 from global;
+    composes: lg_text-base from global;
+}
+
+.sectionRoot {
+    composes: px-5 from global;
+
+    composes: lg_px-7.5 from global;
+}
+
+.sectionContentsContainer {
+    composes: lg_pb-3.75 from global;
+}
+
+.sectionTitleWrapper {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: py-2.5 from global;
+
+    composes: lg_py-3.75 from global;
+}

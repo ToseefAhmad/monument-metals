@@ -1,0 +1,37 @@
+.root {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+}
+
+.contentWrapper {
+    composes: bg-white-dark from global;
+    composes: rounded-sm from global;
+    composes: py-4 from global;
+    composes: px-7.5 from global;
+}
+
+.title {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.content {
+    composes: py-1 from global;
+    composes: whitespace-pre-line from global;
+}
+
+.shimmer {
+    composes: root;
+}
+
+.shimmerBlock {
+    composes: h-[190px] from global;
+
+    composes: lg_h-50 from global;
+}
+
+.shimmerBlockInstructions {
+    composes: h-40 from global;
+
+    composes: lg_h-[136px] from global;
+}

@@ -1,0 +1,40 @@
+.search {
+    appearance: none;
+    composes: inline-flex from global;
+    composes: bg-white-dark from global;
+    composes: border from global;
+    composes: border-white-dark from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: h-10 from global;
+    composes: w-full from global;
+    composes: text-gray-dark from global;
+    composes: placeholder-gray-dark from global;
+    composes: appearance-none from global;
+    composes: py-3 from global;
+    composes: px-6 from global;
+    composes: text-base from global;
+
+    composes: lg_h-12.5 from global;
+
+    composes: hover_text-black-lightest from global;
+    composes: hover_placeholder-black-lightest from global;
+    composes: hover_border-gray from global;
+
+    composes: focus_bg-white from global;
+    composes: focus_text-black-lightest from global;
+    composes: focus_placeholder-black-lightest from global;
+    composes: focus_border-black-lightest from global;
+    composes: focus_outline-none from global;
+
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+    composes: disabled_placeholder-black-lightest from global;
+    composes: disabled_placeholder-opacity-40 from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_bg-white-dark from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}

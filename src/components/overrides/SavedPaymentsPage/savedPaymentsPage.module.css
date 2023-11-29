@@ -1,0 +1,39 @@
+.cardsContent {
+    composes: grid from global;
+    composes: gap-1.25 from global;
+    composes: lg_gap-0 from global;
+    composes: mb-3.75 from global;
+}
+
+.tableHead {
+    composes: hidden from global;
+    composes: lg_grid from global;
+    composes: bg-black-lightest from global;
+    composes: text-white from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+    composes: rounded-t from global;
+
+    composes: text-left from global;
+    composes: px-7.5 from global;
+    composes: py-2 from global;
+    composes: grid-cols-4 from global;
+}
+
+.ccTableHead {
+    composes: tableHead;
+    grid-template-columns: 45% 28% 1fr 10%;
+}
+
+.accountTableHead {
+    composes: tableHead;
+    grid-template-columns: 30% 22% 23% 1fr 10%;
+}
+
+.savedCardsTitle {
+    composes: pb-5 from global;
+}
+
+.actionCell {
+    composes: text-right from global;
+}

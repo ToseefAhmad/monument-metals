@@ -1,0 +1,72 @@
+.root {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: border-b from global;
+    composes: border-solid from global;
+    composes: border-black-lightest from global;
+    composes: border-opacity-10 from global;
+    composes: py-3.75 from global;
+
+    composes: last_border-none from global;
+
+    composes: lg_py-5 from global;
+}
+
+.imageContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: h-15 from global;
+    composes: min-w-[60px] from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+    composes: bg-white from global;
+}
+
+.imageRoot {
+    composes: h-2/3 from global;
+    composes: w-10 from global;
+}
+
+.image {
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+}
+
+.details {
+    composes: pl-5 from global;
+}
+
+.info {
+    composes: flex from global;
+}
+
+.errorText {
+    composes: text-red-light from global;
+    composes: leading-1 from global;
+}
+
+.errorText:empty {
+    @apply hidden;
+}
+
+.name {
+    composes: text-xs from global;
+
+    composes: lg_text-sm from global;
+}
+
+.price {
+    composes: font-semibold from global;
+    composes: text-green-dark from global;
+}
+
+.quantity {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: uppercase from global;
+    composes: pl-1 from global;
+}

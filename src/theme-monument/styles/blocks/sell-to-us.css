@@ -1,0 +1,86 @@
+.sell-us-container h1,
+.sell-us-container h2,
+.sell-us-container h3,
+.sell-us-container h4,
+.sell-us-container h5,
+.sell-us-container h6,
+.sell-us-container p {
+    @apply my-0;
+}
+
+.sell-us-container {
+    @apply lg_container lg_translate-x-0 lg_mb-12.5;
+    @apply px-0;
+}
+
+.sell-us-container > * {
+    @apply w-full h-[224px] lg_w-full lg_h-[160px] md_h-[160px];
+}
+
+.sell-us-container > div {
+    @apply rounded-sm;
+}
+.sell-us-container > div > div {
+    @apply bg-black-lightest
+        bg-opacity-80
+        rounded-sm;
+}
+
+.sell-us-container h2 {
+    @apply lg_mb-[3px]
+        font-semibold
+        text-white
+        text-xl
+        lg_text-2xl;
+    @apply leading-[34px];
+}
+
+.sell-us-container div p {
+    @apply my-0
+        text-white
+        text-sm
+        lg_text-base text-center
+        lg_text-left
+        leading-[30px];
+}
+
+.sell-us-text-col {
+    @apply items-center md_py-0 lg_items-start pt-7.5 lg_w-[740px]  px-5 lg_px-[70px] lg_py-[45px];
+    @apply md_justify-center !important;
+}
+
+.sell-us-button-col {
+    /* !important to override inline styles  */
+    @apply flex-row
+        lg_justify-end
+        justify-center
+        lg_items-center
+        md_items-center
+        !important;
+}
+
+.sell-us-button-col > * {
+    @apply lg_mr-12.5 mb-[5px];
+}
+
+.sell-us-button-col > div > div {
+    @apply m-0 pb-1.25 lg_pb-0;
+}
+
+.sell-us-button-col div button[class] {
+    /* Low priority button */
+    @apply lg_w-[197px] w-[335px] border-gray-light
+        text-blue
+        bg-white
+
+        hover_text-white
+        hover_bg-blue-dark
+        hover_border-blue-dark
+
+        active_focus_text-white
+        active_focus_bg-black-light
+        active_focus_border-black-light;
+
+    /* Custom styles */
+    @apply min-w-46.5;
+}

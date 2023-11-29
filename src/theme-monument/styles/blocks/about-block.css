@@ -1,0 +1,80 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    @apply my-0;
+}
+
+h2.about-block-heading {
+    @apply font-medium
+        normal-case
+        text-2.3xl
+        mb-2.5
+        mt-0;
+
+    /* Large screen styles */
+    @apply lg_font-semibold
+        lg_text-4xl
+        lg_mb-5;
+}
+.about-block-text {
+    @apply lg_items-center lg_container px-mobile lg_max-w-desktop;
+}
+
+.about-block-text p {
+    @apply text-sm
+        mb-5;
+
+    /* Large screen styles */
+    @apply lg_max-w-desktop
+        lg_text-base
+        lg_mb-7.5;
+}
+
+.about-block-buttons-row {
+    @apply pb-3
+        border-b
+        border-gray-light;
+
+    /* Large screen styles */
+    @apply lg_pb-[22px]
+        lg_border-b
+        lg_border-gray-light;
+}
+
+.about-block-buttons div.about-block-read {
+    @apply mr-1.3;
+}
+
+.about-block-buttons div.about-block-reviews {
+    @apply mr-0;
+}
+
+.about-block-read button,
+.about-block-reviews button {
+    @apply w-[165px];
+
+    /* Large screen styles */
+    @apply lg_w-[251px];
+}
+
+.about-block-reviews button {
+    /* low priority button */
+    @apply border-gray-light
+        text-blue
+        bg-white
+
+        hover_text-white
+        hover_bg-blue-dark
+        hover_border-blue-dark
+
+        active_focus_text-white
+        active_focus_bg-black-light
+        active_focus_border-black-light;
+
+    /* Custom */
+    @apply mr-0;
+}

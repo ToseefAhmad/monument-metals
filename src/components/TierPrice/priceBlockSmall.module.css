@@ -1,0 +1,36 @@
+.table {
+    composes: w-full from global;
+}
+
+.tableTitle {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: border-b from global;
+    composes: border-b-[#E1E4E6] from global;
+}
+
+.tableTitleLeft {
+    composes: tableTitle;
+
+    composes: text-left from global;
+}
+
+.tableTitleRight {
+    composes: tableTitle;
+
+    composes: text-right from global;
+}
+
+.tableQuantity {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+}
+
+.tablePrice {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: text-blue from global;
+    composes: text-right from global;
+}

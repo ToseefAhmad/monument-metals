@@ -1,0 +1,11 @@
+.root {
+    composes: auto-cols-auto from global;
+}
+
+.root:empty {
+    @apply hidden;
+}
+
+.root li {
+    @apply float-left;
+}

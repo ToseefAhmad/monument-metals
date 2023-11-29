@@ -1,0 +1,37 @@
+.input {
+    composes: inline-flex from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: h-auto from global;
+    composes: max-w-full from global;
+    composes: min-w-full from global;
+    composes: w-full from global;
+    composes: text-gray-dark from global;
+    composes: placeholder-gray-dark from global;
+    composes: appearance-none from global;
+    composes: py-3 from global;
+    composes: px-6 from global;
+    composes: resize-none from global;
+
+    composes: hover_text-black-lightest from global;
+    composes: hover_placeholder-black-lightest from global;
+    composes: hover_border-gray from global;
+
+    composes: focus_text-black-lightest from global;
+    composes: focus_placeholder-black-lightest from global;
+    composes: focus_border-black-lightest from global;
+    composes: focus_outline-none from global;
+
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+    composes: disabled_placeholder-black-lightest from global;
+    composes: disabled_placeholder-opacity-40 from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_bg-white-dark from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}

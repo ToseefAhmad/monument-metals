@@ -1,0 +1,12 @@
+.anchor {
+    composes: relative from global;
+
+    /**
+    * Scroll anchor is in use only on checkout, so leave hardcoded values for now
+    * 60px - checkout header on mobile
+    * 100px - checkout header on desktop
+    * 5px - offset
+    */
+    @apply top-[calc(-60px-5px)]
+        lg_top-[calc(-100px-5px)];
+}

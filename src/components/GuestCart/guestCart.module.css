@@ -1,0 +1,21 @@
+.root {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: gap-2.5 from global;
+
+    composes: lg_gap-5 from global;
+}
+
+.blockRoot {
+    composes: m-0 from global;
+}
+
+/*
+ * Desktop-specific styles.
+ */
+@media (min-width: 1024px) {
+    .root {
+        grid-template-columns: minmax(min-content, 770px) 370px;
+    }
+}

@@ -1,0 +1,3 @@
+.root {
+    composes: w-full from global;
+}

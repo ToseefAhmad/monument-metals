@@ -1,0 +1,25 @@
+.root {
+    composes: bg-white-dark from global;
+    composes: pt-3.75 from global;
+    composes: -mx-5 from global;
+
+    composes: lg_pt-7.5 from global;
+    composes: lg_mx-0 from global;
+}
+
+.title {
+    composes: pb-3.75 from global;
+
+    composes: lg_pb-5 from global;
+}
+
+.container {
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-gray-light from global;
+    composes: px-5 from global;
+
+    composes: first_border-none from global;
+
+    composes: lg_px-7.5 from global;
+}

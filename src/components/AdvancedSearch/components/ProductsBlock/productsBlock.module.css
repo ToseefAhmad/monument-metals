@@ -1,0 +1,145 @@
+@import '../../index.module.css';
+
+.root {
+    composes: p-5 from global;
+    composes: w-full from global;
+    order: 50;
+
+    composes: lg_p-6 from global;
+    composes: lg_overflow-y-auto from global;
+}
+
+.head {
+    composes: head from '../Autocomplete/autocomplete.module.css';
+}
+
+.message {
+    padding: 1rem 1rem 1.5rem;
+}
+
+.item {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: h-full from global;
+    composes: p-[15px] from global;
+
+    composes: lg_py-4 from global;
+    composes: lg_px-6 from global;
+    composes: lg_mx-[-1.5rem] from global;
+    composes: lg_flex-row from global;
+    composes: lg_border-0 from global;
+}
+
+.itemLink {
+    composes: lg_border-b from global;
+    composes: border-gray-light from global;
+}
+
+.items {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: gap-[5px] from global;
+
+    composes: lg_flex from global;
+    composes: lg_flex-col from global;
+    composes: lg_gap-0 from global;
+}
+
+.item:hover {
+    background: var(--amxsearch-color-hover);
+}
+
+.imageContainer {
+    composes: w-[86%] from global;
+    composes: lg_border from global;
+    composes: border-gray-light from global;
+    composes: self-center from global;
+
+    composes: lg_w-15 from global;
+    composes: lg_h-15 from global;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    object-fit: contain;
+}
+
+.description {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: text-center from global;
+    composes: pt-[0.675rem] from global;
+    composes: h-full from global;
+    composes: justify-between from global;
+
+    composes: lg_pl-[0.7rem] from global;
+    composes: lg_pt-0 from global;
+}
+
+.rating {
+    display: flex;
+    background: #000;
+}
+
+.title {
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: font-normal from global;
+    word-break: keep-all;
+
+    composes: lg_text-base from global;
+}
+
+.head {
+    composes: head from '../Autocomplete/autocomplete.module.css';
+}
+
+.priceWrapper {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: gap-1.25 from global;
+    composes: pt-1.25 from global;
+
+    composes: lg_justify-start from global;
+}
+
+.priceText {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-xss from global;
+    composes: pt-[2px] from global;
+    composes: capitalize from global;
+
+    /* Large screen styles */
+    composes: lg_text-xs from global;
+    composes: lg_pt-0 from global;
+}
+
+.price {
+    composes: text-green from global;
+    composes: font-semibold from global;
+    composes: text-base from global;
+}
+
+.addToCart {
+    composes: root from '~@magento/venia-ui/lib/components/ButtonGroup/button.module.css';
+    border-radius: 0;
+    margin: 0.6rem 0 0;
+}
+
+.addToCart:nth-of-type(1) {
+    border-radius: 0;
+}
+
+.viewAll {
+    composes: searchButton from '@app/components/overrides/SearchBar/Suggestions/suggestedProducts.module.css';
+}
+
+.counter {
+    composes: counter from '../../index.module.css';
+}

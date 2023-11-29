@@ -1,0 +1,15 @@
+{
+    "veniaAppShell": {
+        "inline": {
+            "body": {
+                "provide": {
+                    "gtmId": "gtmId.value",
+                    "evidencePixel": "evidencePixel.value",
+                    "postHogId": "postHogId.value",
+                    "storeConfig": "storeConfig.value",
+                    "olarkId": "olarkId.value"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import './sharedModal.css';
+
+.defaultButton {
+    composes: root_normalPriority from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: w-[255px] from global;
+    composes: lg_w-full from global;
+}
+
+.description {
+    composes: pb-2.5 from global;
+}
+
+.loginText {
+    composes: pb-6 from global;
+}
+
+.loginButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+}

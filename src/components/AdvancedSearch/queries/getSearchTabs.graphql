@@ -1,0 +1,69 @@
+query getSearchTabs($inputText: String) {
+    xsearchProducts(search: $inputText) {
+        total_count
+        code
+        items {
+            id
+            type_id
+            name
+            sku
+            rating_summary
+            reviews_count
+        }
+    }
+    xsearchBlogs(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+    xsearchBrands(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchCategories(search: $inputText) {
+        items {
+            name
+            url
+        }
+        total_count
+        code
+    }
+    xsearchFaqs(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchLandings(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+    xsearchPages(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+}

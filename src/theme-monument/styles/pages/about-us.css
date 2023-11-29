@@ -1,0 +1,113 @@
+@import '../blocks/why-monument-metals.css';
+
+.about-us h1,
+.about-us h2,
+.about-us h3,
+.about-us h4,
+.about-us h5,
+.about-us h6,
+.about-us p {
+    @apply my-0;
+}
+
+.about-us p,
+.about-us li {
+    /* !important to override inline styles */
+    @apply text-gray-dark
+        text-sm
+        lg_text-base
+        mb-0
+        lg_leading-8
+        !important;
+}
+
+.about-us h4 {
+    @apply text-xl
+        lg_text-2xl
+        lg_leading-9.5
+        font-semibold
+        text-black-lightest
+        mb-3.5
+        mt-0;
+}
+
+.about-us ul {
+    @apply list-none
+        p-0
+        my-0;
+}
+
+.about-us ul li {
+    @apply relative
+        pl-5
+        lg_pl-6
+        lg_py-px
+        p-0;
+}
+
+.about-us ul li::before {
+    content: '';
+
+    @apply absolute
+        top-4
+        left-0
+        -translate-y-2/4
+        block
+        h-0.5
+        w-2.5
+        bg-red-light;
+}
+
+.about-us .intro {
+    /* !important to override inline styles */
+    @apply pt-3.75
+        lg_pt-5
+        !important;
+}
+
+.about-us .business-information {
+    @apply bg-white-dark
+        font-semibold
+        my-7.5
+        lg_my-12.5
+        text-center;
+}
+
+.about-us .business-information h5 {
+    @apply text-xl
+        lg_text-2xl
+        lg_leading-9.5
+        font-semibold
+        text-black-lightest
+        lg_pb-1.3
+        m-0;
+}
+
+.about-us .business-information > div {
+    @apply container
+        px-mobile
+        py-2.5
+        lg_py-7.5
+        lg_px-0
+        lg_max-w-desktop
+        !important;
+}
+.about-us .business-information > div > .pagebuilder-column {
+    @apply border-b
+        lg_border-r
+        lg_border-b-0
+        last_border-none
+        border-black-lightest
+        border-opacity-10
+        py-2.5
+        lg_py-0;
+}
+
+.about-us .trustbox-container {
+    @apply my-7.5
+        lg_my-12;
+}
+
+.about-us .trustbox-container .title {
+    @apply lg_pt-12.5;
+}

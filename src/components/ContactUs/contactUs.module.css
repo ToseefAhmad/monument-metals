@@ -1,0 +1,60 @@
+.loadingContainer {
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: left-0 from global;
+    composes: w-full from global;
+    composes: h-3/5 from global;
+    composes: z-10 from global;
+}
+
+.contactTextWrapper {
+    composes: pt-7.5 from global;
+}
+
+.contactTextWrapper h2 {
+    @apply font-semibold
+        mt-0;
+}
+
+.contactTextWrapper hr {
+    @apply block
+        my-2;
+}
+
+.contactTextWrapper p {
+    @apply mt-1.3
+        mb-0
+        text-sm
+        text-gray-dark;
+    @apply lg_text-base
+        lg_mt-0;
+}
+
+.item {
+    composes: py-2 from global;
+}
+.item input {
+    @apply text-base;
+}
+
+.item textarea {
+    @apply text-base;
+}
+
+.buttonWrapper {
+    composes: my-5 from global;
+    composes: lg_mt-5 from global;
+    composes: lg_mb-7.5 from global;
+}
+
+:global(.contact-us) :global(.main-page) {
+    @apply md_min-h-240;
+}
+
+.contactTextWrapper div:nth-child(3) hr {
+    @apply hidden;
+}
+
+.contactTextWrapper div:nth-child(2) {
+    @apply border-b-1 border-gray;
+}

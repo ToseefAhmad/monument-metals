@@ -1,0 +1,104 @@
+.explore-our-deals-row {
+    @apply hidden;
+
+    /* Large screen styles */
+    @apply lg_block
+        lg_mb-12.5
+        lg_w-292.5
+        lg_max-w-full
+        lg_relative;
+}
+
+.explore-our-deals-row div {
+    @apply lg_py-13.5
+        lg_px-17.5;
+}
+
+.explore-our-deals-row h2 {
+    @apply lg_mt-0
+        lg_mb-2.5
+
+        lg_text-left
+        lg_font-semibold
+        lg_text-2xl
+        lg_text-white
+        lg_normal-case;
+}
+
+div.explore-our-deals-text {
+    @apply lg_p-0
+        lg_w-[624px]
+        lg_mb-7.5;
+}
+
+.explore-our-deals-text p {
+    @apply lg_text-white
+        lg_text-lg
+        lg_leading-[34px]
+        lg_opacity-80
+        lg_mb-0;
+}
+
+div.explore-our-deals-buttons-root {
+    @apply lg_p-0
+        lg_z-10;
+}
+
+div.explore-our-deals-buttons-root div {
+    @apply lg_p-0
+        lg_mb-0;
+}
+
+div.explore-our-deals-buttons-root div button[class] {
+    /* Shop alert button */
+    @apply min-w-34
+        min-h-12.5
+        font-bold
+        uppercase
+        border
+        border-solid
+        rounded-sm
+        outline-none
+
+        disabled_bg-white-dark
+        disabled_border-gray-light
+        disabled_text-black-lightest
+        disabled_text-opacity-40
+
+        transition
+        duration-200
+        ease-in-out
+
+        text-red-light
+        border-gray-light
+        bg-white
+
+        hover_text-white
+        hover_bg-red
+        hover_border-red
+
+        focus_active_text-white
+        focus_active_bg-red-dark
+        focus_active_border-red-dark
+
+        lg_min-w-46.5
+        lg_min-h-14;
+}
+
+/* Background */
+.explore-our-deals-row::before {
+    content: '.';
+
+    @apply hidden;
+
+    /* Large screen styles */
+    @apply lg_block
+        lg_bg-white-dark
+        lg_absolute
+        lg_translate-y-[160px]
+        lg_z-[-1]
+        w-[calc(100vw-var(--scrollBarWidth))]
+        ml-[50%]
+        -translate-x-2/4
+        lg_h-[877px];
+}

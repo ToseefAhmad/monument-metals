@@ -1,0 +1,51 @@
+.root {
+    composes: root from '@app/components/overrides/SearchBar/Autocomplete/autocomplete.module.css';
+
+    composes: grid from global;
+    composes: w-full from global;
+    composes: px-0 from global;
+    composes: pb-[4.375rem] from global;
+    composes: overflow-y-scroll from global;
+
+    composes: lg_flex from global;
+    composes: lg_flex-row from global;
+    composes: lg_h-auto from global;
+    composes: lg_max-h-[597px] from global;
+    composes: lg_pb-0 from global;
+    composes: lg_overflow-y-hidden from global;
+    composes: bg-white from global;
+}
+
+.visible {
+    composes: visible from '@app/components/overrides/SearchBar/Autocomplete/autocomplete.module.css';
+}
+
+.hidden {
+    composes: hidden from '@app/components/overrides/SearchBar/Autocomplete/autocomplete.module.css';
+}
+
+.root_visible {
+    composes: root visible;
+}
+
+.root_hidden {
+    composes: root hidden;
+}
+
+.head {
+    composes: pb-1 from global;
+    composes: text-base from global;
+
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+
+    composes: lg_mt-0 from global;
+    composes: lg_mb-0 from global;
+    composes: lg_border-solid from global;
+    composes: lg_border-b-1 from global;
+    composes: lg_border-gray-light from global;
+}

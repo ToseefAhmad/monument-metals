@@ -1,0 +1,419 @@
+.section {
+    composes: section from './index.module.css';
+}
+
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.list {
+    composes: list from './index.module.css';
+}
+
+.item {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-start from global;
+    composes: gap-y-2.5 from global;
+}
+
+.normalPriorityHover {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-blue-lighter from global;
+    composes: border-blue-lighter from global;
+}
+
+.normalPriorityPressed {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-black-light from global;
+    composes: border-black-light from global;
+}
+
+.highPriorityHover {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-black-lighten from global;
+    composes: border-black-lighten from global;
+}
+
+.highPriorityPressed {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-blue-light from global;
+    composes: border-blue-light from global;
+}
+
+.lowPriorityHover {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-blue-dark from global;
+    composes: border-blue-dark from global;
+}
+
+.lowPriorityPressed {
+    composes: root_main from '../overrides/Button/button.module.css';
+    composes: text-white from global;
+    composes: bg-black-light from global;
+    composes: border-black-light from global;
+}
+
+/* Arrow/slider buttons */
+
+.arrowColumns {
+    composes: flex from global;
+    composes: gap-2.5 from global;
+}
+
+.arrowColumn {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-2.5 from global;
+}
+
+.arrowButtonDefault {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: h-11.5 from global;
+    composes: w-40 from global;
+    composes: text-sm from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: outline-none from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: lg_w-20 from global;
+    composes: lg_text-base from global;
+}
+
+.arrowButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: arrowButtonDefault;
+
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: text-red-light from global;
+    composes: border-gray-light from global;
+    composes: bg-white from global;
+
+    composes: hover_text-white from global;
+    composes: hover_bg-red from global;
+    composes: hover_border-red from global;
+
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-red-dark from global;
+    composes: active_focus_border-red-dark from global;
+}
+
+.arrowButtonHover {
+    composes: arrowButtonDefault;
+
+    composes: text-white from global;
+    composes: bg-red from global;
+    composes: border-red from global;
+    composes: hover_text-white from global;
+    composes: hover_bg-red from global;
+    composes: hover_border-red from global;
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-red from global;
+    composes: active_focus_border-red from global;
+}
+
+.arrowButtonFocus {
+    composes: arrowButtonDefault;
+
+    composes: text-white from global;
+    composes: bg-red-dark from global;
+    composes: border-red-dark from global;
+    composes: active_hover_text-white from global;
+    composes: active_hover_bg-red-dark from global;
+    composes: active_hover_border-red-dark from global;
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-red-dark from global;
+    composes: active_focus_border-red-dark from global;
+}
+
+/* Small arrows buttons */
+
+.smallArrowColumns {
+    composes: flex from global;
+    composes: gap-2.5 from global;
+    composes: pt-5 from global;
+    composes: pb-7 from global;
+}
+
+.smallArrowColumn {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-2.5 from global;
+}
+
+.smallArrowButtonDefault {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: outline-none from global;
+
+    composes: h-14 from global;
+    composes: w-14 from global;
+
+    transition-duration: 256ms;
+    transition-property: background-color, border-color, color;
+    transition-timing-function: var(--venia-global-anim-standard);
+
+    composes: rounded-sm from global;
+}
+
+.smallArrowButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: smallArrowButtonDefault;
+
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: bg-black-lightest from global;
+    composes: bg-opacity-50 from global;
+
+    composes: hover_bg-black-lightest from global;
+    composes: hover_bg-opacity-60 from global;
+
+    composes: active_focus_bg-black-lightest from global;
+    composes: active_focus_bg-opacity-70 from global;
+}
+
+.smallArrowButtonHover {
+    composes: smallArrowButtonDefault;
+
+    composes: bg-black-lightest from global;
+    composes: bg-opacity-60 from global;
+    composes: hover_bg-black-lightest from global;
+    composes: hover_bg-opacity-60 from global;
+    composes: active_focus_bg-black-lightest from global;
+    composes: active_focus_bg-opacity-60 from global;
+}
+
+.smallArrowButtonFocus {
+    composes: smallArrowButtonDefault;
+
+    composes: bg-black-lightest from global;
+    composes: bg-opacity-70 from global;
+    composes: hover_bg-black-lightest from global;
+    composes: hover_bg-opacity-70 from global;
+    composes: active_focus_bg-black-lightest from global;
+    composes: active_focus_bg-opacity-70 from global;
+}
+
+.darkWrapper {
+    composes: bg-black-lightest from global;
+    composes: w-max from global;
+    composes: p-8 from global;
+}
+
+.lightText {
+    composes: text-white from global;
+    composes: text-opacity-80 from global;
+}
+
+/* Show now buttons */
+
+.shopNormalButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: min-w-34 from global;
+    composes: min-h-12.5 from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: outline-none from global;
+
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: border-gray-light from global;
+    composes: text-blue from global;
+    composes: bg-white from global;
+
+    composes: hover_text-white from global;
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+
+    composes: lg_min-w-46.5 from global;
+    composes: lg_min-h-14 from global;
+}
+
+.shopAlertButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: min-w-34 from global;
+    composes: min-h-12.5 from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: outline-none from global;
+
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: text-red-light from global;
+    composes: border-gray-light from global;
+    composes: bg-white from global;
+
+    composes: hover_text-white from global;
+    composes: hover_bg-red from global;
+    composes: hover_border-red from global;
+
+    composes: focus_active_text-white from global;
+    composes: focus_active_bg-red-dark from global;
+    composes: focus_active_border-red-dark from global;
+
+    composes: lg_min-w-46.5 from global;
+    composes: lg_min-h-14 from global;
+}
+
+/* Social links */
+
+.socialLinkColumns {
+    composes: flex from global;
+    composes: gap-6 from global;
+    composes: pt-5 from global;
+}
+
+.socialLinkColumn {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-1 from global;
+}
+
+.socialLink {
+    composes: inline-flex from global;
+    composes: justify-center from global;
+    composes: h-11 from global;
+    composes: w-11 from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-white from global;
+    composes: border-opacity-10 from global;
+    composes: rounded-sm from global;
+
+    composes: hover_bg-white from global;
+    composes: hover_bg-opacity-10 from global;
+    composes: hover_border-opacity-0 from global;
+
+    composes: focus_bg-white from global;
+    composes: focus_bg-opacity-20 from global;
+    composes: focus_border-opacity-0 from global;
+}
+
+.socialLinkHover {
+    composes: socialLink;
+    composes: bg-white from global;
+    composes: bg-opacity-10 from global;
+    composes: border-opacity-0 from global;
+    composes: focus_bg-white from global;
+    composes: focus_bg-opacity-10 from global;
+    composes: focus_border-opacity-0 from global;
+}
+
+.socialLinkFocus {
+    composes: socialLink;
+    composes: bg-white from global;
+    composes: bg-opacity-20 from global;
+    composes: border-opacity-0 from global;
+    composes: hover_bg-white from global;
+    composes: hover_bg-opacity-20 from global;
+    composes: hover_border-opacity-0 from global;
+}
+
+.lightTextSocial {
+    composes: text-white from global;
+    composes: text-opacity-80 from global;
+    composes: pt-1.5 from global;
+}
+
+.buttonMobile {
+    composes: min-h-12.5 from global;
+    composes: min-w-34 from global;
+}
+
+/* Mobile buttons */
+.mobileButtonsList {
+    composes: list;
+    composes: pb-2.5 from global;
+}
+
+.normalPriorityMobile {
+    composes: root_normalPriority from '../overrides/Button/button.module.css';
+    composes: buttonMobile;
+}
+
+.highPriorityMobile {
+    composes: root_highPriority from '../overrides/Button/button.module.css';
+    composes: buttonMobile;
+}
+
+.lowPriorityMobile {
+    composes: root_lowPriority from '../overrides/Button/button.module.css';
+    composes: buttonMobile;
+}
+
+.root .normalPriorityMobile,
+.root .highPriorityMobile,
+.root .lowPriorityMobile {
+    @apply text-sm;
+}
+
+.arrowButtonMobile {
+    composes: arrowButton;
+
+    composes: lg_h-11.5 from global;
+    composes: lg_w-40 from global;
+    composes: lg_text-sm from global;
+}
+
+.alertPrioritySmallMobile {
+    composes: root_alertPrioritySmall from '../overrides/Button/button.module.css';
+    composes: lg_text-sm from global;
+}
+
+.root .alertPrioritySmallMobile {
+    @apply lg_min-w-40 lg_min-h-11.5 lg_px-3.5;
+}
+
+.normalPrioritySmallMobile {
+    composes: root_normalPrioritySmall from '../overrides/Button/button.module.css';
+    composes: lg_text-sm from global;
+}
+
+.root .normalPrioritySmallMobile {
+    @apply lg_min-w-40 lg_min-h-11.5 lg_px-3.5;
+}

@@ -1,0 +1,77 @@
+.closeIcon {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-end from global;
+    composes: relative from global;
+    composes: outline-none from global;
+    composes: pt-6 from global;
+    composes: pr-6 from global;
+}
+
+.closeIcon > button {
+    @apply h-[25px]
+        outline-none;
+}
+
+.closeIcon svg:focus {
+    @apply outline-none;
+}
+
+.modal {
+    composes: bg-white from global;
+}
+
+.header {
+    composes: px-6 from global;
+    composes: lg_px-12.5 from global;
+    composes: pb-6 from global;
+    composes: w-full from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.content {
+    composes: px-6 from global;
+    composes: lg_px-12.5 from global;
+    composes: w-full from global;
+}
+
+.actions {
+    composes: px-6 from global;
+    composes: lg_px-12.5 from global;
+    composes: text-center from global;
+    composes: w-full from global;
+    composes: m-auto from global;
+    composes: pb-12 from global;
+}
+
+.error {
+    composes: pb-6 from global;
+}
+
+.field {
+    composes: pb-6 from global;
+}
+
+.defaultButton {
+    composes: root_normalPriority from '@magento/venia-ui/lib/components/Button/button.module.css';
+    composes: w-[255px] from global;
+    composes: lg_w-full from global;
+}
+
+.notifyButton {
+    composes: defaultButton;
+    composes: static from global;
+    composes: m-0 from global;
+}
+
+.toHomeButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: w-[255px] from global;
+    composes: lg_w-full from global;
+    composes: static from global;
+    composes: m-0 from global;
+    composes: hover_text-white from global;
+    composes: active_focus_text-white from global;
+}

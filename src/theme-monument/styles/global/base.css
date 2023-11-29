@@ -1,0 +1,56 @@
+/* Base theme styles */
+@layer base {
+    body {
+        @apply text-gray-dark
+            text-sm
+            lg_text-base;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        @apply text-black-lightest
+            font-semibold;
+    }
+
+    h1 {
+        /* !important to override inline line height */
+        @apply text-2.5xl
+            lg_text-4.5xl !important;
+    }
+
+    h2 {
+        @apply text-2.3xl
+            lg_text-4xl;
+    }
+
+    h3 {
+        @apply text-xl
+            lg_text-2xl;
+    }
+
+    h4 {
+        @apply text-base
+            lg_text-xl;
+    }
+
+    h5 {
+        @apply font-normal
+            text-sm
+            lg_text-lg;
+    }
+
+    a {
+        @apply font-semibold
+            text-blue
+            text-sm
+            lg_text-base
+            hover_text-blue-lighter
+            focus_text-black-light
+            transition
+            duration-200
+            ease-in-out;
+    }
+}

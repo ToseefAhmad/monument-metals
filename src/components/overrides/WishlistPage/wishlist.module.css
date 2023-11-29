@@ -1,0 +1,19 @@
+.root {
+    grid-template-areas:
+        'actions'
+        'items';
+
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+}
+
+.loadMore {
+    composes: mt-2 from global;
+    composes: root_normalPriority from '../Button/button.module.css';
+    composes: w-full from global;
+    composes: lg_w-[99%] from global;
+}
+
+.loadMoreWrapper {
+    composes: text-center from global;
+}

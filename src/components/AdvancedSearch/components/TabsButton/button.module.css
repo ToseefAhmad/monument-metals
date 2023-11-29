@@ -1,0 +1,4 @@
+.counter {
+    composes: counter from '../../index.module.css';
+    margin-left: 0.4rem;
+}

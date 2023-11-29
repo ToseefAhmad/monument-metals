@@ -1,0 +1,16 @@
+.fullBleedContainer {
+    composes: full-bleed from global;
+    composes: h-[260px] from global;
+    composes: bg-white-dark from global;
+
+    /* Large screen styles */
+    composes: lg_h-150 from global;
+}
+
+.mapContainer {
+    composes: lg_relative from global;
+    composes: lg_max-w-[1170px] from global;
+    composes: lg_h-150 from global;
+
+    @apply desktop_left-[calc(((-1210px+100vw-var(--scrollBarWidth))/2))];
+}

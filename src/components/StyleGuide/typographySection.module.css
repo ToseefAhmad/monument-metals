@@ -1,0 +1,88 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.regular {
+    composes: text-4.5xl from global;
+    composes: text-black-lightest from global;
+    composes: pr-7 from global;
+}
+
+.semibold {
+    composes: text-4.5xl from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: pr-7 from global;
+}
+
+.bold {
+    composes: text-4.5xl from global;
+    composes: text-black-lightest from global;
+    composes: font-bold from global;
+    composes: pr-7 from global;
+}
+
+.headingWrapper {
+    composes: pb-7 from global;
+    composes: last_pb-0 from global;
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.columns {
+    composes: columns from './index.module.css';
+}
+
+.column {
+    composes: column from './index.module.css';
+}
+
+.heading {
+    composes: pb-2.5 from global;
+}
+
+.headingMobile1 {
+    composes: heading;
+    composes: text-2.5xl from global;
+}
+
+.headingMobile2 {
+    composes: heading;
+    composes: text-2.3xl from global;
+}
+
+.headingMobile3 {
+    composes: heading;
+    composes: text-xl from global;
+}
+
+.headingMobile4 {
+    composes: heading;
+    composes: text-base from global;
+}
+
+.headingMobile5 {
+    composes: heading;
+    composes: text-sm from global;
+}
+
+.bodyText {
+    composes: pb-2.5 from global;
+}
+
+.bodyTextSmall {
+    composes: bodyText;
+    composes: text-sm from global;
+}
+
+.bodyMobileText {
+    composes: bodyText;
+    composes: text-sm from global;
+}
+
+.bodyMobileTextSmall {
+    composes: bodyText;
+    composes: text-xs from global;
+}

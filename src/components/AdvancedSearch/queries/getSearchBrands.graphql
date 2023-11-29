@@ -1,0 +1,11 @@
+query getBrandSearches($inputText: String) {
+    xsearchBrands(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+}

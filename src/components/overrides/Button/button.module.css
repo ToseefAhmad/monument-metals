@@ -1,0 +1,159 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: max-w-full from global;
+
+    composes: font-bold from global;
+    composes: text-sm from global;
+    composes: uppercase from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: px-3.5 from global;
+    composes: outline-none from global;
+
+    composes: disabled_pointer-events-none from global;
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: lg_px-5 from global;
+}
+
+.root_main {
+    composes: root;
+
+    composes: min-w-34 from global;
+    composes: min-h-12.5 from global;
+
+    composes: lg_min-w-40 from global;
+    composes: lg_min-h-14 from global;
+    composes: lg_text-base from global;
+}
+
+.content {
+    composes: inline-grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-2.5 from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: justify-items-center from global;
+}
+
+/* derived classes */
+
+/* normal button */
+.root_normalPriority {
+    composes: root_main;
+
+    composes: bg-blue from global;
+    composes: border-blue from global;
+    composes: text-white from global;
+
+    composes: hover_bg-blue-lighter from global;
+    composes: hover_border-blue-lighter from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+}
+.root_normalPriorityNegative {
+    composes: root_normalPriority;
+    --stroke: var(--venia-global-color-red-700);
+}
+.root_normalPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+}
+.root_normalPrioritySmall {
+    composes: root;
+
+    composes: min-w-40 from global;
+    composes: min-h-11.5 from global;
+    composes: capitalize from global;
+    composes: font-bold from global;
+    composes: bg-blue from global;
+    composes: border-blue from global;
+    composes: text-white from global;
+
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+
+    composes: lg_min-w-60 from global;
+}
+
+/* high button */
+.root_highPriority {
+    composes: root_main;
+
+    composes: bg-black-lightest from global;
+    composes: border-black-lightest from global;
+    composes: text-white from global;
+
+    composes: hover_bg-black-lighten from global;
+    composes: hover_border-black-lighten from global;
+
+    composes: active_focus_bg-blue-light from global;
+    composes: active_focus_border-blue-light from global;
+}
+
+.root_highPriorityNegative {
+    composes: root_highPriority;
+    --stroke: var(--venia-global-color-red-700);
+}
+.root_highPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+}
+
+/* low button */
+.root_lowPriority {
+    composes: root_main;
+
+    composes: border-gray-light from global;
+    composes: text-blue from global;
+    composes: bg-white from global;
+
+    composes: hover_text-white from global;
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_text-white from global;
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+}
+
+.root_lowPriorityNegative {
+    composes: root_lowPriority;
+    --stroke: var(--venia-global-color-red-700);
+}
+.root_lowPriorityNegative:hover {
+    --stroke: var(--venia-global-color-red-800);
+}
+
+.root_alertPrioritySmall {
+    composes: root;
+
+    composes: min-w-40 from global;
+    composes: min-h-11.5 from global;
+    composes: capitalize from global;
+    composes: font-bold from global;
+    composes: text-white from global;
+    composes: bg-red-light from global;
+    composes: border-red-light from global;
+
+    composes: hover_bg-red from global;
+    composes: hover_border-red from global;
+
+    composes: active_focus_bg-red-dark from global;
+    composes: active_focus_border-red-dark from global;
+
+    composes: lg_text-sm from global;
+    composes: lg_min-w-60 from global;
+    composes: lg_min-h-11.5 from global;
+}

@@ -1,0 +1,87 @@
+.root {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: text-white from global;
+    composes: text-sm from global;
+    composes: leading-none from global;
+    composes: min-h-12 from global;
+    composes: py-2 from global;
+    composes: px-5 from global;
+
+    composes: lg_text-base from global;
+}
+
+.container {
+    composes: relative from global;
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: gap-2.5 from global;
+    padding-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.messageContainer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-2.5 from global;
+}
+
+.messageContainer svg {
+    @apply stroke-current;
+}
+
+.infoToast {
+    composes: bg-blue-dark from global;
+}
+
+.infoToast .progress {
+    @apply bg-blue-light;
+}
+
+.warningToast {
+    composes: bg-blue-dark from global;
+}
+
+.warningToast .progress {
+    @apply bg-blue-light;
+}
+
+.errorToast {
+    composes: bg-red from global;
+}
+
+.errorToast .progress {
+    @apply bg-red-light;
+}
+
+.successToast {
+    composes: bg-green from global;
+}
+
+.successToast .progress {
+    @apply bg-[#86e70c];
+}
+
+.progress {
+    animation: progress-bar;
+
+    composes: absolute from global;
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: w-0 from global;
+    composes: ease-linear from global;
+
+    @apply h-[2px];
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}

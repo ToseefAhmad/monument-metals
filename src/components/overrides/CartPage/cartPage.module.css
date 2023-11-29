@@ -1,0 +1,229 @@
+.root {
+    composes: max-width-full from global;
+    compose: my-auto from global;
+}
+
+.body {
+    grid-template-columns: 65.8% 31.6%;
+
+    /* The summary grid item spans the entire right column. */
+    grid-template-areas:
+        'payment summary'
+        'items summary'
+        'adjustments summary';
+
+    composes: grid from global;
+    composes: lg_gap-7.5 from global;
+}
+
+.body_guest {
+    composes: body;
+
+    grid-template-areas:
+        'guest summary'
+        'guest summary';
+
+    composes: lg_gap-0 from global;
+    composes: lg_gap-x-7.5 from global;
+}
+
+.items_header {
+    grid-template-columns: 49% 130px 66px 120px 1fr;
+    composes: lg_grid from global;
+    composes: hidden from global;
+
+    composes: hidden from global;
+    composes: lg_grid from global;
+    composes: h-17.5 from global;
+    composes: border-b border-solid border-gray-light from global;
+    composes: border-t border-solid border-gray-light from global;
+    composes: items-center from global;
+}
+.bodyTextSmall {
+    composes: bodyTextSmall from '../../StyleGuide/typographySection.module.css';
+
+    composes: pb-0 from global;
+    composes: font-semibold text-black-lightest from global;
+}
+
+.payment_container {
+    grid-area: payment;
+}
+
+.heading_container {
+    composes: mt-7.5 from global;
+    composes: lg_grid from global;
+    composes: mb-5 from global;
+    composes: lg_mb-7.5 from global;
+    composes: gap-x-4 from global;
+}
+
+.stockStatusMessageContainer {
+    composes: mt-7.5 from global;
+    composes: mb-5 from global;
+
+    composes: lg_mt-0 from global;
+}
+
+.stockStatusMessageContainer:empty {
+    @apply hidden;
+}
+
+.items_container {
+    grid-area: items;
+    composes: mb-7.5 lg_mb-0 from global;
+}
+
+.productlisting_label {
+    composes: bodyText from '../../StyleGuide/typographySection.module.css';
+    composes: lg_mb-8 from global;
+    composes: mb-5 from global;
+    composes: pb-0 from global;
+    composes: mt-7.5 lg_mt-0 from global;
+}
+
+.price_adjustments_container {
+    grid-area: adjustments;
+
+    composes: bg-white-dark from global;
+    composes: lg_mb-5 from global;
+    composes: lg_pt-7.5 pt-3.75 from global;
+    composes: lg_mx-0 -mx-5 from global;
+}
+
+.summary_container {
+    grid-area: summary;
+    composes: h-full from global;
+}
+
+.summary_contents {
+    composes: px-5 from global;
+    composes: lg_px-7.5 from global;
+}
+
+.summary_title {
+    composes: ml-5 lg_ml-7.5 mb-5 from global;
+    composes: font-semibold from global;
+    composes: h-[28px] lg_h-[35px] from global;
+}
+
+.summary_title_empty {
+    composes: summary_title;
+
+    @apply grid
+        justify-center
+        mx-0;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 1024px) {
+    .body {
+        /* Only one column in mobile view. */
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'payment'
+            'items'
+            'adjustments'
+            'summary'
+            'checkout';
+    }
+
+    .payment_label {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 32px;
+        text-align: left;
+        color: #111927;
+    }
+
+    input[type='radio'] {
+        width: 16px;
+        height: 16px;
+        left: 45px;
+        top: 565px;
+
+        background-color: #eee;
+    }
+
+    .payment_option_content {
+        height: 200px;
+        margin-bottom: 5px;
+    }
+}
+
+.checkoutButton_container_Mobile {
+    grid-area: checkout;
+    composes: lg_hidden from global;
+    composes: sticky from global;
+    composes: bottom-0 from global;
+    composes: flex from global;
+    composes: h-[90px] from global;
+    composes: py-5 from global;
+}
+.checkoutButton_container_Mobile button {
+    @apply w-full mx-auto;
+}
+
+.checkoutButton_container_MobileSpacer {
+    composes: checkoutButton_container_Mobile;
+    bottom: calc(3rem + env(safe-area-inset-bottom, 0));
+}
+
+.checkoutButton_container {
+    composes: hidden lg_block from global;
+}
+.checkoutButton_container button {
+    @apply w-full mx-auto;
+}
+
+.stickyContainer {
+    composes: sticky top-[204px] lg_mb-7.5 from global;
+}
+
+.bodyEmpty {
+    composes: bodyEmpty from '@app/components/overrides/MiniCart/miniCart.module.css';
+}
+
+.emptyCart {
+    composes: emptyCart from '@app/components/overrides/MiniCart/miniCart.module.css';
+}
+
+.emptyCartIcon {
+    composes: emptyCartIcon from '@app/components/overrides/MiniCart/miniCart.module.css';
+}
+
+.title {
+    composes: title from '@app/components/overrides/MiniCart/miniCart.module.css';
+}
+
+.shoppingButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+
+    composes: hover_text-white from global;
+    composes: focus_text-white from global;
+    composes: w-full from global;
+    composes: hidden lg_flex from global;
+    composes: items-center from global;
+
+    margin-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.shoppingButtonMobile {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+
+    composes: hover_text-white from global;
+    composes: focus_text-white from global;
+    composes: w-full from global;
+    composes: flex lg_hidden from global;
+    composes: items-center from global;
+
+    margin-bottom: env(safe-area-inset-bottom, 0);
+}
+
+.noItemsHeading {
+    composes: hidden lg_block from global;
+}

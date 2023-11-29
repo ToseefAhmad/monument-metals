@@ -1,0 +1,16 @@
+.root {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+
+    composes: p-2 from global;
+
+    composes: block from global;
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    composes: lg_hidden from global;
+}
+
+.label {
+    composes: hidden from global;
+}

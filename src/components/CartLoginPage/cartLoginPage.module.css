@@ -1,0 +1,9 @@
+.root {
+    composes: pt-7.5 from global;
+
+    composes: lg_pb-12.5 from global;
+}
+
+.heading {
+    composes: pb-7.5 from global;
+}

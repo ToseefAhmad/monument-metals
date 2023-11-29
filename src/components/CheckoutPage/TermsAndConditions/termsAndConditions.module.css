@@ -1,0 +1,83 @@
+.checkboxRootError {
+    composes: root_error from '@app/components/overrides/Checkbox/checkbox.module.css';
+
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-red-light from global;
+    composes: rounded-sm from global;
+    composes: py-3 from global;
+    composes: px-4 from global;
+}
+
+.checkboxLabel {
+    composes: label from '@app/components/overrides/Checkbox/checkbox.module.css';
+
+    composes: leading-6 from global;
+}
+
+.label {
+    composes: text-base from global;
+    composes: leading-6 from global;
+
+    composes: lg_text-lg from global;
+}
+
+.link {
+    composes: text-base from global;
+    composes: leading-6 from global;
+    composes: text-blue from global;
+    composes: font-semibold from global;
+    composes: hover_text-blue-lighter from global;
+
+    composes: lg_text-lg from global;
+}
+
+.pb {
+    composes: pb-2.5 from global;
+}
+
+.listEntry {
+    composes: relative from global;
+    composes: pl-5 from global;
+}
+
+.listEntry::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.modal {
+    composes: h-screen from global;
+    composes: w-screen from global;
+    composes: bg-white from global;
+    composes: cursor-auto from global;
+    composes: overflow-auto from global;
+    composes: pb-5 from global;
+    composes: px-5 from global;
+
+    composes: md_pb-12.5 from global;
+    composes: md_px-12.5 from global;
+    composes: md_h-auto from global;
+    composes: md_w-auto from global;
+    composes: lg_max-w-[1400px] from global;
+    composes: lg_my-0 from global;
+    composes: lg_mx-auto from global;
+}
+
+.content {
+    composes: lg_px-4 from global;
+}
+
+.closeIcon {
+    composes: w-full from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-end from global;
+    composes: relative from global;
+    composes: pt-6.25 from global;
+}
+
+.closeIcon > button {
+    @apply outline-none;
+}

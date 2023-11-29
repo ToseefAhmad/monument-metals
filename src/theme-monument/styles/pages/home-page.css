@@ -1,0 +1,20 @@
+.cms-home .selectCategoryRoot .categoryItem {
+    @apply lg_hover_shadow-tileShadowLight
+        transition
+        duration-200
+        ease-in-out;
+}
+
+.cms-home .hero-banner__secondary figure {
+    @apply lg_hover_shadow-tileShadowDarker
+        transition
+        duration-200
+        ease-in-out;
+}
+
+.cms-home h1 {
+    @apply absolute
+        opacity-0
+        invisible
+        -translate-x-288;
+}

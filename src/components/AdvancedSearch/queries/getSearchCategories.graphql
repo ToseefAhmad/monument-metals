@@ -1,0 +1,10 @@
+query getCategorySearches($inputText: String) {
+    xsearchCategories(search: $inputText) {
+        items {
+            name
+            url
+        }
+        total_count
+        code
+    }
+}

@@ -1,0 +1,25 @@
+.root {
+    /*  justify-content: stretch rule not exists in tailwind */
+    justify-content: stretch;
+    composes: gap-y-6 from global;
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: p-6 from global;
+    composes: lg_pt-0 from global;
+}
+
+.link {
+    composes: text-black-lightest from global;
+    composes: justify-start from global;
+    composes: no-underline from global;
+    composes: hover_text-blue-dark from global;
+    composes: pressed_text-black-light from global;
+}
+
+.signOut {
+    composes: link;
+    composes: border-t-2 from global;
+    composes: border-solid from global;
+    composes: pt-4 from global;
+    composes: font-semibold from global;
+}

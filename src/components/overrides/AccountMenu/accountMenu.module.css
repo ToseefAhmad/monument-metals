@@ -1,0 +1,73 @@
+.root {
+    composes: overflow-visible from global;
+    composes: left-[-100vw] from global;
+    composes: opacity-0 from global;
+    composes: h-0 from global;
+    composes: absolute from global;
+    composes: invisible from global;
+    width: calc(100vw - theme('spacing.8'));
+    composes: z-3 from global;
+    composes: -translate-x-1/2 from global;
+}
+
+.root_open {
+    composes: overflow-visible from global;
+    composes: h-0 from global;
+    composes: absolute from global;
+    width: calc(100vw - theme('spacing.8'));
+    composes: z-3 from global;
+    composes: -translate-x-1/2 from global;
+    composes: left-1/2 from global;
+    composes: opacity-100 from global;
+    composes: visible from global;
+}
+
+.contents {
+    /* animation */
+    composes: transition-accountMenu from global;
+    composes: duration-200 from global;
+    composes: ease-out from global;
+
+    composes: shadow-2xl from global;
+    composes: w-[27.5rem] from global;
+    composes: bg-white from global;
+    composes: rounded-1 from global;
+    composes: grid from global;
+    composes: min-h-5 from global;
+    composes: absolute from global;
+    composes: right-[15.25rem] from global;
+    composes: top-20 from global;
+}
+
+.contents_open {
+    composes: contents;
+    composes: translate-y-1 from global;
+    composes: min-w-117.5 from global;
+    composes: max-h-150 from global;
+    composes: overflow-y-auto from global;
+    composes: overflow-x-hidden from global;
+}
+
+.createAccount {
+    composes: lg_px-5 from global;
+    composes: lg_pt-5 from global;
+    composes: lg_px-12.5 from global;
+    composes: lg_pb-12.5 from global;
+    composes: lg_pt-0 from global;
+    composes: w-full from global;
+    composes: lg_w-117.5 from global;
+}
+
+.forgotPassword {
+    composes: p-8 from global;
+}
+
+.loading {
+    composes: p-8 from global;
+}
+
+.closeIcon {
+    composes: flex from global;
+    composes: justify-end from global;
+    composes: p-5 from global;
+}

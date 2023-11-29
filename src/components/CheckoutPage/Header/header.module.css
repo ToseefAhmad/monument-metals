@@ -1,0 +1,63 @@
+.root {
+    composes: sticky from global;
+    composes: top-0 from global;
+    composes: bg-white from global;
+    composes: shadow-header from global;
+    composes: z-10 from global;
+}
+
+.container {
+    composes: container from global;
+}
+
+.content {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: py-3.75 from global;
+
+    composes: lg_py-4.5 from global;
+}
+
+.action {
+    composes: absolute from global;
+    composes: left-0 from global;
+    composes: top-2/4 from global;
+    composes: -translate-y-2/4 from global;
+}
+
+.linkSecondary {
+    composes: text-black-lightest from global;
+    composes: hover_text-red from global;
+    composes: focus_text-red-dark from global;
+}
+
+.linkSecondary:hover > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondary:focus > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkSecondaryIcon {
+    composes: root from '@app/components/overrides/Icon/icon.module.css';
+
+    composes: text-red-light from global;
+    composes: pr-2.5 from global;
+}
+
+.countdownRoot {
+    composes: block from global;
+    composes: text-center from global;
+    composes: pb-2.5 from global;
+
+    composes: lg_hidden from global;
+}
+
+.countdownShimmer {
+    composes: countdownRoot;
+
+    composes: flex from global;
+}

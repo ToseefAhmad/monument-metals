@@ -1,0 +1,51 @@
+.root {
+    composes: relative from global;
+    composes: z-1 from global;
+}
+
+.root_masked {
+    composes: root;
+}
+
+.page {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: container from global;
+
+    /* Min height for pages */
+    composes: min-h-160 from global;
+    composes: sm_min-h-192 from global;
+    composes: md_min-h-240 from global;
+    composes: lg_min-h-288 from global;
+
+    @apply lg_pb-12.5 pb-0 !important;
+}
+
+.errorPage {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: container from global;
+
+    /* Min height for pages */
+    composes: min-h-160 from global;
+    composes: sm_min-h-192 from global;
+}
+
+.page_masked {
+    composes: page;
+}
+
+/* Specific spacing for cms pages */
+:global(.cms-page) .page {
+    @apply pb-7.5;
+}
+
+/* Specific spacing for home page */
+:global(.cms-home) .page {
+    @apply pt-0;
+    min-height: calc(100vh + 258px); /* full screen + newsletter */
+
+    /* Desktop screen */
+    @apply lg_pt-12.5;
+    @apply lg_min-h-screen;
+}

@@ -1,0 +1,13 @@
+.root {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: w-full from global;
+}
+
+@media (min-width: 1024px) {
+    .root {
+        grid-template-columns: 1fr 1fr;
+    }
+}

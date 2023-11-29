@@ -1,0 +1,17 @@
+.root {
+    composes: h-full from global;
+    composes: lg_h-auto from global;
+}
+
+.root button {
+    @apply capitalize lg_uppercase lg_min-h-11.5 h-full;
+}
+
+.filterButton {
+    composes: lg_root_lowPriority from '../Button/button.module.css';
+}
+
+.counter {
+    composes: text-red-light from global;
+    composes: pl-1 from global;
+}

@@ -1,0 +1,4 @@
+.inactive {
+    position: fixed;
+    visibility: hidden;
+}

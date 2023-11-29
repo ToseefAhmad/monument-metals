@@ -1,0 +1,26 @@
+.trustbox-container {
+    @apply bg-white-dark
+        w-100vw
+        lg_w-full
+        -translate-x-1/2
+        ml-50p
+        mb-3.75
+        lg_mb-8;
+}
+
+.trustbox-container .title {
+    @apply text-xl
+        lg_text-2xl
+        font-semibold
+        pt-7.5
+        pl-5
+        lg_pl-12.5
+        my-0;
+}
+
+.trustbox-container .trustpilot-widget {
+    @apply px-2
+        pb-5
+        lg_px-10
+        lg_pb-7;
+}

@@ -1,0 +1,15 @@
+.errorContainer {
+    padding-bottom: 1rem;
+}
+
+.editAccountInformationModal {
+
+    composes: z-50 from global;
+    composes: bg-white from global;
+    composes: min-w-12.5 from global;
+    composes: min-w-[100vw] from global;
+    composes: lg_min-w-[360px] from global;
+    composes: lg_-w-[360px] from global;
+    composes: lg_max-w-[600px] from global;
+    composes: overflow-y-auto from global;
+}

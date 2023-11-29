@@ -1,0 +1,168 @@
+.cms-state-sales-tax-information h1 {
+    @apply mt-7.5;
+
+    /* Large screen styles */
+    @apply lg_mt-0;
+}
+
+.sales-tax-page > div > div {
+    @apply first-of-type_mt-3.75
+        first-of-type_mb-7.5
+        relative;
+
+    /* Large screen styles */
+    @apply lg_first-of-type_mt-5
+        lg_first-of-type_mb-12.5;
+}
+
+.sales-tax-page h2 {
+    @apply mt-7.5
+        mb-3.75;
+
+    /* Large screen styles */
+    @apply lg_mt-12.5
+        lg_mb-5;
+}
+
+/* Map */
+.sales-tax-page div > svg {
+    @apply max-h-[260px]
+        max-w-[375px]
+
+        mx-auto;
+
+    /* Large screen styles */
+    @apply lg_max-h-150
+        lg_max-w-[1170px];
+}
+
+.sales-tax-page svg a path:hover {
+    @apply fill-red-light !important;
+}
+
+.sales-tax-page p {
+    @apply mb-0;
+}
+
+/* States list */
+.sales-tax-page .states-list {
+    @apply mt-1.25;
+
+    /* Large screen styles */
+    @apply lg_mt-8.75;
+}
+
+.sales-tax-page .states-list ul {
+    @apply grid
+        grid-cols-2
+        gap-x-4
+        pb-3.75
+
+        border-b-1
+        border-black-lightest
+        border-opacity-10;
+
+    /* Large screen styles */
+    @apply lg_grid-cols-3
+        lg_gap-x-8
+        lg_pb-[27px]
+        lg_pt-3.75;
+}
+
+.sales-tax-page .states-list li a {
+    @apply font-normal
+        text-gray-dark;
+}
+
+/* List styles */
+.sales-tax-page ul {
+    @apply list-none
+        p-0
+        my-0;
+}
+
+.sales-tax-page ul li {
+    @apply relative
+        pl-5
+        lg_pl-6
+        lg_py-px
+        p-0;
+
+    /* large screen styles */
+    @apply lg_mb-[3px];
+}
+
+.sales-tax-page ul li::before {
+    content: '';
+
+    @apply absolute
+        top-3.5
+        left-0
+        -translate-y-2/4
+        block
+        h-0.5
+        w-2.5
+        bg-red-light;
+
+    /* Large screen size */
+    @apply lg_top-[17px];
+}
+
+/* Anchor positioning */
+.sales-tax-page .sales-tax-anchor {
+    @apply absolute
+        bottom-40;
+
+    /* Large screen styles */
+    @apply lg_bottom-36;
+}
+
+/* Individual states */
+.sales-tax-page h3 {
+    @apply mt-3.75
+        mb-1.5;
+
+    /* Large screen styles */
+    @apply lg_mt-7.5
+        lg_mb-3.75
+
+        lg_text-2xl
+        lg_leading-9.5;
+}
+
+.sales-tax-page ul {
+    @apply border-b-1
+        border-black-lightest
+        border-opacity-10
+
+        py-3.75;
+
+    /* Large screen styles */
+    @apply lg_pt-7.5
+        lg_pb-6.25;
+}
+
+.sales-tax-page div:nth-last-child(2) ul {
+    @apply border-none
+        mb-3.75;
+
+    /* Large screen styles */
+    @apply lg_mb-[22px];
+}
+
+.sales-tax-page ul li {
+    @apply text-sm;
+
+    /* Large screen styles */
+    @apply lg_text-base;
+}
+
+/* Trustpilot block */
+.sales-tax-page > div > div:nth-last-child(1) {
+    @apply mb-3.75;
+}
+
+.sales-tax-page > div > div:nth-last-child(1) > div > div {
+    /* Large screen styles */
+    @apply lg_h-[367px];
+}

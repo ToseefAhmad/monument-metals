@@ -1,0 +1,581 @@
+.root {
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: top-0 from global;
+    composes: z-10 from global;
+    composes: shadow-header from global;
+    composes: text-white from global;
+    composes: bg-black from global;
+}
+
+/* Remove phone number styling on ios devices */
+:global(footer a[href^='tel']) {
+    @apply text-inherit
+        no-underline
+        font-normal;
+}
+
+:global(footer > div:first-child) {
+    @apply m-0;
+}
+
+/* Contacts */
+
+:global(.main > div > .contactsBlock) {
+    @apply bg-black-lighten;
+}
+
+:global(.contacts) {
+    @apply py-[30px] pl-5 pr-2.5;
+}
+
+:global(.contactsItem) {
+    @apply flex
+        flex-row
+        justify-start
+        items-center;
+}
+
+/* Removing styles from m2 pagebuilder */
+:global(.contactsItem) {
+    /* Rewriting inline styles */
+    flex-direction: row !important;
+}
+
+:global(.contactsIcon) {
+    @apply flex
+        justify-center
+        items-center
+        min-w-10
+        h-10
+        border-1
+        border-white
+        border-opacity-10
+        rounded-sm
+        my-0.5;
+}
+
+/* Removing styles from m2 pagebuilder */
+:global(.contactsIcon p) {
+    @apply m-0;
+}
+
+:global(.contactsItemText) {
+    @apply text-xs
+        pl-3.75
+        w-1/7
+        xs_w-[75%];
+}
+
+/* Removing styles from m2 pagebuilder */
+:global(.contactsItemText p) {
+    @apply m-0 text-white text-opacity-80 font-semibold;
+}
+
+/* Social icons and logo */
+:global(.logoAndSocialLinksColumn) {
+    /* Rewriting inline styles. */
+    @apply w-auto flex-wrap mb-7.5 flex-row items-center justify-center !important;
+}
+
+/* Social icons and logo */
+:global(.logoAndSocialLinksColumn > div) {
+    /* Rewriting inline styles. */
+    @apply w-full !important;
+}
+
+/* Social icons and logo */
+:global(.logoAndSocialLinks > div) {
+    /* Rewriting inline styles. */
+    @apply w-auto flex-wrap flex-row items-center justify-center !important;
+}
+
+:global(.logo) {
+    @apply min-w-full flex justify-center items-center;
+}
+
+:global(.logo img) {
+    @apply w-[112px] mt-7.5 mb-3.75;
+}
+
+:global(.socialIcon) {
+    @apply flex
+        justify-center
+        items-center
+        w-10
+        h-10
+        border-1
+        border-white
+        border-opacity-10
+        rounded-sm
+        mx-0.25
+        lg_hover_bg-white
+        lg_hover_bg-opacity-10
+        lg_hover_border-opacity-0
+        lg_focus_bg-white
+        lg_focus_bg-opacity-20
+        lg_focus_border-opacity-0;
+}
+
+/* Extending m2 styling */
+:global(.socialIcon p) {
+    @apply m-0 w-full h-full text-center;
+}
+
+/* Extending m2 styling */
+:global(.socialIcon p a) {
+    @apply w-full h-full flex items-center justify-center;
+}
+
+/* Main footer content */
+
+:global(.main) {
+    @apply bg-black-lightest max-w-full overflow-hidden;
+}
+
+:global(.main > div > div:nth-child(2) > div:nth-child(2)) {
+    /* Inline styles rewriting */
+    @apply w-full !important;
+}
+
+:global(.main > div > div) {
+    @apply flex-col items-center;
+}
+
+:global(.main h2) {
+    @apply text-center
+        m-0
+        font-bold
+        text-white
+        uppercase
+        text-sm;
+}
+
+:global(.main h2 a) {
+    @apply text-white no-underline text-xs;
+}
+
+:global(.siteSectionsColumn) {
+    /* Rewriting inline styles. */
+    @apply w-full !important;
+}
+
+:global(.siteSections) {
+    @apply m-auto;
+}
+
+:global(.siteSections > div) {
+    @apply pb-3.75;
+}
+
+:global(.siteSection > h2 > a) {
+    @apply font-bold;
+}
+
+:global(.siteSection ul) {
+    @apply flex flex-col items-center justify-center  list-none p-0 m-3.75;
+}
+
+:global(.siteSection ul li) {
+    @apply py-0.5 pl-0;
+}
+
+:global(.siteSection ul li::before) {
+    content: none;
+}
+
+:global(.siteSection ul li a) {
+    @apply h-8.5
+        font-semibold
+        text-sm
+        text-white
+        text-opacity-80
+        no-underline
+
+        lg_hover_text-white
+        lg_hover_text-opacity-90
+        lg_focus_text-white
+        lg_focus_text-opacity-90;
+}
+
+:global(.siteSection) {
+    @apply flex;
+}
+
+/* Bottom */
+
+:global(.bottomBlock) {
+    @apply bg-black mt-3.75;
+}
+
+:global(.bottomBlock) img {
+    @apply w-[35px];
+}
+
+:global(.bottom) {
+    @apply flex
+        flex-col
+        justify-center
+        py-7.5
+        font-semibold
+        text-xs
+        h-[140px];
+}
+
+:global(.bottom > div > div) {
+    @apply flex
+        flex-col;
+
+    /* Rewrite inline styles */
+    @apply flex-nowrap !important;
+}
+
+:global(.bottom > div > div > div) {
+    @apply m-auto;
+}
+
+:global(.copyrightText) {
+    @apply text-center
+        mb-1.3;
+}
+
+/* Removing m2 styling */
+:global(.copyrightText p) {
+    @apply mb-0;
+}
+
+:global(.paymentMethods) {
+    /* Important to override inline styles */
+    @apply flex-row
+        w-3/4
+        justify-center
+        !important;
+    @apply flex
+        flex-wrap
+        text-center
+        lg_ml-auto;
+
+    /* Large screen styles */
+    @apply lg_flex-col
+        lg_flex-nowrap;
+}
+
+:global(.paymentMethods > div) {
+    flex-basis: 100%;
+
+    @apply lg_mr-3.5;
+}
+
+@media (min-width: 1024px) {
+    :global(.paymentMethods > div.paymentMethodsText) {
+        flex-basis: auto;
+    }
+}
+
+:global(.paymentMethodsText) {
+    @apply mb-2.5
+        text-center
+        lg_whitespace-nowrap
+        xl_whitespace-normal;
+}
+
+/* Removing m2 styling */
+:global(.paymentMethodsText p) {
+    @apply mb-0;
+}
+
+:global(.paymentMethodsLogos p) {
+    @apply flex
+        flex-row
+        justify-center
+        items-center;
+}
+
+:global(.paymentMethodsLogos p img) {
+    @apply m-0.25;
+}
+
+/* Large screen styling */
+
+/* Contacts */
+
+:global(.contacts) {
+    @apply lg_flex
+        lg_flex-row
+        lg_justify-start
+        lg_py-8.75
+        lg_pl-0
+        lg_pr-0
+        lg_max-w-desktop
+        lg_mx-auto;
+}
+
+:global(.contactsItem) {
+    /* Rewriting inline styles */
+    @apply lg_ml-[40px] lg_w-auto !important;
+}
+
+:global(.firstContactsItem) {
+    /* Rewriting inline styles */
+    @apply lg_ml-0 !important;
+}
+
+:global(.contactsIcon) {
+    @apply lg_min-w-11.5
+        lg_min-h-11.5
+        lg_my-0.5;
+}
+
+:global(.contactsItemText) {
+    @apply lg_text-sm
+        lg_w-auto
+        lg_pl-7.5;
+}
+
+/* Social icons and logo */
+
+/* Social icons and logo */
+:global(.logoAndSocialLinksColumn) {
+    /* Rewriting inline styles. */
+    @apply lg_mb-12.5 !important;
+}
+
+:global(.logoAndSocialLinks > div) {
+    /* Rewriting inline styles */
+    @apply lg_min-w-[200px] lg_flex lg_justify-start lg_items-start lg_w-auto lg_mr-7.5 lg_mb-[70px] !important;
+}
+
+:global(.siteSections ul) {
+    @apply lg_flex lg_m-0 lg_w-full;
+}
+
+:global(.socialIcon) {
+    @apply lg_min-w-11.5
+        lg_min-h-11.5
+        lg_mb-0
+        lg_ml-0
+        lg_mr-1.3
+        lg_mt-7.5;
+}
+
+:global(.logo) {
+    @apply lg_items-start;
+}
+
+:global(.logo img) {
+    @apply lg_w-[173px] lg_mb-0 lg_mt-0;
+}
+
+/* Removing m2 styles */
+:global(.logo p) {
+    @apply m-0;
+}
+
+/* Main footer content */
+
+:global(.siteSection ul li a) {
+    @apply lg_h-8.5
+        lg_font-semibold
+        lg_text-base;
+}
+
+:global(.main) {
+    @apply lg_flex lg_flex-row;
+}
+
+/* Align content */
+:global(.main > div > .contactsBlock > div) {
+    @apply lg_flex lg_flex-row lg_px-7.5;
+}
+
+:global(.main > div > div:nth-child(2) > div) {
+    @apply lg_flex lg_flex-row lg_px-7.5;
+}
+
+:global(.main > div > .bottomBlock) {
+    @apply lg_w-full;
+}
+
+:global(.main > div > .bottomBlock > div) {
+    @apply lg_flex lg_flex-row lg_px-7.5 lg_w-full;
+}
+
+:global(.bottom > div) {
+    @apply lg_w-full;
+}
+
+:global(.bottom > div > div) {
+    @apply lg_flex
+        lg_flex-row;
+}
+
+:global(.bottom > div > div > div) {
+    @apply lg_m-0;
+}
+
+:global(.main > div > div) {
+    @apply lg_flex lg_flex-row;
+}
+
+:global(.main h2) {
+    @apply lg_mt-1.3 lg_mb-10;
+}
+
+:global(.main > div) {
+    @apply lg_w-full;
+}
+
+/* Align footer content */
+:global(.main > div > div:nth-child(2)) {
+    @apply lg_w-auto lg_max-w-[1170px] lg_mx-auto;
+}
+
+:global(.main > div > .contactsBlock > div) {
+    @apply lg_w-[1770px] lg_max-w-[1170px] lg_mx-auto;
+}
+
+:global(.bottomBlock) {
+    @apply lg_mt-0;
+}
+
+:global(.main > div > .bottomBlock > div) {
+    @apply lg_w-[1770px] lg_max-w-[1170px] lg_mx-auto;
+}
+
+:global(.siteSections > div) {
+    /* Rewriting inline styles */
+    @apply lg_flex-row lg_justify-between !important;
+    @apply lg_flex lg_items-start lg_w-full pb-0;
+}
+
+:global(.siteSections > div > div:last-child) {
+    @apply lg_mr-0;
+}
+
+:global(.siteSection) {
+    @apply lg_mr-7.5
+        lg_flex
+        lg_flex-col
+        lg_justify-start
+        lg_items-start
+        lg_max-w-[270px]
+        lg_w-auto
+        lg_py-17.5;
+}
+
+:global(.siteSection ul li) {
+    @apply lg_w-full lg_text-left lg_p-0 lg_text-base lg_mb-1;
+}
+
+:global(.siteSectionLast) {
+    @apply lg_mr-5;
+}
+
+:global(.siteSection h2) {
+    @apply lg_mt-0
+        lg_mb-7.5
+        lg_text-left
+        lg_w-full;
+}
+
+:global(.siteSectionItemList) {
+    @apply lg_w-full;
+}
+
+:global(.siteSectionItem) {
+    @apply lg_text-left
+        lg_text-base
+        lg_h-9.3;
+}
+
+/* Bottom */
+
+:global(.bottom) {
+    @apply lg_p-0
+        lg_h-12.5
+        lg_flex
+        lg_items-center
+        lg_justify-center;
+}
+
+:global(.bottom > div) {
+    @apply lg_flex-row
+        xl_w-[1170px]
+        lg_justify-between
+        lg_mx-auto
+        lg_pt-0
+        lg_pb-0;
+}
+
+:global(.copyrightText) {
+    @apply lg_mb-0;
+}
+
+:global(.copyrightText p) {
+    @apply lg_text-left
+        lg_text-sm
+        lg_mb-0;
+}
+
+:global(.paymentMethods) {
+    /* Rewriting inline styles */
+    @apply lg_flex-row lg_items-center lg_justify-end !important;
+}
+
+:global(.paymentMethods > figure) {
+    @apply mr-0.5;
+}
+
+:global(.paymentMethods > figure:last-of-type) {
+    @apply mr-0;
+}
+
+:global(.paymentMethodsLogos) {
+    @apply lg_ml-3.75;
+}
+
+/* Removing m2 styles */
+:global(.paymentMethodsLogos p) {
+    @apply m-0;
+}
+
+:global(.paymentMethodsText) {
+    @apply lg_mb-0
+        lg_text-sm;
+}
+
+/* XL screen styling */
+
+:global(.main) {
+    @apply xl_px-0;
+}
+
+:global(.siteSection) {
+    @apply xl_w-full;
+}
+
+:global(.siteSections > div) {
+    /* Rewriting inline styles */
+    @apply xl_flex-row xl_justify-start !important;
+}
+
+:global(.contacts) {
+    @apply xl_pl-8.75;
+}
+
+/* Align footer content */
+:global(.main > div > div:nth-child(2)) {
+    @apply xl_w-[1770px] xl_max-w-[1170px] xl_mx-auto;
+}
+
+:global(.main > div > .contactsBlock > div) {
+    @apply xl_px-0;
+}
+
+:global(.main > div > div:nth-child(2) > div) {
+    @apply xl_flex xl_flex-row xl_px-0;
+}
+
+:global(.main > div > .bottomBlock > div) {
+    @apply xl_flex xl_flex-row xl_px-0 xl_w-full;
+}

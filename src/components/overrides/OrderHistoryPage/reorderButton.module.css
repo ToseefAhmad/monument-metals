@@ -1,0 +1,15 @@
+.root {
+    composes: font-bold from global;
+    composes: lg_px-5 from global;
+    composes: min-w-[91px] from global;
+    composes: text-sm from global;
+    composes: py-[2px] from global;
+    composes: rounded from global;
+    composes: bg-blue from global;
+    composes: text-white from global;
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+}

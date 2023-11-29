@@ -1,0 +1,111 @@
+.root {
+    composes: px-5 from global;
+    composes: pt-5 from global;
+
+    composes: lg_px-12.5 from global;
+    composes: lg_pb-12.5 from global;
+    composes: lg_pt-0 from global;
+    composes: w-full from global;
+    composes: lg_w-[470px] from global;
+}
+
+.desktopDropdownTitle {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: mb-5 from global;
+    composes: text-xl from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.form {
+    composes: flex flex-col from global;
+}
+
+.form input {
+    appearance: none;
+}
+
+.emailAndPasswordFields {
+    composes: flex flex-col from global;
+    composes: mb-2.5 from global;
+}
+
+.emailAndPasswordFields > div:first-child {
+    @apply lg_mb-[17px];
+}
+
+.emailAndPasswordFields > div {
+    @apply mb-2.5;
+}
+
+.modal {
+    composes: invisible from global;
+    composes: h-full from global;
+    composes: w-full from global;
+    composes: bg-gray from global;
+    composes: text-center from global;
+    composes: absolute from global;
+    composes: bottom-0 from global;
+}
+
+.modal_active {
+    composes: visible from global;
+    composes: invisible from global;
+    composes: opacity-90 from global;
+}
+
+.buttonsContainer {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: w-full from global;
+}
+
+.buttonsContainer > button {
+    @apply w-full flex mb-5;
+    @apply lg_mb-3.75;
+}
+
+.emailRoot,
+.passwordRoot {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: pb-1.75 from global;
+
+    composes: lg_pb-1.75 from global;
+}
+
+.emailRoot span,
+.passwordRoot span {
+    @apply hidden;
+}
+
+.forgotPasswordAndRememberMeContainer {
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: items-center from global;
+    composes: justify-between from global;
+    composes: text-center from global;
+    composes: mb-5 from global;
+}
+
+.forgotPasswordAndRememberMeContainer span {
+    @apply text-sm lg_text-base;
+}
+
+.forgotPasswordButton {
+    composes: root from '@magento/venia-ui/lib/components/LinkButton/linkButton.module.css';
+    composes: p-0 from global;
+    composes: block from global;
+    composes: no-underline from global;
+}
+
+.forgotPasswordButton > span {
+    @apply text-black-lightest text-sm lg_text-base font-semibold;
+}
+
+.createAccount > button > span {
+    @apply text-black-lightest font-semibold;
+}

@@ -1,0 +1,7 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}

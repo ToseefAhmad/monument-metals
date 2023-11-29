@@ -1,0 +1,23 @@
+.popular-silver-coins {
+    @apply bg-white-dark
+        pt-7.5
+        px-5
+        mb-[33px];
+
+    /* Important to override pagebuilder styles */
+    @apply w-[calc(100vw-var(--scrollBarWidth))]
+        ml-[50%]
+        -translate-x-2/4
+        !important;
+
+    /* large screen styles */
+    @apply lg_pt-0
+        lg_mb-0
+        lg_px-0;
+
+    /* Important to override pagebuilder styles */
+    @apply lg_mx-0
+        lg_w-full
+        lg_translate-x-0
+        !important;
+}

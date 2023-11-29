@@ -1,0 +1,12 @@
+.sortContainer {
+    padding: 0.5rem 0 2rem;
+}
+
+.sortText {
+    font-weight: 700;
+}
+
+.link {
+    display: block;
+    margin: 0 0 0.5rem;
+}

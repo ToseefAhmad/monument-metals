@@ -1,0 +1,14 @@
+.root {
+    composes: h-full from global;
+}
+
+.filterButtonShimmer {
+    composes: flex from global;
+    composes: w-full from global;
+    composes: h-full from global;
+}
+
+.filterButtonShimmer > div {
+    @apply min-h-10 min-w-full;
+    @apply lg_min-h-12 lg_w-[160px];
+}

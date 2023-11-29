@@ -1,0 +1,43 @@
+.root {
+    display: inline-grid;
+    grid-auto-flow: column;
+    grid-template-areas: 'before input after';
+    grid-template-columns: auto 1fr auto;
+    width: 100%;
+}
+
+.input {
+    align-items: center;
+    display: flex;
+    grid-column: before-start / after-end;
+    grid-row: input-start / input-end;
+}
+
+.before,
+.after {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 0 2px;
+    pointer-events: none;
+    z-index: 1;
+
+    composes: w-12 from global;
+}
+
+.before:empty,
+.after:empty {
+    display: none;
+}
+
+.before {
+    grid-area: before;
+}
+
+.after {
+    grid-area: after;
+}
+
+.before svg {
+    stroke: rgb(var(--venia-global-color-gray-600));
+}

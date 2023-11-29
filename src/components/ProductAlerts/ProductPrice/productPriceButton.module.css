@@ -1,0 +1,12 @@
+@import '../sharedPrice.css';
+
+.modal {
+    composes: lg_h-auto from global;
+    composes: grid from global;
+}
+
+.closeIcon {
+    composes: outline-none from global;
+    composes: justify-self-end from global;
+    composes: w-5 from global;
+}

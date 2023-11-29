@@ -1,0 +1,41 @@
+.root {
+    max-width: 1720px;
+
+    composes: mx-auto from global;
+    composes: py-24 from global;
+}
+
+.columns {
+    composes: flex from global;
+    composes: gap-x-24 from global;
+}
+
+.column {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-12 from global;
+}
+
+.title {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: pl-5 from global;
+    composes: pb-7 from global;
+}
+
+.title::before {
+    content: '';
+
+    @apply absolute
+        left-0
+        w-0.5
+        h-6
+        bg-red-light;
+}
+
+.logoWrapper {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: pb-24 from global;
+}

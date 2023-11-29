@@ -1,0 +1,97 @@
+.container {
+    composes: mt-10 from global;
+
+    /* Large screen styles */
+    composes: lg_mt-0 from global;
+}
+
+.root {
+    composes: text-black-lightest from global;
+    composes: px-0 from global;
+    composes: pt-0 from global;
+    composes: pb-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_my-25 from global;
+    composes: lg_p-0 from global;
+}
+
+.content {
+    composes: grid from global;
+    composes: gap-0 from global;
+    composes: text-center from global;
+
+    /* Large screen styles */
+    composes: lg_grid-cols-2 from global;
+    composes: lg_grid-flow-col from global;
+}
+
+.textContainer {
+    /* Large screen styles */
+    composes: lg_col-start-1 from global;
+
+    composes: lg_grid from global;
+    composes: lg_grid-cols-1 from global;
+    composes: lg_justify-start from global;
+
+    composes: lg_py-11.5 from global;
+}
+
+.iconContainer {
+    composes: justify-center from global;
+
+    /* Large screen styles */
+    composes: lg_col-start-2 from global;
+    composes: lg_flex from global;
+    composes: lg_flex-row-reverse from global;
+    composes: lg_justify-between from global;
+}
+
+.icon svg {
+    @apply w-[247px]
+        h-[200px]
+        mx-auto;
+
+    /* Large screen styles */
+    @apply lg_w-100
+        lg_h-[324px];
+}
+
+.header {
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: mt-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_text-left from global;
+    composes: lg_mt-0 from global;
+}
+
+.message {
+    composes: mt-3.75 from global;
+    composes: mb-5 from global;
+    composes: pb-0 from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+
+    /* Large screen styles */
+    composes: lg_text-left from global;
+    composes: lg_mt-5 from global;
+    composes: lg_mb-10 from global;
+    composes: lg_text-base from global;
+}
+
+.buttonContainer {
+    /* Custmizations */
+    composes: w-[203px] from global;
+    composes: mx-auto from global;
+
+    /* Large screen styles */
+    composes: lg_m-0 from global;
+    composes: lg_w-[241px] from global;
+}
+
+.buttonContainer button {
+    @apply px-0
+        w-full;
+}

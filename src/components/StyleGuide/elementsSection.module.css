@@ -1,0 +1,344 @@
+.subtitle {
+    composes: subtitle from './index.module.css';
+}
+
+.section {
+    composes: section from './index.module.css';
+}
+
+.columns {
+    composes: columns from './index.module.css';
+}
+
+.column {
+    composes: column from './index.module.css';
+}
+
+.unorderedItem {
+    composes: relative from global;
+    composes: pl-6 from global;
+}
+
+.unorderedItem::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.unorderedItemMobile {
+    composes: relative from global;
+    composes: text-sm from global;
+    composes: pl-5 from global;
+}
+
+.unorderedItemMobile::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.numberedList {
+    counter-reset: list-number;
+}
+
+.numberedItem {
+    composes: relative from global;
+    composes: pl-6 from global;
+}
+
+.numberedItem::before {
+    counter-increment: list-number;
+    content: counters(list-number, '.') '. ';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block text-red-light font-bold;
+}
+
+.numberedListMobile {
+    counter-reset: list-number;
+}
+
+.numberedItemMobile {
+    composes: relative from global;
+    composes: text-sm from global;
+    composes: pl-5 from global;
+}
+
+.numberedItemMobile::before {
+    counter-increment: list-number;
+    content: counters(list-number, '.') '. ';
+
+    @apply absolute left-0 -translate-y-2/4 block text-red-light text-sm font-bold top-[0.9rem];
+}
+
+.radioGroup {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-2.5 from global;
+    composes: pb-2.5 from global;
+    composes: last_pb-0 from global;
+}
+
+.radioContainerMobile {
+    composes: radioContainer from '@app/components/overrides/RadioGroup/radioGroup.module.css';
+}
+
+.radioContainerActiveMobile {
+    composes: radioContainer_active from '@app/components/overrides/RadioGroup/radioGroup.module.css';
+}
+
+.root .radioContainerMobile,
+.root .radioContainerActiveMobile {
+    @apply lg_min-h-12.5;
+}
+
+.root .radioLabelMobile {
+    @apply lg_text-sm;
+}
+
+.checkboxList {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: gap-y-2.5 from global;
+}
+
+.linksColumns {
+    composes: flex from global;
+    composes: gap-x-7 from global;
+    composes: mb-7 from global;
+    composes: last_mb-0 from global;
+}
+
+.linksColumnsDark {
+    composes: linksColumns;
+    composes: bg-black-lightest from global;
+    composes: w-max from global;
+    composes: p-8 from global;
+}
+
+.linksColumn {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.linksText {
+    composes: pt-2.5 from global;
+}
+
+.linksTextLight {
+    composes: linksText;
+    composes: text-white from global;
+    composes: text-opacity-80 from global;
+}
+
+.linkHover {
+    composes: text-blue-dark from global;
+    composes: hover_text-blue-lighter from global;
+    composes: focus_text-blue-dark from global;
+}
+
+.linkFocus {
+    composes: text-black-light from global;
+    composes: hover_text-black-light from global;
+    composes: focus_text-black-light from global;
+}
+
+.linkMobile {
+    composes: text-sm from global;
+}
+
+.linkSecondary {
+    composes: text-black-lightest from global;
+    composes: hover_text-red from global;
+    composes: focus_text-red-dark from global;
+}
+
+.linkSecondary:hover > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondary:focus > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkSecondaryIcon {
+    composes: root from '@app/components/overrides/Icon/icon.module.css';
+
+    composes: text-red-light from global;
+    composes: pl-2.5 from global;
+}
+
+.linkSecondaryHover {
+    composes: text-red from global;
+    composes: hover_text-red from global;
+    composes: focus_text-red from global;
+}
+
+.linkSecondaryHover > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondaryHover:hover > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondaryHover:focus > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondaryFocus {
+    composes: text-red-dark from global;
+    composes: hover_text-red-dark from global;
+    composes: focus_text-red-dark from global;
+}
+
+.linkSecondaryFocus > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkSecondaryFocus:hover > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkSecondaryFocus:focus > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkSecondaryMobile {
+    composes: linkSecondary;
+    composes: text-sm from global;
+}
+
+.linkSecondaryMobile:hover > .linkSecondaryIcon {
+    @apply text-red;
+}
+
+.linkSecondaryMobile:focus > .linkSecondaryIcon {
+    @apply text-red-dark;
+}
+
+.linkLight {
+    composes: text-white from global;
+    composes: text-opacity-80 from global;
+    composes: hover_text-white from global;
+    composes: hover_text-opacity-90 from global;
+    composes: focus_text-white from global;
+    composes: focus_text-opacity-90 from global;
+}
+
+.linkLightHover {
+    composes: text-white from global;
+    composes: text-opacity-90 from global;
+    composes: hover_text-white from global;
+    composes: hover_text-opacity-90 from global;
+    composes: focus_text-white from global;
+    composes: focus_text-opacity-90 from global;
+}
+
+.linkLightFocus {
+    composes: text-white from global;
+    composes: text-opacity-90 from global;
+    composes: hover_text-white from global;
+    composes: hover_text-opacity-90 from global;
+    composes: focus_text-white from global;
+    composes: focus_text-opacity-90 from global;
+}
+
+.linkLightMobile {
+    composes: linkLight;
+    composes: text-sm from global;
+}
+
+.labelsList {
+    composes: flex from global;
+    composes: gap-x-1.5 from global;
+    composes: pb-1.5 from global;
+    composes: last_pb-0 from global;
+}
+
+.label {
+    composes: block from global;
+    composes: rounded-sm from global;
+    composes: uppercase from global;
+    composes: text-white from global;
+    composes: text-xs from global;
+    composes: font-bold from global;
+    padding: 3px 12px;
+}
+
+.labelDanger {
+    composes: label;
+    composes: bg-red-light from global;
+}
+
+.labelSuccess {
+    composes: label;
+    composes: bg-green from global;
+}
+
+.labelWarning {
+    composes: label;
+    composes: bg-gold from global;
+}
+
+.labelMobile {
+    composes: block from global;
+    composes: rounded-sm from global;
+    composes: uppercase from global;
+    composes: text-white from global;
+    composes: font-bold from global;
+
+    font-size: 10px;
+    line-height: 18px;
+    padding: 3px 10px;
+}
+
+.labelDangerMobile {
+    composes: labelMobile;
+    composes: bg-red-light from global;
+}
+
+.labelSuccessMobile {
+    composes: labelMobile;
+    composes: bg-green from global;
+}
+
+.labelWarningMobile {
+    composes: labelMobile;
+    composes: bg-gold from global;
+}
+
+.breadcrumbs {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-x-2.5 from global;
+    composes: h-auto from global;
+    composes: text-sm from global;
+    composes: font-semibold from global;
+
+    /* Permanent height to prevent pop-in. */
+    composes: h-3.5 from global;
+
+    /* Show ellipses when overflowing. */
+    composes: overflow-hidden from global;
+    composes: overflow-ellipsis from global;
+    composes: whitespace-nowrap from global;
+}
+
+.breadcrumbsDivider {
+    composes: leading-0 from global;
+}
+
+.breadcrumbsLink {
+    composes: text-sm from global;
+    composes: text-gray-dark from global;
+    composes: hover_text-black-lightest from global;
+}
+
+.breadcrumbsLinkHover {
+    composes: text-sm from global;
+    composes: text-black-lightest from global;
+}
+
+.breadcrumbsText {
+    composes: text-black-lightest from global;
+}

@@ -1,0 +1,81 @@
+.root {
+    composes: justify-self-center from global;
+    composes: items-center from global;
+    composes: hidden from global;
+    composes: justify-items-center from global;
+    composes: w-full from global;
+}
+
+.root_open {
+    composes: root;
+    composes: z-3 from global;
+}
+
+.form {
+    composes: h-screen from global;
+    composes: w-full from global;
+
+    composes: lg_h-auto from global;
+}
+
+.container {
+    composes: items-center from global;
+    composes: inline-flex from global;
+    composes: justify-center from global;
+    composes: relative from global;
+    composes: w-full from global;
+    composes: h-screen from global;
+    composes: bg-white from global;
+
+    composes: lg_h-auto from global;
+}
+
+.search {
+    composes: relative from global;
+    composes: px-5 from global;
+    composes: py-2.5 from global;
+    composes: border-b-1 from global;
+    composes: border-gray-light from global;
+
+    composes: lg_border-b-0 from global;
+}
+
+.autocomplete {
+    composes: flex from global;
+    composes: w-full from global;
+    composes: relative from global;
+}
+
+.closeSearchBarSection {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: fixed from global;
+    composes: bottom-0 from global;
+    composes: right-0 from global;
+    composes: h-auto from global;
+    composes: w-full from global;
+    composes: bg-white from global;
+    composes: px-5 from global;
+    composes: pb-2.5 from global;
+    padding: 10px 5% calc(env(safe-area-inset-bottom) + 10px);
+
+    composes: lg_hidden from global;
+}
+
+.closeSearchBarMobile {
+    composes: block from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: h-12.5 from global;
+    composes: overflow-hidden from global;
+    composes: w-full from global;
+    composes: text-black-lightest from global;
+    composes: border-solid from global;
+    composes: border-1 from global;
+    composes: rounded-sm from global;
+    composes: border-gray-light from global;
+    composes: text-blue from global;
+
+    composes: lg_hidden from global;
+}

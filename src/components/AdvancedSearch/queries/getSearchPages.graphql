@@ -1,0 +1,12 @@
+query getPageSearches($inputText: String) {
+    xsearchPages(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+}

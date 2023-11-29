@@ -1,0 +1,19 @@
+.buttonOutOfStock {
+    grid-column: qty / add;
+
+    composes: w-full from global;
+}
+
+.button button {
+    @apply min-h-11.5
+        min-w-full;
+}
+
+.qty input {
+    @apply w-11.5
+        h-11.5;
+}
+
+.qty button {
+    @apply h-[23px];
+}

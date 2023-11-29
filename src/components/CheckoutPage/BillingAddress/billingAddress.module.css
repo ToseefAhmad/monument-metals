@@ -1,0 +1,80 @@
+.billing_address_fields_root {
+    composes: pt-5 from global;
+}
+
+.title {
+    composes: relative from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: pl-5 from global;
+    composes: pb-7 from global;
+}
+
+.title::before {
+    content: '';
+
+    @apply absolute
+        left-0
+        w-0.5
+        h-6
+        bg-red-light;
+}
+
+.billingAddressFields {
+    grid-template-columns: 1fr;
+
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: w-full from global;
+}
+
+@media (min-width: 1024px) {
+    .billingAddressFields {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.billing_address_fields_root_hidden {
+    overflow: hidden;
+    visibility: hidden;
+    height: 0;
+    opacity: 0%;
+}
+
+.formErrorContainer {
+    padding-top: 1.5rem;
+}
+
+.first_name,
+.last_name {
+    grid-column-end: span 1;
+}
+
+.country,
+.street1,
+.street2,
+.address_check,
+.city,
+.region,
+.postal_code,
+.phone_number {
+    grid-column-end: span 2;
+}
+
+/*
+ * Mobile-specific styles.
+ */
+
+@media (max-width: 960px) {
+    .first_name,
+    .last_name,
+    .city,
+    .region,
+    .postal_code,
+    .phone_number,
+    .street1,
+    .street2,
+    .address_check {
+        grid-column-end: span 2;
+    }
+}

@@ -1,0 +1,11 @@
+query getRecentSearches {
+    xsearchRecentSearches {
+        items {
+            name
+            url
+            num_results
+        }
+        total_count
+        code
+    }
+}

@@ -1,0 +1,100 @@
+.root {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: p-5 from global;
+}
+
+.root input {
+    appearance: none;
+}
+
+.fields {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: pb-5 from global;
+}
+
+.title {
+    composes: hidden from global;
+    composes: lg_block from global;
+    composes: mb-5 from global;
+    composes: text-xl from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.message {
+    composes: bg-gray-light from global;
+    composes: rounded-sm from global;
+    composes: text-sm from global;
+    composes: p-4 from global;
+}
+
+.label {
+    composes: text-black-lightest from global;
+    composes: mb-2.25 from global;
+    composes: relative from global;
+}
+
+.label > label {
+    @apply block pb-1.75;
+}
+
+.label > label > span {
+    @apply hidden;
+}
+
+.password {
+    composes: text-black-lightest from global;
+    composes: mb-5 from global;
+    composes: relative from global;
+}
+
+.password > label {
+    @apply block pb-[5px];
+}
+
+.password > label > span {
+    @apply hidden;
+}
+
+.message:empty {
+    display: none;
+}
+
+.actions {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+}
+
+.actions > button {
+    @apply w-full mb-5 bg-blue;
+}
+
+.loginIntoYourAccountAction {
+    composes: cursor-pointer from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.submitButtonContainer {
+    composes: w-full from global;
+    composes: pb-5 from global;
+}
+
+.submitButtonContainer button {
+    @apply w-full;
+}
+
+.subscribe {
+    composes: -ml-1.5 from global;
+}
+
+.actions {
+    composes: lg_grid-flow-row from global;
+}
+
+.submitButton {
+    composes: lg_col-start-auto from global;
+}

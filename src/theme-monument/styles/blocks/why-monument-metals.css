@@ -1,0 +1,53 @@
+.why-monument-metals > * > :not(.full-width) {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.why-monument-metals .full-width > * {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.why-monument-metals .full-width {
+    @apply py-7.5
+        lg_py-32;
+}
+
+.why-monument-metals .content {
+    @apply lg_pt-15;
+}
+
+.why-monument-metals img {
+    @apply m-auto
+        rounded
+        object-fill
+        h-30
+        lg_h-40;
+}
+
+.why-monument-metals .top-image {
+    @apply lg_-mb-20
+        z-10
+        rounded
+        mt-7.5
+        lg_mt-12.5
+        h-30
+        lg_h-40;
+}
+
+.why-monument-metals .bottom-image {
+    @apply lg_-mt-28
+        m-auto
+        z-10
+        mb-7.5
+        lg_mb-20
+        lg_pt-7.5
+        h-30
+        lg_h-40;
+}
+.why-monument-metals .top-image picture {
+    @apply m-0
+        p-0;
+}
+.why-monument-metals .bottom-image picture {
+    @apply m-0
+        p-0;
+}

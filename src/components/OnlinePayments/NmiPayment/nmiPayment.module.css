@@ -1,0 +1,57 @@
+.modeSwitch {
+    composes: pb-2.5 from global;
+}
+
+.vaultForm {
+    composes: pb-2.5 from global;
+}
+
+.ccFields {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: pb-4 from global;
+
+    composes: lg_grid-flow-col from global;
+}
+
+.ccNumber {
+    composes: input from '@magento/venia-ui/lib/components/Field/field.module.css';
+}
+
+.expiration {
+    composes: input from '@magento/venia-ui/lib/components/Field/field.module.css';
+}
+
+.cvv {
+    composes: input from '@magento/venia-ui/lib/components/Field/field.module.css';
+}
+
+@media (min-width: 1024px) {
+    .ccFields {
+        grid-template-columns: auto 173px 173px;
+    }
+}
+
+.shimmer {
+    composes: ccFields;
+}
+
+.shimmerLabel {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: h-9 from global;
+    composes: w-2/6 from global;
+}
+
+.shimmerInput {
+    composes: h-12 from global;
+
+    composes: lg_h-14 from global;
+}
+
+.shimmerCheckbox {
+    composes: h-7.5 from global;
+    composes: w-2/6 from global;
+
+    composes: lg_h-8 from global;
+}

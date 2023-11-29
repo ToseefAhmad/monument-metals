@@ -1,0 +1,61 @@
+.root {
+    /*
+     * Each grid item gets at least 125px.
+     * Wrap the grid items.
+     */
+    grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+
+    composes: grid from global;
+    composes: gap-2 from global;
+}
+
+.radioContainer {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: min-h-12.5 from global;
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: px-6 from global;
+    composes: cursor-pointer from global;
+
+    composes: lg_min-h-14 from global;
+}
+
+.radioContainer_default {
+    composes: radioContainer;
+
+    composes: border-gray-light from global;
+    composes: hover_border-blue from global;
+
+    composes: transition-primary from global;
+}
+
+.radioContainer_disabled {
+    composes: radioContainer;
+
+    composes: bg-white-dark from global;
+    composes: cursor-default from global;
+}
+
+.radioContainer_active {
+    composes: radioContainer;
+
+    composes: border-blue from global;
+}
+
+.message {
+    @apply text-base
+        mt-4;
+}
+
+.message:empty {
+    @apply hidden;
+}

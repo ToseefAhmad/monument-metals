@@ -1,0 +1,69 @@
+.root {
+    grid-template-areas:
+        'actions'
+        'items';
+
+    composes: grid from global;
+    composes: grid-cols-1 from global;
+}
+
+.rootList {
+    composes: block from global;
+}
+
+.buttonContainer button {
+    @apply w-full;
+}
+
+.buttonContainerLoadPrev {
+    composes: buttonContainer;
+
+    composes: pb-7.5 from global;
+}
+
+.buttonContainerLoadMore {
+    composes: buttonContainer;
+
+    composes: pt-7.5 from global;
+}
+
+.content {
+    composes: m-[-2.5px] from global;
+
+    composes: lg_-m-1.25 from global;
+}
+
+.gridItems {
+    grid-area: items;
+
+    composes: grid from global;
+    composes: mb-2.5 from global;
+}
+
+.listItems {
+    composes: block from global;
+    composes: mt-9.3 from global;
+}
+
+.infiniteScrollGrid {
+    composes: grid from global;
+    composes: gap-y-1.25 from global;
+    composes: lg_gap-y-2.5 from global;
+    composes: lg_grid-cols-4 from global;
+    composes: md_grid-cols-3 from global;
+    composes: grid-cols-2 from global;
+
+    composes: lg_mb-2.5 from global;
+
+    @apply overflow-visible !important;
+}
+
+.infiniteScrollList {
+    composes: block from global;
+
+    @apply overflow-hidden !important;
+}
+
+.shimmerItems {
+    composes: infiniteScrollGrid;
+}

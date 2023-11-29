@@ -1,0 +1,76 @@
+.root {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    background: rgb(var(--venia-global-color-gray));
+    pointer-events: none;
+}
+
+.root::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--venia-global-maxWidth);
+    height: 100%;
+    background:
+        linear-gradient(
+            to right,
+            rgb(var(--venia-global-color-gray-50) / 0%) 0%,
+            rgb(var(--venia-global-color-gray-50)) 40%,
+            rgb(var(--venia-global-color-gray-50) / 0%) 80%,
+            rgb(var(--venia-global-color-gray-50) / 0%) 100%
+        )
+        no-repeat;
+    background-size: var(--venia-global-maxWidth) 100%;
+    animation-name: shimmer-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+.root_rectangle {
+    composes: root;
+    min-height: var(--venia-typography-body-M-fontSize);
+}
+
+.root_button {
+    composes: root_rectangle;
+}
+
+.root_checkbox {
+    composes: input from '../Checkbox/checkbox.module.css';
+    composes: root;
+    border: none;
+}
+
+.root_radio {
+    composes: input from '../RadioGroup/radio.module.css';
+    composes: root;
+    border: none;
+}
+
+.root_textArea {
+    composes: input from '../TextArea/textArea.module.css';
+    composes: root;
+    min-height: 6.75rem;
+    border: none;
+}
+
+.root_textInput {
+    composes: input from '../TextInput/textInput.module.css';
+    composes: root;
+    border: none;
+}
+
+@keyframes shimmer-animation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}

@@ -1,0 +1,56 @@
+.root {
+    composes: grid from global;
+    composes: max-h-[273px] from global;
+    composes: lg_max-h-[400px] from global;
+    composes: overflow-y-scroll from global;
+}
+
+::-webkit-scrollbar {
+    @apply w-1;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray;
+}
+
+.shimmer {
+    composes: root;
+}
+
+.shimmerItem {
+    composes: root from './item.module.css';
+}
+
+.shimmerImage {
+    composes: imageContainer from './item.module.css';
+}
+
+.shimmerContent {
+    composes: details from './item.module.css';
+
+    composes: w-full from global;
+}
+
+.shimmerName {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: h-5 from global;
+
+    composes: lg_h-[27px] from global;
+}
+
+.shimmerNameSecond {
+    composes: shimmerName;
+
+    composes: hidden from global;
+
+    composes: lg_flex from global;
+}
+
+.shimmerPrice {
+    composes: inline-flex from global;
+    composes: items-center from global;
+    composes: h-7.5 from global;
+
+    composes: lg_h-8 from global;
+}

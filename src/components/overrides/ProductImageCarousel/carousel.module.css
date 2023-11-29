@@ -1,0 +1,219 @@
+.root:hover button {
+    @apply visible;
+}
+
+.carouselContainer {
+    composes: overflow-hidden from global;
+    composes: grid from global;
+    composes: grid-cols-3 from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+    composes: min-h-83.75 from global;
+    composes: relative from global;
+
+    /* Large screen styles */
+    composes: lg_row-start-1 from global;
+    composes: lg_h-155 from global;
+}
+
+.imageContainer {
+    composes: row-start-1 from global;
+    composes: col-start-1 from global;
+    composes: row-end-2 from global;
+    composes: col-end-4 from global;
+
+    composes: max-h-83.75 from global;
+
+    /* Large screen styles */
+    composes: lg_p-8.75 from global;
+    composes: lg_max-h-155 from global;
+}
+
+.currentImage {
+    composes: block from global;
+
+    composes: object-contain from global;
+    composes: object-center from global;
+    composes: max-h-[297px] from global;
+
+    composes: top-[19px] from global;
+
+    composes: w-full from global;
+
+    /* Large screen styles */
+    composes: lg_w-137.5 from global;
+    composes: lg_h-137.5 from global;
+    composes: lg_top-8.75 from global;
+    composes: lg_left-8.75 from global;
+    composes: lg_max-h-137.5 from global;
+}
+
+.currentImagePlaceholder {
+    composes: currentImage;
+    composes: bg-white from global;
+}
+
+.previousButton,
+.nextButton {
+    composes: flex from global;
+    composes: outline-none from global;
+    composes: z-1 from global;
+}
+
+.previousButton {
+    composes: justify-start from global;
+
+    composes: row-start-1 from global;
+    composes: col-start-1 from global;
+    composes: row-end-2 from global;
+    composes: col-end-2 from global;
+
+    composes: ml-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_invisible from global;
+}
+
+.nextButton {
+    composes: justify-end from global;
+
+    composes: row-start-1 from global;
+    composes: col-start-3 from global;
+    composes: row-end-2 from global;
+    composes: col-end-4 from global;
+
+    composes: mr-7 from global;
+
+    /* Large screen styles */
+    composes: lg_invisible from global;
+}
+
+.imageCounter {
+    composes: absolute from global;
+    composes: right-2.5	from global;
+    composes: w-[37px] from global;
+
+    composes: bg-black-lightest/[0.54] from global;
+    composes: rounded-sm from global;
+    composes: z-10 from global;
+
+    composes: px-2.5 from global;
+    composes: py-px from global;
+
+    composes: mt-2.5 from global;
+    composes: ml-2.5 from global;
+
+    composes: text-white from global;
+    composes: font-bold from global;
+    composes: text-xs from global;
+
+    /* Large screen styles */
+    composes: lg_hidden from global;
+}
+
+/* Thumbnail carousel */
+
+.chevron {
+    composes: root from '../Icon/icon.module.css';
+    composes: hidden from global;
+    composes: self-center from global;
+
+    /* Large screen styles */
+    composes: lg_block from global;
+    composes: lg_bg-black-lightest from global;
+    composes: lg_bg-opacity-50 from global;
+    composes: lg_rounded-sm from global;
+}
+
+.chevron polyline {
+    @apply stroke-white;
+}
+
+.imageChevron {
+    composes: chevron;
+
+    composes: lg_w-14 from global;
+    composes: lg_h-14 from global;
+    composes: lg_p-5 from global;
+}
+
+.thumbnailChevron {
+    composes: chevron;
+
+    composes: lg_w-10 from global;
+    composes: lg_h-11 from global;
+    composes: lg_pt-3.5 from global;
+    composes: lg_px-3 from global;
+    composes: lg_z-11 from global;
+}
+
+.thumbnailsRight {
+    composes: hidden from global;
+
+    /* Large screen styles */
+    composes: lg_block from global;
+    composes: lg_absolute from global;
+    composes: lg_ml-[600px] from global;
+    composes: lg_mt-[25px] from global;
+}
+
+.thumbnailList {
+    composes: justify-center from global;
+    composes: mt-2.5 from global;
+    composes: z-1 from global;
+
+    composes: hidden from global;
+
+    /* Large screen styles */
+    composes: lg_grid from global;
+    composes: lg_grid-flow-col from global;
+    composes: lg_row-start-2 from global;
+    composes: lg_gap-2.5 from global;
+
+    composes: lg_max-h-23.75 from global;
+}
+
+.visible {
+    composes: root from './thumbnail.module.css';
+    composes: inline from global;
+}
+
+.hidden {
+    composes: root from './thumbnail.module.css';
+    composes: hidden from global;
+}
+
+/* Image transitions */
+
+.fromRightEnter img {
+    @apply translate-x-full;
+}
+
+.fromRightEnterActive img {
+    @apply transition-transform
+        translate-x-0
+        duration-300;
+}
+
+.fromRightExitActive img {
+    @apply transition-transform
+        translate-x-reverse
+        duration-300;
+}
+
+.fromLeftEnter img {
+    @apply translate-x-reverse;
+}
+
+.fromLeftEnterActive img {
+    @apply transition-transform
+        translate-x-0
+        duration-300;
+}
+
+.fromLeftExitActive img {
+    @apply transition-transform
+        translate-x-full
+        duration-300;
+}

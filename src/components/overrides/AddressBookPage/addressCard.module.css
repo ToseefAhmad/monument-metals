@@ -1,0 +1,139 @@
+.root {
+    composes: border from global;
+    composes: rounded from global;
+    composes: border-gray-light from global;
+    composes: xl_min-w-[430px] from global;
+    composes: lg_min-h-[327px] from global;
+    composes: lg_p-7.5 from global;
+    composes: p-6 from global;
+    composes: relative from global;
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.root_updated {
+    composes: root;
+    animation: flash var(--venia-global-anim-bounce) 640ms 2;
+}
+
+.confirmDeleteContainer {
+    composes: items-center from global;
+    align-items: center;
+    background-color: rgb(255 255 255 / 90%);
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+    height: 100%;
+    justify-items: center;
+    left: 0;
+    padding: 1.25rem 2rem;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.confirmDeleteButton {
+    composes: root_normalPriorityNegative from '../Button/button.module.css';
+    composes: bg-blue from global;
+    order: 1;
+}
+.cancelDeleteButton {
+    composes: root_lowPriority from '../Button/button.module.css';
+    composes: bg-white from global;
+    background-color: white;
+}
+
+.contentContainer {
+    composes: grid from global;
+    composes: pb-3.5 from global;
+}
+
+.actionContainer {
+    composes: grid from global;
+    composes: lg_flex from global;
+    composes: grid-cols-2 from global;
+    composes: gap-1.25 from global;
+    composes: mt-auto from global;
+    composes: flex-wrap from global;
+}
+
+.defaultBadge {
+    composes: bg-blue from global;
+    composes: uppercase from global;
+    composes: w-max from global;
+    composes: lg_text-xs from global;
+    composes: text-xss from global;
+    composes: text-white from global;
+    composes: font-bold from global;
+    composes: px-2.5 from global;
+    composes: lg_px-3 from global;
+    composes: py-[3px] from global;
+    composes: rounded from global;
+    composes: mb-3 from global;
+}
+
+.linkButton {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: w-full from global;
+    composes: lg_w-auto from global;
+    composes: lg_max-w-full from global;
+
+    composes: font-bold from global;
+    composes: text-sm from global;
+    composes: uppercase from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: px-3 from global;
+    composes: lg_py-3 from global;
+    composes: outline-none from global;
+
+    composes: disabled_pointer-events-none from global;
+    composes: disabled_bg-white-dark from global;
+    composes: disabled_border-gray-light from global;
+    composes: disabled_text-black-lightest from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.editButton {
+    composes: linkButton;
+    composes: bg-blue from global;
+    composes: border-blue from global;
+    composes: text-white from global;
+
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+    composes: lg_text-base from global;
+    composes: lg_min-w-[135px] from global;
+    composes: lg_w-auto from global;
+    composes: w-full from global;
+    composes: py-2.5 from global;
+}
+
+.editButtonInRow {
+    composes: editButton;
+    composes: flex from global;
+    composes: flex-1 from global;
+}
+
+.editButtonOnly {
+    composes: editButton;
+}
+
+.deleteButton {
+    composes: cancelDeleteButton;
+    composes: flex from global;
+    composes: flex-1 from global;
+}
+
+.defaultBadges {
+    composes: flex from global;
+    composes: gap-2 from global;
+}

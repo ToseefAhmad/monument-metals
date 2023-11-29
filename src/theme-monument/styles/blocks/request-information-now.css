@@ -1,0 +1,93 @@
+/* request-info */
+
+.request-info-container h1,
+.request-info-container h2,
+.request-info-container h3,
+.request-info-container h4,
+.request-info-container h5,
+.request-info-container h6,
+.request-info-container p {
+    @apply my-0;
+}
+
+.request-info-container {
+    @apply lg_container
+        px-mobile
+        lg_max-w-desktop
+        lg_translate-x-0
+        lg_mb-12.5
+        mb-7.5;
+    @apply px-0 !important;
+}
+
+.request-info-container > * {
+    @apply w-full min-h-[224px] md_min-h-[160px] lg_h-[160px] md_h-[160px];
+}
+
+.request-info-container > div {
+    @apply rounded-sm;
+}
+.request-info-container > div > div {
+    @apply bg-black-lightest
+        bg-opacity-80
+        rounded-sm;
+}
+
+.request-info-container h2 {
+    @apply lg_my-0 mt-[-4px] mb-[-3px]
+        font-semibold
+        text-white
+        text-xl
+        lg_text-2xl;
+    @apply leading-9.5 !important;
+}
+
+.request-info-container div p {
+    @apply my-0
+        text-white
+        text-sm
+        lg_text-base text-center
+        lg_text-left
+        leading-8.5 !important;
+}
+
+.request-info-text-col {
+    @apply items-center md_py-0 lg_items-start pt-7.5 lg_w-[740px]  px-5 lg_px-[70px] lg_py-[45px];
+    @apply md_justify-center !important;
+}
+
+.request-info-button-col {
+    /* !important to override inline styles  */
+    @apply flex-row
+        lg_justify-end
+        justify-center
+        lg_items-center
+        md_items-center
+        !important;
+}
+
+.request-info-button-col > * {
+    @apply lg_mr-12.5 mb-2.5;
+}
+
+.request-info-button-col > div > div {
+    @apply m-0 pb-1.25 lg_pb-0;
+}
+
+.request-info-button-col div button[class] {
+    /* Low priority button */
+    @apply lg_w-[330px] w-[335px] border-gray-light
+        text-blue
+        bg-white
+
+        hover_text-white
+        hover_bg-blue-dark
+        hover_border-blue-dark
+
+        active_focus_text-white
+        active_focus_bg-black-light
+        active_focus_border-black-light;
+
+    /* Custom styles */
+    @apply min-w-46.5;
+}

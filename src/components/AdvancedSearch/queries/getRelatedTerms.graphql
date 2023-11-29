@@ -1,0 +1,8 @@
+query getXsearchRelatedTerms($inputText: String) {
+    xsearchRelatedTerms(search: $inputText) {
+        items {
+            name
+            count
+        }
+    }
+}

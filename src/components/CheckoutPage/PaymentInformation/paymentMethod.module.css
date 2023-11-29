@@ -1,0 +1,46 @@
+.radioGroup {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+}
+
+.paymentMethod_active {
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-blue from global;
+    composes: rounded-sm from global;
+}
+
+.radioRoot {
+    composes: root_default from '@app/components/overrides/RadioGroup/radio.module.css';
+
+    composes: border-gray-light from global;
+    composes: cursor-pointer from global;
+    composes: transition-primary from global;
+
+    composes: hover_border-blue from global;
+}
+
+.radioRootActive {
+    composes: root_default from '@app/components/overrides/RadioGroup/radio.module.css';
+
+    composes: border-none from global;
+}
+
+.paymentMethodWrapper {
+    composes: border-t from global;
+    composes: border-solid from global;
+    composes: border-blue from global;
+    composes: py-5 from global;
+    composes: mx-6 from global;
+}
+
+.paymentErrors {
+    composes: font-semibold from global;
+    composes: text-red-light from global;
+}
+
+.shimmer {
+    composes: h-12.5 from global;
+
+    composes: lg_h-14 from global;
+}

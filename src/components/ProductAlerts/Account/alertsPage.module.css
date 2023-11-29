@@ -1,0 +1,33 @@
+.root {
+    composes: grid from global;
+    composes: gap-5 from global;
+}
+
+.header {
+    composes: md_flex from global;
+}
+
+.marketAlertButton {
+    composes: mt-2.5 from global;
+    composes: lg_mt-0 from global;
+    composes: md_ml-auto from global;
+}
+
+.marketAlertButton button {
+    @apply text-sm
+        w-full
+        h-10
+        min-h-10
+        capitalize
+        rounded
+
+        lg_max-w-[169px]
+        lg_min-w-[169px]
+        lg_w-[169px]
+        lg_min-h-[46px]
+        lg_h-[46px];
+}
+
+.marketAlertButton button svg {
+    @apply hidden;
+}

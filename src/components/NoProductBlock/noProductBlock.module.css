@@ -1,0 +1,213 @@
+.bannerBlock {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: lg_flex-row from global;
+}
+
+.textBlock {
+    composes: lg_my-24 from global;
+    composes: w-full from global;
+    composes: text-center from global;
+
+    composes: lg_order-1 from global;
+    composes: lg_text-left from global;
+}
+
+.title {
+    composes: mb-[15px] from global;
+    composes: px-8 from global;
+    composes: leading-[42px] from global;
+    composes: lg_px-0 from global;
+    composes: lg_mb-5 from global;
+    composes: text-[28px] from global;
+    composes: lg_text-[38px] from global;
+    composes: lg_leading-[52px] from global;
+}
+
+.categories span {
+    @apply px-1.5;
+}
+
+.imgBlock {
+    composes: w-full from global;
+    composes: px-[46px] from global;
+    composes: mt-[26px] from global;
+    composes: lg_mt-10 from global;
+    composes: lg_mr-6 from global;
+    composes: lg_px-0 from global;
+    composes: lg_order-2 from global;
+    composes: max-w-[458px] from global;
+    composes: mx-auto from global;
+}
+
+.imgBlock img {
+    @apply max-h-[235px] sm_max-h-[305px] lg_left-auto lg_right-0;
+}
+
+.recommendedProductsSlider img {
+    @apply lg_h-50 h-27.5;
+}
+
+.actions {
+    composes: mt-5 from global;
+    composes: mb-[30px] from global;
+
+    composes: lg_mt-10 from global;
+    composes: lg_mb-0 from global;
+}
+
+.toHomeButton {
+    composes: root_normalPriority from '@app/components/overrides/Button/button.module.css';
+    composes: min-w-[203px] from global;
+    composes: w-[203px] from global;
+    composes: lg_min-w-[241px] from global;
+    composes: lg_w-[241px] from global;
+    composes: static from global;
+    composes: m-0 from global;
+    composes: hover_text-white from global;
+    composes: active_focus_text-white from global;
+}
+
+.recommendedProductsSlider h1,
+.recommendedProductsSlider h2,
+.recommendedProductsSlider h3,
+.recommendedProductsSlider h4,
+.recommendedProductsSlider h5,
+.recommendedProductsSlider h6,
+.recommendedProductsSlider p {
+    @apply my-0 z-1 lg_text-left;
+}
+
+.recommendedProductsSlider h2 {
+    @apply normal-case lg_mb-[50px];
+}
+
+.recommendedProductsSlider {
+    @apply bg-white-dark
+        py-7.5
+        mb-7.5
+        lg_max-h-[637px]
+        lg_h-[637px]
+        lg_mb-12.5
+        relative;
+}
+
+.recommendedProductsSlider > div {
+    @apply relative;
+}
+
+.recommendedProductsSlider > div::before {
+    content: '.';
+
+    @apply bg-white-dark
+        absolute
+        w-screen
+        h-[calc(100%+60px)]
+        -left-5
+        -top-7.5
+        lg_h-[637px]
+        desktop_left-[calc(((1170px-100vw-var(--scrollBarWidth))/2))];
+}
+
+.recommendedProductsSlider > div {
+    @apply lg_pt-4;
+}
+
+.recommendedProductsSlider .headerText {
+    @apply text-center
+        font-semibold
+        text-black-lightest
+        text-2.5xl
+        z-1
+        mb-6
+        lg_text-4.5xl
+        lg_text-left
+        lg_mt-5
+        lg_mb-12.5;
+}
+
+.recommendedProductsSlider > div > div:nth-child(2) {
+    /* Override inline styles */
+    @apply grid !important;
+    @apply grid-flow-row
+        grid-cols-3
+        gap-1.25
+        lg_gap-3.75;
+}
+
+.categoryItem {
+    /* Override inline styles */
+    @apply w-full
+        flex
+        flex-col
+        items-start
+        justify-between !important;
+    @apply bg-white
+        rounded-sm
+        relative
+        h-[120px]
+        2sm_h-[220px];
+}
+
+.categoryItem .categoryTitle p {
+    @apply mt-5
+        mb-5
+        pl-4.25
+        border-l-2
+        border-solid
+        border-blue
+        flex
+        flex-row
+        justify-start
+        items-center
+        lg_pl-7
+        lg_mt-8.75
+        lg_mb-0
+        lg_h-9.5;
+}
+
+.categoryItem .categoryTitle p a {
+    @apply font-semibold
+        text-base
+        text-black-lightest
+        flex
+        flex-row
+        justify-start
+        items-center
+        no-underline
+        w-full
+        lg_text-2xl;
+}
+
+.categoryItem .categoryTitle p a img {
+    @apply hidden
+        lg_flex
+        lg_my-0
+        lg_ml-2.5
+        lg_w-4
+        lg_h-2.5;
+}
+
+.categoryImage {
+    @apply w-full;
+}
+
+.categoryImage a {
+    @apply absolute
+        bottom-0
+        w-full
+        h-full
+        flex
+        items-end
+        justify-center;
+}
+
+.categoryImage img {
+    @apply m-auto
+        2sm_w-[190px]
+        lg_w-[240px];
+}
+
+.categoryImage a img {
+    @apply lg_w-[240px];
+}

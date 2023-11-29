@@ -1,0 +1,865 @@
+.root {
+    composes: pt-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_py-12.5 from global;
+}
+
+.topContainer {
+    composes: lg_flex from global;
+    composes: lg_justify-between from global;
+}
+
+.carouselWrapper {
+    composes: w-full from global;
+
+    composes: lg_pr-5 from global;
+    composes: lg_min-w-[620px] from global;
+}
+
+.detailsWrapper {
+    composes: w-full from global;
+
+    composes: lg_min-w-[100px] from global;
+    composes: lg_max-w-[500px] from global;
+}
+
+.title {
+    composes: mb-2.5 from global;
+
+    /* large screen styles */
+    composes: lg_mb-5 from global;
+}
+
+.productName {
+    composes: lg_font-semibold from global;
+}
+
+/* Product tile */
+.productTile {
+    composes: border-t-1 from global;
+    composes: border-b-1 from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+
+    composes: pt-2.5 from global;
+    composes: pb-0 from global;
+
+    /* large screen syles */
+    composes: lg_flex from global;
+    composes: lg_flex-row from global;
+    composes: lg_flex-wrap from global;
+    composes: lg_justify-center from global;
+    composes: lg_desktop-max-h-[104px] from global;
+    composes: lg_pt-3.75 from global;
+    composes: lg_pb-2 from global;
+    composes: lg_gap-x-0.25 from global;
+}
+
+.productTile > div {
+    @apply bg-white
+        z-10;
+}
+
+.productTileSKU {
+    composes: break-all from global;
+
+    /* large screen styles */
+    composes: lg_pr-3.75 from global;
+}
+
+.seperator {
+    composes: hidden from global;
+
+    composes: lg_block from global;
+    composes: lg_bg-black-lightest/20 from global;
+    composes: lg_w-10 from global;
+    composes: lg_h-4 from global;
+    composes: lg_mt-2 from global;
+    composes: lg_absolute from global;
+    composes: lg_z-3 from global;
+}
+
+.productTileAvailability {
+    /* large screen styles */
+    composes: lg_pl-3.75 from global;
+}
+
+.productTileAvailability svg {
+    @apply mr-2.5;
+}
+
+.productTile > div:last-of-type {
+    @apply lg_mx-8;
+}
+
+/*  3 or more rows */
+
+.productTileLarge > .seperator {
+    @apply lg_hidden;
+}
+
+.productTileLarge > .productTileSKU {
+    /* large screen styles */
+    @apply lg_px-5;
+}
+
+.productTileLarge > .productTileAvailability {
+    /* large screen styles */
+    @apply lg_pl-0;
+}
+
+.skuText {
+    composes: text-black-lightest from global;
+    composes: ml-[3px] from global;
+}
+
+.inStock {
+    composes: text-green from global;
+    composes: font-semibold from global;
+}
+
+.preorder {
+    composes: text-gold from global;
+    composes: font-semibold from global;
+}
+
+.outOfStock {
+    composes: text-red-light from global;
+    composes: font-semibold from global;
+}
+
+.iconOutOfStock {
+    composes: text-red-light from global;
+    composes: inline-flex from global;
+}
+
+.iconInStock {
+    composes: text-green from global;
+    composes: inline-flex from global;
+}
+
+.iconPreorder {
+    composes: text-gold from global;
+    composes: inline-flex from global;
+}
+
+.shippingContet {
+    composes: relative from global;
+    composes: bottom-1 from global;
+
+    /* Large screen styles */
+    composes: lg_mt-1.25 from global;
+    composes: lg_mr-1 from global;
+    composes: lg_min-w-[20rem] from global;
+}
+
+.shippingContet div div {
+    @apply w-full
+        bg-inherit;
+}
+
+.shippingContet > div > div > div {
+    @apply px-0;
+}
+
+.productTile > .shippingRoot > .shippingContet > div > div > div > div > div {
+    @apply pl-[11px];
+}
+
+.shippingContet p {
+    @apply text-gray-dark
+        text-sm;
+
+    /* large screen styles */
+    @apply lg_text-base;
+}
+
+.shippingContet p strong {
+    @apply font-normal;
+}
+
+.shippingContet p strong:first-of-type {
+    @apply text-black
+        text-sm
+        font-semibold;
+
+    /* large screen styles */
+    @apply lg_text-base;
+}
+
+/* Important to override !important styles from header  */
+.shippingContet > div > div > div > div:first-of-type,
+.shippingContet > div > div > div > div:last-of-type {
+    @apply lg_hidden
+        !important;
+}
+
+/* Important to override inline styles */
+.shippingContet > div > div > div > div {
+    @apply w-full
+        !important;
+}
+
+.preorderNote {
+    composes: flex from global;
+    composes: lg_text-center from global;
+}
+
+.preorderMessage {
+    composes: ml-2.5 from global;
+    composes: text-black-lightest from global;
+}
+
+/* Image carousel */
+.imageCarousel {
+    composes: mt-5 from global;
+
+    composes: lg_sticky from global;
+    composes: lg_top-[192px] from global;
+    composes: lg_m-0 from global;
+    composes: lg_max-w-155 from global;
+    composes: lg_max-h-[725px] from global;
+}
+
+.thumbnailList {
+    composes: hidden from global;
+}
+
+.priceBlock {
+    composes: mt-5 from global;
+}
+
+.detailsBottomWrapper {
+    composes: border-t-1 from global;
+    composes: border-gray-light from global;
+    composes: pt-2.5 from global;
+    composes: mt-2.5 from global;
+
+    composes: lg_pt-5 from global;
+    composes: lg_mt-5 from global;
+}
+
+.actionButtons {
+    composes: h-[50px] from global;
+    composes: mt-5 from global;
+
+    /* Large screen styles */
+    composes: lg_h-[56px] from global;
+}
+
+.actionContainer {
+    composes: flex from global;
+}
+
+.cartActionWrapper {
+    composes: w-full from global;
+    composes: ml-1.3 from global;
+}
+
+.cartActionWrapper button {
+    @apply w-full;
+}
+
+.actionContainerStatic {
+    composes: actionContainer;
+    composes: justify-center from global;
+    composes: static from global;
+}
+
+.actionContainerFixed {
+    composes: actionContainer;
+    composes: fixed from global;
+
+    composes: justify-between from global;
+
+    composes: bottom-0 from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: z-30 from global;
+
+    composes: mx-auto from global;
+
+    composes: pt-5 from global;
+    composes: px-4.5 from global;
+    composes: pb-5 from global;
+
+    composes: bg-white from global;
+
+    /* Large screen sizes */
+    composes: lg_static from global;
+    composes: lg_justify-center from global;
+    composes: lg_z-1 from global;
+
+    composes: lg_p-0 from global;
+}
+
+.actionContainerFixed > button {
+    @apply w-full
+        ml-2.5;
+}
+
+.actionContainerFixedSpacer {
+    composes: actionContainerFixed;
+    margin-bottom: calc(3rem + env(safe-area-inset-bottom, 0));
+}
+
+.addToCartButtonStatic {
+    composes: static from global;
+    composes: w-full from global;
+    composes: ml-1.3 from global;
+}
+
+.addToCartButtonFixed {
+    composes: fixed from global;
+    composes: bottom-1 from global;
+    composes: mx-auto from global;
+    composes: left-0 from global;
+    composes: right-0 from global;
+    composes: z-30 from global;
+
+    /* Large screen sizes */
+    composes: lg_static from global;
+    composes: lg_ml-1.3 from global;
+    composes: lg_z-1 from global;
+}
+
+.quantityRoot {
+    composes: root from '@magento/venia-ui/lib/components/CartPage/ProductListing/quantity.module.css';
+
+    composes: flex-shrink-0 from global;
+
+    /* Large screen styles */
+    composes: lg_min-w-[85px] from global;
+    composes: justify-end from global;
+}
+
+.quantityRoot > span {
+    @apply lg_w-14;
+}
+
+.quantityInput {
+    composes: inline-flex from global;
+    composes: w-12.5 from global;
+    composes: min-w-12.5 from global;
+    composes: h-12.5 from global;
+    composes: min-h-12.5 from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+    composes: rounded-tl-sm from global;
+    composes: rounded-bl-sm from global;
+    composes: text-center from global;
+    composes: text-base from global;
+    composes: text-gray-dark from global;
+    composes: placeholder-gray-dark from global;
+    composes: appearance-none from global;
+    composes: outline-none from global;
+
+    composes: hover_text-black-lightest from global;
+    composes: hover_border-gray from global;
+
+    composes: focus_text-black-lightest from global;
+    composes: focus_border-black-lightest from global;
+
+    composes: disabled_text-gray-dark from global;
+    composes: disabled_border-gray-light from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    /* Large screen styles */
+    composes: lg_h-full from global;
+    composes: lg_w-14 from global;
+}
+
+.quantityButton {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-1/2 from global;
+
+    composes: w-[26px] from global;
+    composes: bg-white from global;
+    composes: border-t from global;
+    composes: border-r from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+
+    composes: hover_bg-gray-light from global;
+    composes: hover_text-opacity-100 from global;
+
+    composes: disabled_bg-white from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.quantityButtonIncrement {
+    composes: quantityButton;
+    composes: rounded-tr-sm from global;
+}
+
+.quantityButtonDecrement {
+    composes: quantityButton;
+    composes: border-b from global;
+    composes: rounded-br-sm from global;
+}
+
+.productDetails {
+    composes: bg-white-dark from global;
+    composes: w-screen from global;
+    composes: relative from global;
+    composes: right-5 from global;
+    composes: overflow-x-hidden from global;
+    composes: min-h-192 from global;
+
+    composes: mt-7.5 from global;
+    composes: pt-7.5 from global;
+    composes: pb-0 from global;
+
+    /* Large screen styles */
+    composes: lg_w-full from global;
+    composes: lg_right-0 from global;
+    composes: lg_mt-0 from global;
+
+    composes: lg_overflow-x-visible from global;
+    composes: lg_pb-5 from global;
+}
+
+.productDetails::before {
+    content: ' ';
+
+    @apply bg-white-dark
+        absolute
+        w-screen
+        lg_z-[-10]
+        lg_h-full
+        lg_py-7.5
+
+        lg_bottom-0
+        lg_-left-5
+        desktop_left-[calc(((1170px-100vw-var(--scrollBarWidth))/2))];
+}
+
+.productDetailsHeading {
+    composes: mx-5 from global;
+    composes: mb-3.5 from global;
+
+    /* Large screen styles */
+    composes: lg_mx-0 from global;
+    composes: lg_mt-5 from global;
+    composes: lg_mb-11 from global;
+}
+
+.description {
+    composes: m-0 from global;
+    composes: overflow-hidden from global;
+}
+
+/* Previously searched products */
+.previouslySearched {
+    composes: bg-white from global;
+    composes: flex from global;
+    composes: justify-start from global;
+    composes: flex-col from global;
+    composes: pt-7.5 from global;
+    composes: mb-1 from global;
+
+    /* large screen styles */
+    composes: lg_pt-12 from global;
+    composes: lg_min-h-full from global;
+}
+
+.previouslySearchedTitle {
+    composes: mb-5 from global;
+
+    /* large screen styles */
+    composes: lg_mb-12.5 from global;
+}
+
+.alertButtonsContainer {
+    composes: grid from global;
+    composes: grid-cols-2 from global;
+    composes: gap-[5px] from global;
+}
+
+.alertButtonsContainer > div {
+    @apply lg_w-full;
+}
+
+.alertButtonsContainer > div > button {
+    @apply min-w-[auto]
+        lg_min-w-41.25
+        w-full
+        px-1
+        xxs_px-3.5;
+}
+
+.unavailableContainer {
+    composes: w-full from global;
+}
+
+/* Reviews tab */
+div > div.reviewsTab {
+    /* large screen styles */
+    @apply lg_flex
+        lg_justify-between
+        lg_px-0
+        lg_mt-0;
+}
+
+.reviewsTab > form > div {
+    @apply mt-2.5;
+}
+
+.reviewsTab > form > div:first-of-type {
+    @apply mt-0
+        lg_mt-[17px];
+}
+
+.reviewsTab > form > div > label {
+    @apply text-xs
+        font-semibold;
+
+    /* large screen styles */
+    @apply lg_text-sm;
+}
+
+.reviewInput {
+    composes: input from '@magento/venia-ui/lib/components/Field/field.module.css';
+    composes: h-12 from global;
+    composes: text-base from global;
+    composes: placeholder-sm from global;
+
+    /* large screen styles */
+    composes: lg_text-base from global;
+    composes: lg_placeholder-lg from global;
+}
+
+.reviewsTab > form > div textarea {
+    @apply pt-2.5
+        pb-2
+        text-base;
+}
+
+.reviewsTab button {
+    @apply w-full;
+}
+
+.reviewsTab button:first-of-type {
+    @apply mt-2.5;
+}
+
+.reviewsForm {
+    composes: min-w-[40%] from global;
+    composes: mb-5 from global;
+
+    /* large screen styles */
+    composes: lg_mr-5 from global;
+    composes: lg_mb-0 from global;
+}
+
+.reviewsContainer {
+    composes: lg_max-w-[650px] from global;
+    composes: w-full from global;
+    composes: lg_min-w-0 from global;
+}
+
+.review {
+    composes: border-b-1 from global;
+    composes: border-black-lightest/10 from global;
+
+    composes: pb-3.75 from global;
+    composes: mb-3.75 from global;
+
+    composes: break-words from global;
+
+    /* large screen styles */
+    composes: lg_mt-7.5 from global;
+}
+
+.review:first-of-type {
+    @apply mt-5;
+
+    /* large screen styles */
+    @apply mt-[17px];
+}
+
+.review > h5 {
+    @apply font-semibold
+        mb-1.3;
+
+    /* large screen styles */
+    @apply lg_text-base
+        lg_mb-2.5;
+}
+
+.review > div {
+    @apply font-semibold
+        text-xs
+        text-black-lightest;
+
+    /* large screen styles */
+    @apply lg_text-sm
+        lg_mt-2.5
+        lg_mb-3.75;
+}
+
+.hidden {
+    composes: hidden from global;
+}
+
+/* Product info tabs */
+.tabsHeaderContainer {
+    composes: whitespace-nowrap from global;
+    composes: overflow-y-hidden from global;
+    composes: overflow-x-auto from global;
+    composes: max-h-[68px] from global;
+
+    composes: w-[120vw] from global;
+    composes: ml-5 from global;
+    composes: h-17 from global;
+
+    composes: relative from global;
+    composes: right-10 from global;
+
+    scrollbar-width: none;
+
+    /* After block to hide extra bottom border */
+    composes: after_relative from global;
+    composes: after_w-[20vw] from global;
+    composes: after_h-2.5 from global;
+    composes: after_inline-block from global;
+    composes: after_left-[412px] from global;
+    composes: after_bottom-4 from global;
+    composes: after_bg-white-dark from global;
+
+    /* Large screen styles */
+    composes: lg_right-0 from global;
+    composes: lg_ml-0 from global;
+    composes: lg_w-full from global;
+    composes: lg_after_hidden from global;
+}
+
+.tabsHeaderContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.tabList {
+    composes: border-b-1 from global;
+    composes: border-solid from global;
+    composes: border-black-lightest from global;
+    composes: border-opacity-10 from global;
+    composes: ml-10 from global;
+    composes: w-[448px] from global;
+
+    /* Large screen styles */
+    composes: lg_first_before_hidden from global;
+    composes: lg_w-full from global;
+    composes: lg_ml-0 from global;
+}
+
+.tab {
+    composes: inline-block from global;
+    composes: top-0.25 from global;
+    composes: relative from global;
+    composes: list-none from global;
+    composes: py-1.5 from global;
+    composes: cursor-pointer from global;
+    composes: pr-7.5 from global;
+
+    composes: font-semibold from global;
+
+    composes: first_ml-0 from global;
+    composes: first_mr-0 from global;
+    composes: first_pr-0 from global;
+
+    composes: even_ml-7.5 from global;
+    composes: even_pr-0 from global;
+    composes: last_pl-7.5 from global;
+    composes: last_pr-0 from global;
+    composes: last_mr-0 from global;
+    composes: first_z-20 from global;
+
+    /* Large sceen styles */
+    composes: lg_first_ml-0 from global;
+    composes: lg_even_ml-12.5 from global;
+    composes: lg_last_ml-12.5 from global;
+    composes: lg_last_pl-0 from global;
+}
+
+ul .selectedTab {
+    @apply border-b-2
+        border-solid
+        border-opacity-100
+        border-red-light
+        text-black-lightest
+        pb-2
+
+        pl-0
+        pr-0
+
+        first_ml-0
+        first_pl-0
+        first_pr-0
+        even_pl-0
+        last_pl-0
+        last_ml-7.5
+        last_mr-0;
+
+    /* Large sceen styles */
+    @apply lg_first_ml-0
+        lg_pb-3.5
+        lg_last_ml-12.5;
+}
+
+.tabListLastSelected {
+    composes: relative from global;
+    composes: right-10 from global;
+}
+
+/* Tab content styling */
+.tabPanel {
+    composes: mx-5 from global;
+    composes: mb-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_mx-0 from global;
+    composes: lg_mt-7.5 from global;
+}
+
+div.tabPanel {
+    @apply block;
+}
+
+.tabContent h1,
+.tabContent h2,
+.tabContent h3,
+.tabContent h4,
+.tabContent h5,
+.tabContent h6 {
+    @apply mb-2.5
+        lg_my-7.5;
+}
+
+.tabContent ul li {
+    @apply relative
+        text-sm
+        pl-5
+        lg_pl-6
+        lg_text-base;
+}
+
+.tabContent ul li::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.tabContent ol li {
+    @apply relative
+        text-sm
+        pl-5
+        lg_text-base;
+}
+
+.tabContent ol li::before {
+    counter-increment: list-number;
+    content: counters(list-number, '.') '. ';
+
+    @apply absolute left-0 -translate-y-2/4 block text-red-light text-sm font-bold top-[0.9rem];
+}
+
+.tabContent p {
+    @apply mb-7.5;
+}
+
+/* Trustpilot block */
+.shopperApproved {
+    composes: bg-white-dark from global;
+    composes: mt-[25px] from global;
+    composes: mb-7.5 from global;
+
+    /* Large screen styles */
+    composes: lg_pt-4 from global;
+    composes: lg_mt-10 from global;
+    composes: lg_mb-12.5 from global;
+}
+
+.shopperApproved div div div {
+    @apply mb-0;
+
+    /* Large screen styles */
+    @apply max-h-[350px];
+}
+
+/* Additional information tab */
+.additionalInfoTab {
+    composes: lg_mb-5 from global;
+}
+.attributeValue {
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: ml-1.5 from global;
+}
+
+.additionalInfoTab ul li {
+    @apply relative
+        text-sm
+        pl-6
+
+        /* large screen styles */
+        lg_text-base
+        lg_min-w-[370px];
+}
+
+.additionalInfoTab ul li::before {
+    content: '';
+
+    @apply absolute top-4 left-0 -translate-y-2/4 block h-0.5 w-2.5 bg-red-light;
+}
+
+.additionalInfoList {
+    composes: lg_flex from global;
+    composes: lg_flex-wrap from global;
+    composes: lg_mt-9 from global;
+    composes: lg_gap-y-1.5 from global;
+    composes: lg_gap-x-7.5 from global;
+}
+
+@media screen and (max-width: 768px) {
+    :global(#olark-wrapper #olark-container) {
+        bottom: 150px !important;
+    }
+
+    :global(#olark-wrapper .olark-launch-button-wrapper) {
+        bottom: 80px !important;
+    }
+}
+
+.wishlistButtonWrapper {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: mt-1 from global;
+}
+
+.addToListButton {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-2 from global;
+    composes: items-center from global;
+    composes: text-blue from global;
+}
+
+.addToListButton_selected {
+    composes: addToListButton;
+}
+
+.addToListButton_selected svg {
+    @apply fill-blue;
+}

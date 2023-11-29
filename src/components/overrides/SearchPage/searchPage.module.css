@@ -1,0 +1,93 @@
+.contentWrapper {
+    composes: w-full from global;
+    composes: lg_flex from global;
+}
+
+.searchContent {
+    composes: lg_grow from global;
+    composes: w-full from global;
+    composes: pb-5 from global;
+}
+
+.searchContentNoProducts {
+    composes: searchContent;
+    composes: pb-0 from global;
+}
+
+.title {
+    composes: pt-7.5 from global;
+    composes: pb-2.5 from global;
+    composes: lg_pb-7.5 from global;
+    composes: text-center from global;
+    composes: md_text-left from global;
+}
+
+.toolbarSectionWrapper {
+    composes: relative from global;
+    composes: lg_bg-white-dark from global;
+    composes: full-bleed from global;
+    composes: lg_mb-7.5 from global;
+    composes: z-10 from global;
+}
+
+.headerButtons {
+    composes: lg_pb-0 from global;
+    composes: pb-6 from global;
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: lg_justify-end from global;
+    composes: basis-full from global;
+    composes: w-full from global;
+}
+
+.heading {
+    composes: lg_py-7.5 from global;
+    composes: lg_pb-7 from global;
+    composes: flex from global;
+    composes: flex-wrap from global;
+    composes: justify-center from global;
+    composes: lg_justify-end from global;
+    composes: lg_flex-nowrap from global;
+    composes: lg_items-center from global;
+}
+
+.toolbarSection {
+    composes: container from global;
+}
+
+.headerButtons > * {
+    @apply w-1/2
+        lg_w-auto;
+}
+
+.headerButtons > * button {
+    @apply w-full;
+}
+
+.headerButtons button {
+    @apply min-h-10
+        lg_min-h-11.5;
+}
+
+.viewSwitcher {
+    composes: hidden from global;
+    composes: lg_flex from global;
+    composes: gap-1.5 from global;
+}
+
+.viewSwitcher button:enabled {
+    @apply hover_opacity-80
+        focus-visible_border-opacity-0;
+}
+
+.pagination {
+    composes: mt-5 from global;
+}
+
+.noResult {
+    display: flex;
+}
+
+.itemsCountHeading {
+    composes: pl-2 from global;
+}

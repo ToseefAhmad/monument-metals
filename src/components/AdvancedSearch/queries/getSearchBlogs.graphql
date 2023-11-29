@@ -1,0 +1,12 @@
+query getBlogSearches($inputText: String) {
+    xsearchBlogs(search: $inputText) {
+        items {
+            name
+            url
+            title
+            description
+        }
+        total_count
+        code
+    }
+}

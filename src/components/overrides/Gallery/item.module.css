@@ -1,0 +1,316 @@
+/* stylelint-disable value-no-vendor-prefix */
+.root {
+    grid-template-rows: auto 1fr auto;
+
+    composes: relative from global;
+    composes: grid from global;
+    composes: content-start from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: rounded-sm from global;
+    composes: p-[12.5px] from global;
+    composes: m-[2.5px] from global;
+
+    /* Large screen styles */
+    composes: lg_h-full from global;
+    composes: lg_p-6.25 from global;
+
+    composes: lg_m-1.25 from global;
+
+    /* Hover state */
+    composes: lg_hover_border-white from global;
+    composes: lg_hover_rounded-b-none from global;
+
+    /* Transition */
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+@media (min-width: 1024px) {
+    .root:hover {
+        box-shadow: 0 0 40px rgb(17 25 39 / 10%);
+    }
+}
+
+.images {
+    grid-template-areas: 'main';
+
+    composes: grid from global;
+    composes: relative from global;
+}
+
+.imageContainer {
+    grid-area: main;
+}
+
+.imageContainer img {
+    @apply my-0
+        mx-auto;
+}
+
+.imageContainer img + img {
+    @apply left-2/4
+        -translate-x-2/4;
+}
+
+.image {
+    transition: opacity 512ms ease-out;
+
+    composes: block from global;
+    composes: h-27.5 from global;
+    composes: w-27.5 from global;
+    composes: object-contain from global;
+
+    /* Large screen styles */
+    composes: lg_h-50 from global;
+    composes: lg_w-50 from global;
+}
+
+.imageLoaded {
+    composes: loaded from '~@magento/venia-ui/lib/components/Image/image.module.css';
+
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '~@magento/venia-ui/lib/components/Image/image.module.css';
+
+    composes: opacity-0 from global;
+}
+
+.imagePlaceholder {
+    composes: image;
+
+    composes: bg-gray-light from global;
+}
+
+.actionsContainer {
+    composes: hidden from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: gap-1.25 from global;
+    composes: pt-4 from global;
+
+    /* Large screen styles */
+    composes: lg_grid from global;
+}
+
+@media (min-width: 1024px) {
+    .actionsContainer {
+        grid-template-columns: auto [qty] 1fr [add];
+    }
+}
+
+.nameWrapper {
+    composes: overflow-hidden from global;
+    composes: h-[min-content] from global;
+    composes: mt-2.5 from global;
+
+    /* Large screen styles */
+    composes: lg_h-[64px] from global;
+    composes: lg_mt-5 from global;
+}
+
+.name {
+    composes: line-clamp-3 from global;
+    composes: font-normal from global;
+    composes: text-center from global;
+    composes: text-gray-dark from global;
+    composes: active_text-gray-dark from global;
+
+    /* Large screen styles */
+    composes: lg_line-clamp-2 from global;
+}
+
+.priceWrapper {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: gap-px from global;
+
+    /* Large screen styles */
+    composes: lg_gap-1.25 from global;
+}
+
+.priceText {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-xss from global;
+    composes: pt-[2px] from global;
+    composes: capitalize from global;
+
+    /* Large screen styles */
+    composes: lg_text-xs from global;
+    composes: lg_pt-0 from global;
+}
+
+.price {
+    composes: font-bold from global;
+    composes: text-blue from global;
+    composes: text-base from global;
+
+    /* Large screen styles */
+    composes: lg_text-lg from global;
+}
+
+.unavailableContainer {
+    composes: justify-start from global;
+    composes: bg-gray-light from global;
+    composes: text-blue from global;
+    composes: text-base from global;
+    composes: items-center from global;
+    composes: col-gap-2 from global;
+    composes: grid from global;
+    composes: italic from global;
+    composes: grid-flow-col from global;
+    composes: p-3 from global;
+    composes: w-full from global;
+}
+
+.hoverContainer {
+    box-shadow: 0 20px 20px 0 rgb(17 25 39 / 10%);
+
+    composes: invisible from global;
+    composes: opacity-0 from global;
+    composes: absolute from global;
+    composes: w-full from global;
+    composes: bg-white from global;
+    composes: rounded-b-sm from global;
+    composes: px-7.5 from global;
+    composes: pb-7.5 from global;
+    composes: z-10 from global;
+
+    /* Transition */
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    @apply top-[calc(100%-15px)];
+}
+
+.root:hover .hoverContainer {
+    @apply lg_visible
+        lg_opacity-100;
+}
+
+.table {
+    composes: w-full from global;
+}
+
+.root .table {
+    @apply border-none
+        m-0;
+}
+
+.tableTitle {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: border-b from global;
+    composes: border-b-[#E1E4E6] from global;
+}
+
+.root .tableTitle {
+    @apply font-semibold
+        text-gray-dark
+        text-sm
+        border-r-0
+        border-b
+        border-b-[#E1E4E6]
+        bg-white
+        p-0;
+}
+
+.tableTitleLeft {
+    composes: tableTitle;
+
+    composes: text-left from global;
+}
+
+.root .tableTitleLeft {
+    @apply text-left;
+}
+
+.tableTitleRight {
+    composes: tableTitle;
+
+    composes: text-right from global;
+}
+
+.root .tableTitleRight {
+    @apply text-right;
+}
+
+.tableQuantity {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+}
+
+.root .tableQuantity {
+    @apply font-semibold
+        text-gray-dark
+        text-sm
+        p-0
+        border-none;
+}
+
+.tablePrice {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: text-blue from global;
+    composes: text-right from global;
+}
+
+.root .tablePrice {
+    @apply font-semibold
+        text-sm
+        text-blue
+        text-right
+        border-none
+        p-0;
+}
+
+.delivery {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: text-center from global;
+    composes: bg-[#F0F2F5] from global;
+    composes: rounded-sm from global;
+    composes: py-1.25 from global;
+    composes: px-4 from global;
+    composes: mt-1.25 from global;
+}
+
+.deliveryTime {
+    composes: text-black-lightest from global;
+}
+
+.priceWrapperShimmer {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: h-8 from global;
+}
+
+.actionsContainerShimmer {
+    composes: hidden from global;
+    composes: gap-1.25 from global;
+    composes: pt-4 from global;
+
+    @apply grid-cols-[64px,1fr];
+
+    composes: lg_grid from global;
+}
+
+.buttonShimmer {
+    composes: flex from global;
+    composes: h-11.5 from global;
+}
+
+.buttonShimmer > div {
+    @apply min-h-11.5 lg_min-h-11.5 min-w-0;
+}

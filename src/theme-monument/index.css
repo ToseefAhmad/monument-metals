@@ -1,0 +1,48 @@
+/* Tailwind and Global styles */
+@import 'tailwindcss/base';
+@import './styles/global/base.css';
+@import 'tailwindcss/utilities';
+@import './styles/global/utilities.css';
+@import 'tailwindcss/components';
+
+/* CMS Pages styles (see ./lazyStyles.json and @app/hooks/useDynamicStyles for other styles) */
+@import './styles/pages/home-page.css';
+@import './styles/pages/my-account.css';
+
+/* CMS Blocks styles */
+@import './styles/blocks/hero-banner.css';
+@import './styles/blocks/select-category.css';
+@import './styles/blocks/top-header-contacts.css';
+@import './styles/blocks/selling-proposition.css';
+@import './styles/blocks/about-block.css';
+@import './styles/blocks/trust-mark-bottom.css';
+@import './styles/blocks/trustpilot-block.css';
+
+/* Custom components */
+@import './styles/blocks/live-chat.css';
+
+/*
+ * Moved to @app/theme-monument/styles/pages/about-us.css
+ * @import './styles/blocks/why-monument-metals.css';
+*/
+
+/*
+ * Moved to @app/theme-monument/styles/pages/ira-program.css
+ * @import './styles/blocks/request-information-now.css';
+*/
+
+/*
+ * Moved to:
+ * @app/theme-monument/styles/pages/sell-to-us.css
+ * @app/theme-monument/styles/pages/storage.css
+ * @import './styles/blocks/sell-to-us.css';
+*/
+
+/*
+ * Moved to @app/pageBuilder/ContentTypes/Products/products.js
+ * @import './styles/blocks/popular-silver-coins.css';
+ * @import './styles/blocks/explore-gold-coins.css';
+ * @import './styles/blocks/explore-our-deals.css';
+ * @import './styles/blocks/explore-silver-coins.css';
+ * @import './styles/blocks/products-slider.css';
+*/

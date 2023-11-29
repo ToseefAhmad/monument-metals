@@ -1,0 +1,43 @@
+.root {
+    composes: min-w-39% from global;
+    composes: block from global;
+    composes: overflow-scroll from global;
+    composes: initial from global;
+
+    composes: lg_pl-6 from global;
+    composes: lg_bg-white-dark from global;
+}
+
+.items {
+    composes: block from global;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.root::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.root {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+}
+
+.rootEmpty {
+    composes: hidden from global;
+}
+
+.header {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-start from global;
+    composes: w-full from global;
+    composes: mt-5 from global;
+    composes: mb-2.5 from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+
+    composes: lg_mt-0 from global;
+    composes: lg_mb-0 from global;
+    composes: lg_h-19 from global;
+}

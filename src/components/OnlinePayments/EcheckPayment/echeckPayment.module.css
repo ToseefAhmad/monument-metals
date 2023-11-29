@@ -1,0 +1,47 @@
+.modeSwitch {
+    composes: pb-2.5 from global;
+}
+
+.vaultForm {
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: pb-2.5 from global;
+}
+
+.achForm {
+    composes: pb-4 from global;
+}
+
+.shimmer {
+    composes: vaultForm;
+}
+
+.shimmerLabel {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: h-9 from global;
+    composes: w-2/6 from global;
+}
+
+.shimmerInput {
+    composes: h-12 from global;
+
+    composes: lg_h-14 from global;
+}
+
+.shimmerCheckbox {
+    composes: h-7.5 from global;
+    composes: w-2/6 from global;
+
+    composes: lg_h-8 from global;
+}
+
+.accountNumberWrapper input::-webkit-outer-spin-button,
+.accountNumberWrapper input::-webkit-inner-spin-button {
+    @apply appearance-none
+        m-0;
+}
+
+.accountNumberWrapper input[type='number'] {
+    appearance: textfield;
+}

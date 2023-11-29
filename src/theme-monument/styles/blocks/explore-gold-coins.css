@@ -1,0 +1,69 @@
+.explore-gold-coins-container {
+    @apply hidden;
+
+    /* Large screen styles */
+    @apply lg_block
+        lg_mb-12.5;
+}
+
+.explore-gold-coins-container > div {
+    @apply rounded-sm;
+}
+.explore-gold-coins-container > div > div {
+    @apply bg-black-lightest
+        bg-opacity-80
+        rounded-sm;
+}
+
+.explore-gold-coins-container h2 {
+    @apply my-0
+        font-semibold
+        text-white
+        text-2xl
+        leading-9.5;
+}
+
+.explore-gold-coins-container div p {
+    @apply my-0
+        text-white
+        text-base;
+}
+
+.explore-gold-coins-text-col {
+    @apply px-17.5
+        py-11.252;
+}
+
+.explore-gold-coins-button-col {
+    /* !important to override inline styles  */
+    @apply flex-row
+        justify-end
+        items-center
+        !important;
+}
+
+.explore-gold-coins-button-col {
+    @apply px-17.5;
+}
+
+.explore-gold-coins-button-col > div > div {
+    @apply m-0;
+}
+
+.explore-gold-coins-button-col div button[class] {
+    /* Low priority button */
+    @apply border-gray-light
+        text-blue
+        bg-white
+
+        hover_text-white
+        hover_bg-blue-dark
+        hover_border-blue-dark
+
+        active_focus_text-white
+        active_focus_bg-black-light
+        active_focus_border-black-light;
+
+    /* Custom styles */
+    @apply min-w-46.5;
+}

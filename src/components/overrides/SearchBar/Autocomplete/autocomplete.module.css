@@ -1,0 +1,70 @@
+.hidden {
+    composes: opacity-0 from global;
+    composes: translate-y-8 from global;
+    composes: duration-200 from global;
+    composes: ease-out from global;
+    composes: invisible from global;
+}
+
+.visible {
+    composes: opacity-1 from global;
+    composes: translate-y-0 from global;
+    composes: duration-200 from global;
+    composes: ease-in from global;
+    composes: visible from global;
+}
+
+.root {
+    composes: h-[100vh] from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: w-full from global;
+    composes: px-5 from global;
+
+    @apply lg_h-auto;
+    composes: lg_min-h-[100px] from global;
+    composes: lg_w-auto from global;
+    composes: lg_max-w-[871px] from global;
+    composes: lg_px-0 from global;
+    composes: lg_w-[60vw] from global;
+    composes: lg_absolute from global;
+    composes: lg_left-5 from global;
+    composes: lg_top-[-12px] from global;
+    composes: lg_z-3 from global;
+    composes: lg_border-1 from global;
+    composes: lg_border-solid from global;
+}
+
+.root_hidden {
+    composes: root hidden;
+}
+
+.root_visible {
+    composes: root visible;
+}
+
+.noResult {
+    composes: root;
+}
+
+.message {
+    composes: py-0 from global;
+    composes: px-3 from global;
+    composes: text-center from global;
+}
+
+.suggestions {
+    composes: grid from global;
+    composes: w-full from global;
+    composes: px-5 from global;
+
+    composes: lg_flex from global;
+    composes: lg_flex-row from global;
+    composes: lg_h-auto from global;
+    composes: lg_max-h-[597px] from global;
+    composes: px-0 from global;
+}
+
+.suggestions:empty {
+    @apply hidden ;
+}

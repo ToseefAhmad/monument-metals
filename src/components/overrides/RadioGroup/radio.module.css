@@ -1,0 +1,108 @@
+.root_default {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: min-h-12.5 from global;
+    composes: items-center from global;
+    composes: grid from global;
+    composes: gap-2.5 from global;
+    composes: grid-flow-col from global;
+    composes: justify-center from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: px-6 from global;
+
+    composes: lg_min-h-14 from global;
+}
+
+.root {
+    composes: root_default;
+
+    composes: border-gray-light from global;
+}
+
+.root_active {
+    composes: root_default;
+
+    composes: border-blue from global;
+}
+
+.input {
+    grid-area: input;
+
+    composes: opacity-0 from global;
+    composes: h-4 from global;
+    composes: w-4 from global;
+    composes: checked_bg-blue from global;
+    composes: appearance-none from global;
+    composes: cursor-pointer from global;
+    composes: z-10 from global;
+
+    composes: disabled_cursor-default from global;
+}
+
+.icon {
+    grid-area: input;
+
+    composes: h-4 from global;
+    composes: w-4 from global;
+}
+
+.icon {
+    composes: block from global;
+    composes: relative from global;
+    composes: text-gray-light from global;
+}
+
+.icon::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    transform: translate(-50%, -50%);
+
+    @apply block
+        absolute
+        bg-white
+        top-2/4
+        left-2/4
+        rounded-full;
+}
+
+.iconRoot {
+    composes: block from global;
+}
+
+.iconSvg {
+    composes: stroke-current from global;
+}
+
+.label {
+    grid-area: label;
+
+    composes: flex from global;
+    composes: justify-self-start from global;
+    composes: text-sm from global;
+
+    composes: lg_text-base from global;
+}
+
+.labelIcon {
+    composes: flex from global;
+
+    composes: pr-2.5 from global;
+}
+
+.input:checked + .icon svg {
+    @apply text-blue fill-current;
+}
+
+.input:disabled + .icon svg {
+    @apply text-white fill-current;
+}
+
+.input:disabled:checked + .icon::before {
+    @apply bg-black-lightest
+        opacity-40;
+}

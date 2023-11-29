@@ -1,0 +1,13 @@
+.root {
+    composes: relative from global;
+    composes: self-end from global;
+    composes: w-full from global;
+    composes: text-center from global;
+}
+.root button {
+    @apply w-90p
+        mx-5
+        mb-5
+        p-0
+        mt-2.5;
+}

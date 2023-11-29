@@ -1,0 +1,92 @@
+.overlayContainer > button {
+    @apply z-50;
+}
+
+.itemAddedContainer {
+    composes: w-[335px] from global;
+    composes: min-h-[410px] from global;
+    composes: bg-white from global;
+    composes: rounded-sm from global;
+
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-center from global;
+
+    /* Large screen styles */
+    composes: lg_w-[470px] from global;
+    composes: lg_min-h-[499px] from global;
+}
+
+.productName {
+    @apply text-gray-dark
+        px-7.5
+        text-center;
+
+    /* Large screen styles */
+    @apply lg_text-base;
+}
+
+.itemAddedClose {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: self-end from global;
+    composes: outline-none from global;
+    composes: leading-none from global;
+
+    /* Large screen styles */
+    composes: lg_mt-7.5 from global;
+    composes: lg_mr-7.5 from global;
+}
+
+.itemAddedClose svg path {
+    @apply fill-black-lightest
+        opacity-40;
+}
+
+.itemAddedImageRoot {
+    composes: mx-auto from global;
+    composes: bottom-1.3 from global;
+
+    /* Large screen styles */
+    composes: lg_h-45 from global;
+    composes: lg_w-45 from global;
+    composes: lg_mt-2.5 from global;
+}
+
+.image {
+    composes: object-contain from global;
+    composes: h-40 from global;
+    composes: w-40 from global;
+}
+
+.itemAddedText {
+    composes: font-semibold from global;
+    composes: text-xs from global;
+    composes: text-black-lightest from global;
+
+    composes: mt-2.5 from global;
+    composes: mb-1.3 from global;
+
+    /* Large screen styles */
+    composes: lg_text-sm from global;
+    composes: lg_mt-3.5 from global;
+    composes: lg_mb-0 from global;
+}
+
+.itemAddedButtons {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-stretch from global;
+    composes: gap-1.3 from global;
+    composes: w-68.75 from global;
+
+    composes: mt-3.75 from global;
+
+    /* Large screen styles */
+    composes: lg_mt-5 from global;
+    composes: lg_w-92.5 from global;
+}
+
+.itemAddedButtons button {
+    @apply last_mb-7.5;
+}

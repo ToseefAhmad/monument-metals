@@ -1,0 +1,59 @@
+.root {
+    composes: bg-black-lightest from global;
+    composes: py-7.5 from global;
+
+    composes: lg_py-[27px] from global;
+}
+
+.container {
+    composes: container from global;
+}
+
+.root .container {
+    @apply mx-auto;
+}
+
+.content {
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: justify-center from global;
+    composes: gap-3.75 from global;
+
+    composes: lg_grid-flow-col from global;
+    composes: lg_justify-between from global;
+}
+
+.logoContainer {
+    composes: flex from global;
+    composes: justify-center from global;
+}
+
+.paymentContainer {
+    composes: grid from global;
+    composes: grid-flow-row from global;
+    composes: justify-center from global;
+    composes: gap-3.75 from global;
+
+    composes: lg_grid-flow-col from global;
+}
+
+.paymentText {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: font-semibold from global;
+    composes: text-white from global;
+    composes: text-xs from global;
+
+    composes: lg_text-sm from global;
+}
+
+.paymentList {
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-x-[2px] from global;
+}
+
+.paymentItem {
+    composes: flex from global;
+}

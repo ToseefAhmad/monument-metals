@@ -1,0 +1,11 @@
+.root {
+    composes: text-center from global;
+    composes: text-sm from global;
+    composes: text-gray-dark from global;
+    composes: lg_hidden from global;
+}
+
+.sortText {
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}

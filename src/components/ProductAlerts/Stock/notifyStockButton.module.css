@@ -1,0 +1,21 @@
+@import '../sharedModal.css';
+
+.notifyTriggerButton {
+    composes: defaultButton;
+    composes: static from global;
+}
+
+.headerSubText {
+    composes: pt-3 from global;
+    composes: text-sm from global;
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+}
+
+.modal {
+    composes: m-auto from global;
+}
+
+.description {
+    composes: pb-2.5 from global;
+}

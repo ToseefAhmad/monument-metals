@@ -1,0 +1,39 @@
+.root {
+    composes: bg-white-dark from global;
+    composes: border from global;
+    composes: border-t-0 from global;
+    composes: border-gray-light from global;
+    composes: px-7.5 from global;
+    composes: py-5 from global;
+}
+
+.subTotal,
+.tax,
+.shipping,
+.discount,
+.grandTotal {
+    composes: flex from global;
+    composes: md_grid from global;
+    composes: gap-1.5 from global;
+    composes: md_gap-0 from global;
+    grid-template-columns: 66% 1fr 1fr;
+    grid-template-areas: 'left center right';
+}
+.value {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    grid-area: right;
+}
+
+.label {
+    composes: min-w-[135px] from global;
+    grid-area: center;
+}
+
+.grandTotal .value {
+    @apply text-green;
+}
+
+.priceCurrency {
+    composes: pr-1 from global;
+}

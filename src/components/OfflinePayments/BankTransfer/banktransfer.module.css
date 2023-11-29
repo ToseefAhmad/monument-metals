@@ -1,0 +1,15 @@
+.title {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+}
+
+.instructions {
+    composes: bg-white-dark from global;
+    composes: rounded-sm from global;
+    composes: py-4 from global;
+    composes: px-7.5 from global;
+}
+
+.ccForm {
+    composes: pt-2.5 from global;
+}

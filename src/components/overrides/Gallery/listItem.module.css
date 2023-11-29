@@ -1,0 +1,275 @@
+.root {
+    composes: grid from global;
+    composes: grid-cols-3 from global;
+    composes: p-12.5 from global;
+    composes: pb-10.5 from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: mt-2.5 from global;
+    grid-template-columns: 250px 1fr 1fr;
+
+    composes: first_mt-0 from global;
+}
+
+.contentWrapper {
+    composes: justify-self-start from global;
+}
+
+.name {
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+}
+
+.priceWrapper {
+    composes: flex from global;
+    composes: justify-left from global;
+    composes: items-center from global;
+    composes: gap-1.25 from global;
+    composes: pt-1.25 from global;
+}
+
+.table thead tr th {
+    @apply bg-blue;
+}
+
+.readMore {
+    composes: pl-1 from global;
+}
+
+.shippingContent {
+    composes: relative from global;
+    composes: bottom-1 from global;
+    composes: hidden from global !important;
+
+    /* Large screen styles */
+    composes: lg_mt-1.25 from global;
+    composes: lg_mr-1 from global;
+    composes: lg_min-w-[20rem] from global;
+}
+
+/* Rewriting inline styles. */
+.shippingRoot :global(.top-header-contacts) {
+    @apply w-full
+        mt-2.5
+        bg-white
+        !important;
+}
+
+.shippingRoot :global(.top-header-contacts) > div {
+    @apply px-0;
+}
+
+/* Rewriting inline styles. */
+.shippingRoot :global(.shipping-information) {
+    @apply w-full
+        justify-start
+        !important;
+}
+
+/* Rewriting inline styles. */
+.shippingRoot :global(.shipping-information) p {
+    @apply text-black-lightest
+        !important;
+}
+
+/* Rewriting inline styles. */
+.shippingRoot :global(.payment-icons) {
+    @apply hidden !important;
+}
+
+/* Rewriting inline styles. */
+.shippingRoot :global(.store-times) {
+    @apply hidden !important;
+}
+
+.actionsContainer {
+    composes: grid from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: gap-1.25 from global;
+    composes: pt-4 from global;
+    grid-template-columns: auto [qty] 1fr [add];
+}
+
+.actionsContainer > :last-child button {
+    @apply ml-1.25
+        min-w-51.25;
+}
+
+@media (min-width: 1024px) {
+    .root:hover {
+        box-shadow: 0 0 40px rgb(17 25 39 / 10%);
+    }
+}
+
+.images {
+    grid-template-areas: 'main';
+    composes: grid from global;
+    composes: relative from global;
+}
+
+.imageContainer {
+    composes: mt-9 from global;
+    grid-area: main;
+}
+
+.imageContainer img {
+    @apply my-0
+        mx-auto;
+}
+
+.image {
+    transition: opacity 512ms ease-out;
+    composes: block from global;
+    composes: h-50 from global;
+    composes: w-50 from global;
+    composes: object-contain from global;
+}
+
+.imageLoaded {
+    composes: loaded from '~@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-100 from global;
+}
+
+.imageNotLoaded {
+    composes: notLoaded from '~@magento/venia-ui/lib/components/Image/image.module.css';
+    composes: opacity-0 from global;
+}
+
+.imagePlaceholder {
+    composes: image;
+    composes: bg-gray-light from global;
+}
+
+.nameWrapper {
+    composes: overflow-hidden from global;
+    composes: h-[115px] from global;
+    composes: mt-2.5 from global;
+
+    /* Large screen styles */
+    composes: lg_h-[64px] from global;
+    composes: lg_mt-5 from global;
+}
+
+.priceText {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-xss from global;
+    composes: pt-[2px] from global;
+
+    /* Large screen styles */
+    composes: lg_text-xs from global;
+    composes: lg_pt-0 from global;
+}
+
+.price {
+    composes: font-bold from global;
+    composes: text-blue from global;
+    composes: text-base from global;
+
+    /* Large screen styles */
+    composes: lg_text-lg from global;
+}
+
+.unavailableContainer {
+    composes: justify-start from global;
+    composes: bg-gray-light from global;
+    composes: text-blue from global;
+    composes: text-base from global;
+    composes: items-center from global;
+    composes: col-gap-2 from global;
+    composes: grid from global;
+    composes: italic from global;
+    composes: grid-flow-col from global;
+    composes: p-3 from global;
+    composes: w-full from global;
+}
+
+.hoverContainer {
+    box-shadow: 0 20px 20px 0 rgb(17 25 39 / 10%);
+
+    composes: invisible from global;
+    composes: opacity-0 from global;
+    composes: absolute from global;
+    composes: w-full from global;
+    composes: bg-white from global;
+    composes: rounded-b-sm from global;
+    composes: px-7.5 from global;
+    composes: pb-7.5 from global;
+    composes: z-10 from global;
+
+    /* Transition */
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+
+    @apply top-[calc(100%-15px)];
+}
+
+.root:hover .hoverContainer {
+    @apply lg_visible
+        lg_opacity-100;
+}
+
+/* Table styles */
+.tableWrapper {
+    composes: ml-2.5 from global;
+}
+
+.table {
+    composes: w-full from global;
+    composes: mt-7.5 from global;
+}
+
+.root .table {
+    @apply rounded;
+}
+
+.tableTitle {
+    composes: font-semibold from global;
+    composes: text-white from global;
+    composes: text-center from global;
+    composes: text-sm from global;
+    composes: border-b from global;
+    composes: border-b-[#E1E4E6] from global;
+    composes: p-1.75 from global;
+}
+
+.tableQuantity {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: text-center from global;
+    composes: p-1.75 from global;
+}
+
+.tablePrice {
+    composes: font-semibold from global;
+    composes: text-sm from global;
+    composes: text-blue from global;
+    composes: text-center from global;
+}
+
+.root .tablePrice {
+    @apply font-semibold
+        text-sm
+        text-blue
+        border-none
+        p-0;
+}
+
+.delivery {
+    composes: font-semibold from global;
+    composes: text-gray-dark from global;
+    composes: text-sm from global;
+    composes: text-center from global;
+    composes: bg-[#F0F2F5] from global;
+    composes: rounded-sm from global;
+    composes: py-1.25 from global;
+    composes: px-4 from global;
+    composes: mt-2.25 from global;
+}
+
+.deliveryTime {
+    composes: text-black-lightest from global;
+}

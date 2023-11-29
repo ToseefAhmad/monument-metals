@@ -1,0 +1,125 @@
+.root {
+    grid-template-areas: 'input label';
+    grid-template-columns: min-content 1fr;
+
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: items-center from global;
+    composes: justify-items-center from global;
+    composes: text-gray-dark from global;
+}
+
+.root_error {
+    composes: root;
+}
+
+.input {
+    grid-area: input;
+
+    composes: w-5 from global;
+    composes: h-5 from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: border-2 from global;
+    composes: rounded-sm from global;
+    composes: cursor-pointer from global;
+    composes: appearance-none from global;
+    composes: opacity-0 from global;
+    composes: z-10 from global;
+
+    composes: disabled_cursor-default from global;
+}
+
+.iconWrapper {
+    grid-area: input;
+
+    composes: relative from global;
+}
+
+.icon_default {
+    composes: flex from global;
+    composes: w-5 from global;
+    composes: h-5 from global;
+    composes: cursor-pointer from global;
+    composes: pointer-events-none from global;
+}
+
+.icon_default svg {
+    @apply stroke-current;
+    stroke-width: 1px;
+}
+
+.icon {
+    composes: icon_default;
+
+    composes: text-gray-light from global;
+}
+
+.iconDark {
+    composes: icon_default;
+    composes: text-blue from global;
+}
+
+.iconDark svg {
+    stroke-width: 2px;
+}
+
+.icon_error {
+    composes: icon_default;
+    composes: text-red-light from global;
+}
+
+.iconMark {
+    composes: absolute from global;
+    composes: -translate-y-2/4 from global;
+    composes: -translate-x-2/4 from global;
+    composes: top-2/4 from global;
+    composes: left-2/4 from global;
+    composes: opacity-0 from global;
+}
+
+.label {
+    grid-area: label;
+
+    composes: text-sm from global;
+    composes: justify-self-start from global;
+    composes: pl-4 from global;
+    composes: cursor-pointer from global;
+
+    composes: lg_text-base from global;
+}
+
+.input:disabled + .iconWrapper .icon svg {
+    stroke: #e6e9eb;
+
+    @apply text-white-dark fill-current;
+}
+
+.input:checked:disabled + .iconWrapper .iconMark svg path {
+    @apply text-black-lightest text-opacity-40 fill-current;
+}
+
+.input:disabled ~ .label {
+    cursor: default;
+}
+
+.input:checked:enabled + .iconWrapper .icon svg {
+    @apply text-blue fill-current;
+}
+
+.input:checked:enabled + .iconWrapper .iconDark svg {
+    @apply text-blue-dark fill-current;
+}
+
+.input:checked + .iconWrapper .iconMark {
+    @apply opacity-100;
+}
+
+.input:active:enabled,
+.input:focus:enabled {
+    outline: none;
+}
+
+.messageWrapper > p {
+    @apply flex flex-row relative;
+}

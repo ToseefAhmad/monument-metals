@@ -1,0 +1,186 @@
+@import '../blocks/request-information-now.css';
+
+.cms-ira-program h1,
+.cms-ira-program h2,
+.cms-ira-program h3,
+.cms-ira-program h4,
+.cms-ira-program h5,
+.cms-ira-program h6,
+.cms-ira-program p {
+    @apply my-0;
+}
+
+.cms-ira-program .full-width-section > * {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.cms-ira-program .full-width-section.grey {
+    @apply bg-white-dark;
+}
+
+.cms-ira-program h1 {
+    @apply mb-7.5 lg_mb-12.5 lg_mt-0 mt-7.5  !important;
+}
+.cms-ira-program .investing {
+    @apply py-7.5 lg_py-12.5;
+}
+
+.cms-ira-program .investing > * {
+    @apply gap-y-2.5 lg_gap-x-3.75;
+}
+
+.cms-ira-program .investing img {
+    @apply mb-7.5 lg_mb-12.5;
+}
+
+.cms-ira-program .investing h2 {
+    @apply mb-5 lg_mb-12.5 font-semibold;
+}
+
+.cms-ira-program .investing .investing-option-title {
+    @apply text-black-lightest mb-1.25 lg_mb-2.5 text-sm lg_text-base font-semibold mt-4.5 lg_mt-[38px];
+}
+
+.cms-ira-program .investing .investing-option-content {
+    @apply text-xs lg_text-sm leading-7;
+}
+
+.cms-ira-program .investing-option {
+    @apply px-5 lg_px-7.5 pb-5 lg_pb-7.5 pt-7.5 lg_pt-12.5 bg-white;
+}
+
+.cms-ira-program .ira-approved {
+    @apply py-7.5 lg_py-12.5;
+}
+
+.cms-ira-program .ira-approved > * {
+    @apply gap-y-2.5 lg_gap-x-3.75;
+}
+.cms-ira-program .ira-approved h2 {
+    @apply mb-3.75 lg_mb-5 font-semibold;
+}
+.cms-ira-program .ira-approved-description {
+    @apply mb-5 lg_mb-12.5;
+}
+
+.cms-ira-program .ira-approved-option {
+    @apply bg-white-dark p-5 lg_p-7.5;
+}
+
+.cms-ira-program .ira-approved-option h4 {
+    @apply mb-3.75 lg_mb-7.5;
+}
+
+.cms-ira-program .ira-approved-option a {
+    @apply m-0 mb-1.25 lg_mb-2.5;
+}
+
+.cms-ira-program .ira-approved-option .links {
+    @apply mb-2.5 lg_mb-7.5 lg_h-[116px];
+}
+
+.cms-ira-program .ira-approved-option .links p {
+    @apply mb-1.25 lg_mb-2.5 font-semibold;
+}
+.cms-ira-program .ira-approved-option .links p img {
+    @apply inline ml-2.5;
+}
+
+.cms-ira-program .ira-approved-button div {
+    @apply p-0 m-0;
+}
+
+.cms-ira-program .ira-approved-button button {
+    @apply w-[295px]
+        lg_w-[320px]
+        font-bold
+        bg-blue
+        border-blue
+        text-white
+        hover_bg-blue-dark
+        hover_border-blue-dark
+        active_focus_bg-black-light
+        active_focus_border-black-light;
+}
+
+.cms-ira-program .ira-custodians {
+    @apply py-7.5 lg_py-12.5;
+}
+
+.cms-ira-program .ira-custodians > * {
+    @apply lg_gap-x-[30px];
+}
+
+.cms-ira-program .ira-custodians h2 {
+    @apply mb-3.75 lg_mb-[46px] font-semibold;
+}
+
+.cms-ira-program .ira-custodians h3 {
+    @apply mb-3.75 lg_mb-[10px];
+}
+
+.cms-ira-program .ira-custodians .contacts {
+    @apply bg-white p-5 lg_p-7.5 lg_min-h-[300px] mb-7.5 lg_mb-0 ;
+}
+
+.cms-ira-program .contacts-hidden {
+    @apply lg_hidden h-[260px] mb-5;
+}
+
+.cms-ira-program .contact-column {
+    @apply hidden lg_flex !important;
+}
+
+.cms-ira-program .divider-hidden,
+.divider {
+    @apply hidden lg_block;
+}
+
+.cms-ira-program .divider > * {
+    @apply py-0 my-0;
+}
+
+.cms-ira-program .approved-depositories-content {
+    @apply mb-5 lg_mb-0;
+}
+
+.cms-ira-program .contacts.grey {
+    @apply bg-white-dark lg_min-h-[263px] min-h-[225px] p-5 lg_p-7.5 mb-6;
+}
+.cms-ira-program .contacts.contacts.grey p {
+    @apply mb-[5px];
+}
+
+.cms-ira-program .ira-custodians .contacts p {
+    @apply mb-1.25;
+}
+
+.cms-ira-program .ira-custodians .divider {
+    @apply mt-2.5 mb-3.75;
+}
+
+.cms-ira-program .approved-depositories .divider {
+    @apply mt-[2px] mb-[43px];
+}
+.cms-ira-program .contacts p img {
+    @apply inline mb-1.25 mr-[8px];
+}
+
+.cms-ira-program .contacts .contact-logo {
+    @apply mb-5  max-w-[200px];
+}
+
+.cms-ira-program .approved-depositories {
+    @apply pt-7.5 lg_py-12.5 pb-1.5 lg_pb-[22px];
+}
+.cms-ira-program .approved-depositories > * {
+    @apply lg_gap-x-[30px];
+}
+
+.cms-ira-program .approved-depositories h2 {
+    @apply mb-6 lg_mb-[55px] font-semibold;
+}
+
+.cms-ira-program .approved-depositories h3 {
+    @apply mb-3.75 lg_mb-[10px];
+}

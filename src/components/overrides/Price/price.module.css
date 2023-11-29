@@ -1,0 +1,3 @@
+.currency {
+    composes: pr-1 from global;
+}

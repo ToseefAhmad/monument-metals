@@ -1,0 +1,44 @@
+.buttonContainer {
+    composes: pb-5 from global;
+}
+
+.buttonContainer button {
+    @apply w-full;
+}
+
+.loading {
+    composes: root from '~@magento/venia-ui/lib/components/LoadingIndicator/indicator.module.css';
+
+    composes: text-center from global;
+}
+
+.shimmer {
+    composes: content from './AddressBook/addressBook.module.css';
+}
+
+.shimmerContainer {
+    composes: h-50 from global;
+
+    composes: lg_h-[254px] from global;
+}
+
+.shimmerButtonContainer {
+    composes: buttonContainer from './AddressBook/addressBook.module.css';
+    composes: h-[50px] from global;
+    composes: lg_h-[56px] from global;
+    composes: flex from global;
+}
+
+.shimmerForm {
+    composes: root from './AddressForm/addressForm.module.css';
+}
+
+.shimmerField {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.shimmerLabel {
+    composes: flex from global;
+    composes: pb-3.75 from global;
+}

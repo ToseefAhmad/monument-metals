@@ -1,0 +1,111 @@
+.trigger {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: py-2 from global;
+    composes: flex from global;
+    composes: align-content-center from global;
+    composes: justify-center from global;
+    composes: relative from global;
+    composes: px-2.5 from global;
+    composes: ml-2.5 from global;
+    composes: z-1 from global;
+    composes: bg-white bg-opacity-80 from global;
+    composes: lg_hover_bg-gray-light lg_hover_bg-opacity-20 from global;
+    composes: lg_px-0 from global;
+    composes: lg_ml-0 from global;
+    composes: lg_focus_bg-gray-light lg_focus_bg-opacity-60 from global;
+}
+
+.triggerContainer {
+    composes: hidden from global;
+    composes: items-center from global;
+    composes: -mr-5 from global;
+
+    composes: lg_grid from global;
+}
+
+.link {
+    composes: trigger;
+    composes: relative from global;
+
+    composes: flex from global;
+    composes: text-blue from global;
+
+    composes: lg_hidden from global;
+}
+
+.cart {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-5 from global;
+    composes: px-5 from global;
+    composes: border-l from global;
+    composes: border-gray-light from global;
+    composes: py-1.25 from global;
+    composes: text-blue from global;
+    composes: bg-white bg-opacity-80 from global;
+    composes: lg_hover_bg-gray-light lg_hover_bg-opacity-20 from global;
+    composes: lg_focus_bg-gray-light lg_focus_bg-opacity-60 from global;
+    composes: transition from global;
+}
+
+.cart::before {
+    @apply content-['']
+        bg-blue
+        block
+        h-[1px]
+        bottom-[1px]
+        absolute
+        left-0
+        w-0
+        transition-all
+        ease-in-out;
+}
+
+.cart:hover::before {
+    @apply w-full;
+}
+
+.wrapper {
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: items-start from global;
+}
+
+.textSmall {
+    composes: text-gray-dark from global;
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: text-xss from global;
+}
+
+.textWrapper {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: gap-4 from global;
+}
+
+.text {
+    composes: font-semibold from global;
+    composes: text-black-lightest from global;
+    composes: leading-8 from global;
+    composes: capitalize from global;
+}
+
+.mobileCounter {
+    composes: absolute from global;
+    composes: bottom-4 from global;
+    composes: left-[1.3rem] from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: leading-none from global;
+    composes: bg-blue from global;
+    composes: font-bold from global;
+    composes: font-sans from global;
+    composes: text-[8px] from global;
+    composes: text-white from global;
+    composes: h-4 from global;
+    composes: min-w-4 from global;
+    composes: rounded-full from global;
+    composes: p-1 from global;
+}

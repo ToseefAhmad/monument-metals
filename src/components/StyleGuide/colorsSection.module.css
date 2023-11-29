@@ -1,0 +1,90 @@
+.list {
+    composes: list from './index.module.css';
+    width: 810px;
+}
+
+.colorBadge {
+    width: 154px;
+    height: 56px;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: rounded-sm from global;
+}
+
+.colorText {
+    composes: text-sm from global;
+    composes: font-bold from global;
+}
+
+.colorTextWhite {
+    composes: text-white from global;
+}
+
+.colorTextBlack {
+    composes: text-black-lightest from global;
+}
+
+.redLight {
+    composes: bg-red-light from global;
+}
+
+.blue {
+    composes: bg-blue from global;
+}
+
+.blueLighter {
+    composes: bg-blue-lighter from global;
+}
+
+.blackLightest {
+    composes: bg-black-lightest from global;
+}
+
+.grayDark {
+    composes: bg-gray-dark from global;
+}
+
+.whiteDark {
+    composes: bg-white-dark from global;
+}
+
+.grayLight {
+    composes: bg-gray-light from global;
+}
+
+.blackLighten {
+    composes: bg-black-lighten from global;
+}
+
+.green {
+    composes: bg-green from global;
+}
+
+.gold {
+    composes: bg-gold from global;
+}
+
+.blueDark {
+    composes: bg-blue-dark from global;
+}
+
+.blackLight {
+    composes: bg-black-light from global;
+}
+
+.blueLight {
+    composes: bg-blue-light from global;
+}
+
+.red {
+    composes: bg-red from global;
+}
+
+.redDark {
+    composes: bg-red-dark from global;
+}
+
+.gray {
+    composes: bg-gray from global;
+}

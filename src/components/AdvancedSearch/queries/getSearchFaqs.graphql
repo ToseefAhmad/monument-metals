@@ -1,0 +1,11 @@
+query getFaqSearches($inputText: String) {
+    xsearchFaqs(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+}

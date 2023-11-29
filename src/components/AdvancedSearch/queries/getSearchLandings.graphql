@@ -1,0 +1,11 @@
+query getLandingSearches($inputText: String) {
+    xsearchLandings(search: $inputText) {
+        items {
+            name
+            url
+            title
+        }
+        total_count
+        code
+    }
+}

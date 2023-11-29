@@ -1,0 +1,170 @@
+.root {
+    composes: grid from global;
+    composes: gap-x-2 from global;
+    composes: lg_min-h-[102px] from global;
+}
+
+.item {
+    grid-template-areas: 'info details actions';
+    grid-template-columns: 49% 41% 1fr;
+
+    composes: items-start from global;
+    composes: grid from global;
+    composes: items-center from global;
+}
+
+.item_disabled {
+    composes: item;
+    composes: opacity-50 from global;
+    composes: pointer-events-none from global;
+}
+
+.stockStatus {
+    composes: font-semibold from global;
+    composes: text-red-light from global;
+}
+
+.errorText {
+    composes: text-red-light from global;
+    composes: leading-1 from global;
+}
+
+.errorText:empty {
+    @apply hidden;
+}
+
+.info {
+    grid-area: info;
+    grid-template-areas:
+        'image name'
+        'image sku';
+    grid-template-columns: 60px 1fr;
+    composes: grid from global;
+    composes: items-center from global;
+    composes: gap-x-3.75 from global;
+    composes: lg_gap-x-5 from global;
+}
+
+.imageContainer {
+    grid-area: image;
+    composes: h-15 w-15 from global;
+    composes: border border-solid border-gray-light from global;
+}
+
+.imageRoot {
+    composes: h-full from global;
+}
+
+.image {
+    composes: border border-solid border-gray-light from global;
+    composes: h-full from global;
+    composes: object-contain from global;
+    composes: object-center from global;
+}
+
+.details {
+    grid-area: details;
+    grid-template-areas:
+        'price quantity product_total'
+        'price quantity product_total';
+    grid-template-columns: 130px 66px 120px;
+    composes: grid from global;
+    composes: leading-normal from global;
+    composes: items-center from global;
+    composes: lg_mb-0 from global;
+    composes: mb-3.75 from global;
+}
+
+.nameContainer {
+    composes: pb-0 from global;
+    composes: mt-5 from global;
+
+    composes: lg_pr-7.5 from global;
+}
+
+.name {
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+
+    composes: lg_text-base from global;
+}
+
+.price {
+    grid-area: price;
+    composes: lg_block from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+    composes: hidden from global;
+}
+
+.quantity {
+    grid-area: quantity;
+    composes: grid from global;
+    composes: items-start from global;
+    composes: lg_justify-items-left from global;
+
+    composes: justify-items-start from global;
+}
+
+.actions {
+    grid-area: actions;
+    composes: lg_mb-0 from global;
+    composes: mb-3.25 from global;
+}
+
+.actions button {
+    @apply h-9 w-9 border border-solid border-gray-light flex items-center justify-center;
+}
+
+.product_code {
+    grid-area: sku;
+    composes: min-h-5 from global;
+    composes: flex items-start from global;
+    composes: lg_mb-2 from global;
+    composes: mb-1.25 from global;
+    composes: -mt-0.75 from global;
+}
+
+.code_label {
+    composes: bodyMobileTextSmall from '../../../StyleGuide/typographySection.module.css';
+    composes: lg_pb-2.5 from global;
+    composes: lg_text-sm from global;
+    composes: whitespace-nowrap from global;
+    composes: mr-[5px] from global;
+}
+.code_sku {
+    composes: bodyMobileTextSmall from '../../../StyleGuide/typographySection.module.css';
+    composes: lg_pb-2.5 from global;
+    composes: lg_text-sm from global;
+    composes: text-black-lightest from global;
+    composes: font-semibold from global;
+}
+
+.product_total {
+    grid-area: product_total;
+    composes: text-green font-semibold from global;
+}
+
+.total {
+    composes: bodyTextSmall from '../../../StyleGuide/typographySection.module.css';
+    composes: lg_hidden from global;
+    composes: text-gray-dark from global;
+    composes: font-normal from global;
+}
+
+@media (max-width: 640px) {
+    .details {
+        grid-template-columns: 75px 120px;
+        grid-template-areas: 'quantity product_total';
+    }
+
+    .item {
+        grid-template:
+            'info info' 1fr
+            'details actions' min-content / 1fr min-content;
+    }
+
+    .info {
+        grid-template-rows: 1fr min-content;
+    }
+}

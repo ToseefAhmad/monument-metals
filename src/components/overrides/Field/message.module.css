@@ -1,0 +1,23 @@
+.root {
+    composes: flex from global;
+    composes: items-center from global;
+    composes: absolute from global;
+    composes: right-0 from global;
+    composes: text-xs from global;
+    composes: leading-7.5 from global;
+    composes: ml-auto from global;
+}
+
+.root:empty {
+    @apply hidden;
+}
+
+.root_error {
+    composes: root;
+    composes: text-red-light from global;
+    composes: font-semibold from global;
+}
+
+.errorIcon {
+    composes: pr-1 from global;
+}

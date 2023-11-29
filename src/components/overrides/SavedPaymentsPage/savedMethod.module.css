@@ -1,0 +1,126 @@
+.root {
+    composes: lg_grid from global;
+    composes: relative from global;
+    composes: p-6.25 from global;
+    composes: lg_p-0 from global;
+    composes: lg_px-7.5 from global;
+    composes: border from global;
+    composes: lg_border-t-0 from global;
+    composes: border-gray-light from global;
+    composes: text-sm from global;
+}
+
+.ccRoot {
+    composes: root;
+    grid-template-columns: 45% 28% 1fr 10%;
+}
+
+.accountRoot {
+    composes: root;
+    grid-template-columns: 30% 22% 23% 1fr 10%;
+}
+
+.mobileCardTypeLabel,
+.mobileCardNumberLabel,
+.mobileExpirationDateLabel {
+    composes: font-normal from global;
+    composes: text-gray-dark from global;
+    composes: lg_hidden from global;
+}
+
+.deleteField button {
+    @apply border
+        border-solid
+        border-gray-light
+        leading-0
+        rounded
+        p-2
+        py-2.25
+        lg_py-2
+        lg_mr-1.25
+        w-full
+        lg_w-auto;
+}
+
+.typeField,
+.cardNumberField,
+.dateField {
+    composes: lg_py-3 from global;
+    composes: font-semibold from global;
+    composes: lg_font-normal from global;
+    composes: text-blue from global;
+    composes: lg_text-gray-dark from global;
+}
+
+.cardNumberField {
+    composes: uppercase from global;
+}
+
+.typeField {
+    composes: capitalize from global;
+}
+
+.deleteField {
+    composes: text-right from global;
+    composes: pt-3.75 from global;
+    composes: lg_py-2.25 from global;
+}
+
+.root_active {
+    composes: border-blue-light from global;
+    composes: border-solid from global;
+    composes: lg_border-t-1 from global;
+}
+
+.ccRoot_active {
+    composes: ccRoot;
+    composes: root_active;
+}
+
+.accountRoot_active {
+    composes: accountRoot;
+    composes: root_active;
+}
+
+.deleteButton {
+    composes: text-blue from global;
+
+    composes: hover_bg-gray-light from global;
+
+    composes: disabled_bg-gray-light from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition-primary from global;
+}
+
+.deleteConfirmationContainer {
+    composes: items-center from global;
+    composes: bg-white/80 from global;
+    composes: rounded-sm from global;
+    composes: grid from global;
+    composes: grid-flow-col from global;
+    composes: gap-4 from global;
+    composes: h-full from global;
+    composes: justify-center from global;
+    composes: opacity-100 from global;
+    composes: left-0 from global;
+    composes: p-5 from global;
+    composes: absolute from global;
+    composes: top-0 from global;
+    composes: visible from global;
+    composes: w-full from global;
+
+    composes: lg_p-0 from global;
+}
+
+.deleteConfirmationContainer_hidden {
+    composes: deleteConfirmationContainer;
+
+    composes: opacity-0 from global;
+    composes: hidden from global;
+}
+
+.confirmationButtonContainer button {
+    @apply lg_min-h-10
+        lg_min-w-[120px];
+}

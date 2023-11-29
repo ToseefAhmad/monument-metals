@@ -1,0 +1,220 @@
+@import '../blocks/sell-to-us.css';
+
+.cms-storage-row-1 > div > div > p:first-child {
+    @apply mt-3.75;
+
+    /* Large screen styles */
+    @apply lg_mt-[22px];
+}
+
+.cms-storage-row-1 > div > div > p:last-child {
+    @apply mb-7.5;
+
+    /* Large screen styles */
+    @apply lg_mb-12.5;
+}
+
+/* Full bleed row */
+.cms-storage-row-2 {
+    @apply bg-white-dark
+        py-7.5
+        px-5;
+
+    /* Large screen styles */
+    @apply lg_pt-0
+        lg_pb-10;
+
+    /* Important to override pabebuilder inline styles */
+    @apply lg_justify-center
+        !important;
+}
+
+.cms-storage-row-2 > * {
+    /* Large screen styles */
+    @apply relative
+        desktop_left-[calc(((-1210px+100vw-var(--scrollBarWidth))/2))]
+        lg_max-w-[1170px];
+}
+
+.cms-storage-row-2 > h2 {
+    @apply mb-5;
+
+    /* Large screen styles */
+    @apply lg_my-12.5;
+}
+
+/* Step column */
+.cms-storage-row-2 .pagebuilder-column {
+    @apply bg-white
+        mb-2.5
+        pt-7.5
+        px-5
+        pb-5;
+
+    /* Large screen styles */
+    @apply lg_first_mr-3.75
+        lg_last_ml-3.75
+
+        lg_pt-12.5
+        lg_pl-7.5;
+}
+
+.cms-storage-row-2 .pagebuilder-column h5 {
+    @apply font-semibold
+        mt-7.5
+        mb-1.3;
+
+    /* Large screen styles */
+    @apply lg_mt-12.5
+        lg_mb-2.5
+        lg_text-base
+        lg_leading-8;
+}
+
+.cms-storage-row-2 .pagebuilder-column p {
+    /* Large screen styles */
+    @apply lg_text-sm;
+}
+
+.cms-storage-row-3 {
+    @apply pt-7.5
+        mb-7.5;
+
+    /* Large screen styles */
+    @apply lg_pt-12.5
+        lg_mb-12.5;
+}
+
+.cms-storage-row-3 h3 {
+    @apply my-3.75;
+
+    /* Large screen styles */
+    @apply lg_mt-[25px];
+}
+
+.cms-storage-row-3 p {
+    @apply mb-0;
+}
+
+.cms-storage-row-3 > div > div {
+    @apply border-b-1
+        border-black-lightest
+        border-opacity-10
+
+        pb-3.75;
+
+    /* Large screen styles */
+    @apply lg_pb-7.5;
+}
+
+.cms-storage-row-3 > div > div:nth-last-child(2) {
+    @apply border-none;
+}
+
+/* Contact us block (column container) */
+.cms-storage-row-3 > div > div {
+    @apply last-of-type_border-none
+        last-of-type_pb-0
+        last-of-type_mt-3.75
+        last-of-type_min-h-[224px]
+        last-of-type_w-[calc(100vw-var(--scrollBarWidth))]
+        last-of-type_ml-[50%]
+        last-of-type_-translate-x-2/4;
+
+    /* Large screen styles */
+    @apply lg_last-of-type_min-h-[160px]
+        lg_last-of-type_mt-5
+        lg_last-of-type_w-full
+        lg_last-of-type_ml-0
+        lg_last-of-type_translate-x-0;
+}
+
+/* Shimmer */
+.cms-storage-row-3 > div > div:last-of-type > div {
+    @apply relative
+        inline-block
+        overflow-hidden
+        bg-[#f4f5f5]
+        pointer-events-none
+
+        before_content-['']
+        before_absolute
+        before_top-0
+        before_left-0
+        before_w-[1440px]
+        before_h-full
+        before_bg-no-repeat;
+}
+
+.cms-storage-row-3 > div > div:last-of-type > div::before {
+    background:
+        linear-gradient(
+            to right,
+            rgb(var(--venia-global-color-gray-50) / 0%) 0%,
+            rgb(var(--venia-global-color-gray-50)) 40%,
+            rgb(var(--venia-global-color-gray-50) / 0%) 80%,
+            rgb(var(--venia-global-color-gray-50) / 0%) 100%
+        );
+    background-size: var(--venia-global-maxWidth) 100%;
+    animation-name: shimmer-animation;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    will-change: transform;
+}
+
+@keyframes shimmer-animation {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.cms-storage-row-3 > div > div:last-of-type > div > div > div > div {
+    /* Large screen styles */
+    @apply lg_mb-0;
+}
+
+.cms-storage-row-3 > div > div:last-of-type > div > div > div > div > div {
+    @apply h-[224px];
+
+    /* Large screen styles */
+    @apply lg_h-[160px];
+}
+
+/* Lists */
+.cms-storage-row-1 ul,
+.cms-storage-row-2 ul,
+.cms-storage-row-3 ul {
+    @apply list-none
+        p-0
+        my-0;
+}
+
+.cms-storage-row-1 ul li,
+.cms-storage-row-2 ul li,
+.cms-storage-row-3 ul li {
+    @apply relative
+        pl-5
+        lg_pl-6
+        lg_py-px
+        p-0;
+}
+
+.cms-storage-row-1 ul li::before,
+.cms-storage-row-2 ul li::before,
+.cms-storage-row-3 ul li::before {
+    content: '';
+
+    @apply absolute
+        left-0
+        -translate-y-2/4
+        block
+        h-0.5
+        w-2.5
+        bg-red-light;
+}

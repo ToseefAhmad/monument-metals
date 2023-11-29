@@ -1,0 +1,73 @@
+.root {
+    composes: inline-flex from global;
+}
+
+.input {
+    composes: inline-flex from global;
+    composes: w-9 from global;
+    composes: h-9 from global;
+    composes: bg-white from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+    composes: rounded-tl-sm from global;
+    composes: rounded-bl-sm from global;
+    composes: text-center from global;
+    composes: text-base from global;
+    composes: text-gray-dark from global;
+    composes: placeholder-gray-dark from global;
+    composes: appearance-none from global;
+    composes: outline-none from global;
+
+    composes: hover_text-black-lightest from global;
+    composes: hover_border-gray from global;
+
+    composes: focus_text-black-lightest from global;
+    composes: focus_border-black-lightest from global;
+
+    composes: disabled_text-gray-dark from global;
+    composes: disabled_border-gray-light from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.buttonsWrapper {
+    composes: flex from global;
+    composes: flex-col from global;
+}
+
+.button {
+    composes: flex from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: h-4.5 from global;
+    composes: w-4.5 from global;
+    composes: bg-white from global;
+    composes: border-t from global;
+    composes: border-r from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+
+    composes: hover_bg-gray-light from global;
+    composes: hover_text-opacity-100 from global;
+
+    composes: disabled_bg-white from global;
+    composes: disabled_text-opacity-40 from global;
+
+    composes: transition from global;
+    composes: duration-200 from global;
+    composes: ease-in-out from global;
+}
+
+.button_increment {
+    composes: button;
+    composes: rounded-tr-sm from global;
+}
+
+.button_decrement {
+    composes: button;
+    composes: border-b from global;
+    composes: rounded-br-sm from global;
+}

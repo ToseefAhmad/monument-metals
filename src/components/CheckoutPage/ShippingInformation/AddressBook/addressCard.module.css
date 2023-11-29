@@ -1,0 +1,45 @@
+.root {
+    composes: relative from global;
+    composes: flex from global;
+    composes: flex-col from global;
+    composes: border from global;
+    composes: border-solid from global;
+    composes: rounded-sm from global;
+    composes: p-6 from global;
+
+    composes: lg_p-7.5 from global;
+}
+
+.root_default {
+    composes: root;
+
+    composes: border-gray-light from global;
+    composes: bg-white from global;
+
+    /* Transition */
+    composes: transition-primary from global;
+
+    /* Hover state */
+    composes: hover_border-blue from global;
+}
+
+.root_selected {
+    composes: root;
+
+    composes: border-blue from global;
+    composes: bg-white-dark from global;
+}
+
+.selectedIcon {
+    composes: absolute from global;
+    composes: -top-px from global;
+    composes: -right-px from global;
+    composes: flex from global;
+    composes: items-center from global;
+    composes: justify-center from global;
+    composes: w-5 from global;
+    composes: h-5 from global;
+    composes: rounded-sm from global;
+    composes: bg-blue from global;
+    composes: text-white from global;
+}

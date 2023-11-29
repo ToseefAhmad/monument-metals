@@ -1,0 +1,14 @@
+.root {
+    composes: hidden from global;
+    composes: items-center from global;
+
+    composes: lg_flex from global;
+}
+
+.trigger {
+    composes: root from '@magento/venia-ui/lib/components/clickable.module.css';
+    composes: z-1 from global;
+    composes: bg-white bg-opacity-80 from global;
+    composes: lg_hover_bg-gray-light lg_hover_bg-opacity-20 from global;
+    composes: lg_focus_bg-gray-light lg_focus_bg-opacity-60 from global;
+}

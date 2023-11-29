@@ -1,0 +1,16 @@
+.header {
+    composes: text-center from global;
+    composes: lg_pb-7.5 from global;
+    composes: pt-7.5 from global;
+}
+
+.contentContainer {
+    composes: lg_pb-8 from global;
+    composes: lg_border-2 lg_border-gray-light from global;
+    composes: lg_rounded-sm from global;
+}
+
+/* Override styles of main-page */
+:global(.createAccount-page .main-page) {
+    @apply min-h-[690px] lg_min-h-[1020px];
+}

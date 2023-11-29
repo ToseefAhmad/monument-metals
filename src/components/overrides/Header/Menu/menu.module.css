@@ -1,0 +1,121 @@
+.root {
+    composes: flex from global;
+}
+
+.overlay {
+    composes: w-full from global;
+    composes: min-h-[100vw] from global;
+}
+
+.title {
+    composes: block from global;
+    composes: text-black-lightest from global;
+    composes: px-6.25 from global;
+}
+
+.root > .title > a {
+    @apply py-3.75
+        block;
+}
+
+.root > li:first-child {
+    @apply pl-0;
+}
+
+.root > li {
+    @apply px-5
+        xl_px-6.25;
+}
+
+.menuLink {
+    composes: border-b-3 from global;
+    composes: border-white from global;
+}
+
+.title:hover > .menuLink {
+    @apply border-b-3
+        border-solid
+        border-blue;
+}
+
+.hover > .menuLink {
+    @apply border-b-3
+        border-solid
+        border-blue;
+}
+
+.title > aside {
+    @apply hidden top-[66px];
+}
+
+.hover > aside {
+    @apply block;
+}
+
+.dropdown {
+    composes: w-full from global;
+    composes: absolute from global;
+    composes: left-0 from global;
+}
+
+.dropdownContentWrapper {
+    composes: bg-white from global;
+    composes: px-5 from global;
+    composes: shadow-lg from global;
+}
+
+.dropdownContent {
+    composes: max-w-desktop from global;
+    composes: container from global;
+    composes: pt-5 from global;
+    composes: pb-12.5 from global;
+}
+
+.items {
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: flex-wrap from global;
+    composes: max-h-[50vh] from global;
+}
+
+.firstChildItemWrapper {
+    composes: mt-7.5 from global;
+    composes: min-w-[270px] from global;
+    composes: max-w-[270px] from global;
+}
+
+.firstChildItem {
+    composes: mb-2.5 from global lg_hover_text-blue-dark lg_focus_text-black-light from global;
+}
+
+.secondChildItem {
+    composes: text-gray-dark from global;
+    composes: font-normal from global;
+}
+
+.viewAllWithArrow {
+    composes: block from global;
+    composes: mt-2.5 from global;
+    composes: flex from global;
+    composes: flex-row from global;
+    composes: items-center from global;
+    composes: justify-start from global;
+}
+
+.viewAll {
+    composes: text-black-lightest from global;
+    composes: mr-2.5 from global;
+}
+
+.viewAllIcon {
+    composes: text-red-light from global;
+}
+
+.shimmer {
+    composes: hidden from global;
+    composes: items-center from global;
+    composes: h-[65px] from global;
+
+    /* Large screen styles */
+    composes: lg_flex from global;
+}

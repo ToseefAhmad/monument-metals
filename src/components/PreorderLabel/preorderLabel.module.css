@@ -1,0 +1,24 @@
+.root {
+    composes: flex from global;
+}
+
+.preorderLabel {
+    composes: uppercase from global;
+    composes: whitespace-nowrap from global;
+    composes: bg-green from global;
+    composes: text-white from global;
+    composes: font-bold from global;
+    composes: h-full from global;
+    composes: p-1 from global;
+    composes: px-3 from global;
+    composes: text-xss from global;
+    composes: rounded from global;
+}
+
+.preorderNote {
+    composes: pl-2 from global;
+    composes: self-center from global;
+    composes: text-xs from global;
+    composes: whitespace-nowrap from global;
+    composes: text-black-lightest from global;
+}

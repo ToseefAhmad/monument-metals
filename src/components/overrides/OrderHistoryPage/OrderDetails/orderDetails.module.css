@@ -1,0 +1,128 @@
+.topActionBar {
+    composes: flex from global;
+    composes: mt-2.5 from global;
+    composes: mb-7.5 from global;
+    composes: gap-1.25 from global;
+    composes: lg_gap-0 from global;
+    composes: py-3.75 from global;
+    composes: border-t from global;
+    composes: border-b from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+    composes: lg_my-5 from global;
+}
+
+.backIcon {
+    composes: text-red from global;
+}
+
+.actionButton {
+    composes: font-bold from global;
+    composes: lg_px-5 from global;
+    composes: text-base from global;
+    composes: py-1.5 from global;
+    composes: px-7.5 from global;
+    composes: rounded from global;
+    composes: flex from global;
+    composes: bg-white from global;
+    composes: text-blue from global;
+    composes: justify-center from global;
+    composes: items-center from global;
+    composes: gap-2.5 from global;
+    composes: border from global;
+    composes: border-gray-light from global;
+    composes: border-solid from global;
+    composes: w-full from global;
+    composes: lg_w-auto from global;
+}
+
+.backButton {
+    composes: actionButton;
+    composes: min-w-[146px] from global;
+
+    composes: hover_text-white from global;
+    composes: active_text-white from global;
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+}
+
+.itemViewTable {
+    composes: grid from global;
+    composes: text-sm from global;
+}
+
+.tableHead {
+    composes: hidden from global;
+    composes: md_grid from global;
+    composes: bg-black-lightest from global;
+    composes: text-white from global;
+    composes: rounded-t from global;
+    composes: font-semibold from global;
+
+    composes: text-left from global;
+    composes: px-7.5 from global;
+    composes: py-[7px] from global;
+    grid-template-columns: 50% repeat(3, 1fr);
+}
+
+.orderDetailsWrapper .footerContent {
+    @apply block
+        sm_grid
+        grid-cols-4
+        lg_gap-7.5;
+}
+
+.orderDetailsWrapper .heading {
+    @apply pb-5
+        lg_pb-7.5;
+}
+
+.reorderButtonWrapper {
+    composes: pb-5 from global;
+    composes: pt-2.5 from global;
+    composes: md_pt-5 from global;
+    composes: lg_pb-7.5 from global;
+    composes: text-right from global;
+}
+
+.reorderButton {
+    composes: font-bold from global;
+    composes: uppercase from global;
+    composes: py-2.5 from global;
+    composes: lg_py-3 from global;
+    composes: w-full from global;
+    composes: lg_w-auto from global;
+    composes: px-[100px] from global;
+    composes: rounded from global;
+    composes: bg-blue from global;
+    composes: text-white from global;
+    composes: hover_bg-blue-dark from global;
+    composes: hover_border-blue-dark from global;
+
+    composes: active_focus_bg-black-light from global;
+    composes: active_focus_border-black-light from global;
+}
+
+.headerTitle {
+    composes: text-xl from global;
+    composes: lg_text-2xl from global;
+    composes: text-blue from global;
+}
+
+.headerTitle .deliveryStatus {
+    @apply font-semibold
+        text-green;
+}
+
+.printButton {
+    composes: root_lowPriority from '@app/components/overrides/Button/button.module.css';
+
+    @apply min-w-0 min-h-0 capitalize ml-auto w-full lg_w-auto;
+}
+
+.printButton:hover svg * {
+    stroke: white;
+}

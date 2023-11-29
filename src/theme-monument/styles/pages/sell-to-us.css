@@ -1,0 +1,89 @@
+@import '../blocks/sell-to-us.css';
+
+.cms-sell-to-us h1,
+.cms-sell-to-us h2,
+.cms-sell-to-us h3,
+.cms-sell-to-us h4,
+.cms-sell-to-us h5,
+.cms-sell-to-us h6,
+.cms-sell-to-us p {
+    @apply my-0;
+}
+.cms-sell-to-us .full-width {
+    @apply py-7.5 lg_py-12.5;
+}
+
+.cms-sell-to-us .full-width h2 {
+    @apply mb-5 lg_mb-[44px];
+}
+
+.cms-sell-to-us .full-width p {
+    @apply leading-7.5 lg_leading-[32px];
+}
+.cms-sell-to-us .full-width > * {
+    @apply container px-mobile lg_max-w-desktop;
+}
+
+.cms-sell-to-us .full-width.grey {
+    @apply bg-white-dark;
+}
+.cms-sell-to-us h1 {
+    @apply mb-[14px] lg_mb-[22px] mt-0;
+}
+
+.cms-sell-to-us .intro-row {
+    @apply pt-0 pb-[25px] lg_pb-10;
+}
+
+.cms-sell-to-us .intro-row div {
+    @apply mb-[5px] lg_mb-2.5;
+}
+
+.cms-sell-to-us .sell-us-steps h3 {
+    @apply mb-[15px] lg_mb-2.5;
+}
+
+.cms-sell-to-us .sell-us-steps h3 span {
+    @apply text-red;
+}
+
+.cms-sell-to-us .sell-us-steps h3 span span {
+    @apply text-black;
+}
+
+.cms-sell-to-us .sell-us-steps .divider-steps hr {
+    @apply mt-[15px] mb-[4px] lg_mt-[31px] lg_mb-[13px];
+}
+.cms-sell-to-us .benefits {
+    @apply pb-5 lg_pb-[35px];
+}
+
+.cms-sell-to-us .benefits > div {
+    @apply lg_gap-x-[15px] gap-y-2.5 lg_mb-[15px] mb-2.5;
+}
+
+.cms-sell-to-us .benefits > div:first-of-type > div:nth-child(3) img {
+    @apply pt-5;
+}
+
+.cms-sell-to-us .benefits h2 {
+    @apply lg_mb-[52px];
+}
+
+.cms-sell-to-us .benefits .benefits-card {
+    @apply bg-white-dark px-5 pb-5 pt-7.5 lg_px-7.5 lg_py-12.5 lg_h-[542px];
+}
+
+.cms-sell-to-us .benefits .benefits-card img {
+    @apply mb-7.5 lg_mb-12.5;
+}
+.cms-sell-to-us .benefits .benefits-card div:nth-child(2) {
+    @apply font-semibold text-black-lightest mb-[5px] lg_mb-2.5;
+}
+.cms-sell-to-us .benefits .benefits-card div:last-child p {
+    @apply leading-[28px] text-xs lg_text-sm lg_leading-7.5;
+}
+
+.sell-to-us-block {
+    @apply mb-7.5;
+}
